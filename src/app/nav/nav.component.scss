@@ -1,0 +1,66 @@
+.div-header {
+  width: 100%;
+  height: 70px;
+  position: fixed;
+  top: 0px;
+  z-index: 100;
+  transition: all 0.15s ease-out 0s;
+  display: flex;
+  -webkit-box-pack: center;
+  background-color: rgb(243, 246, 250);
+  justify-content: space-evenly;
+  font-family: "Roboto", sans-serif;
+
+  .sub-1,
+  .sub-2 {
+    display: flex;
+    align-items: center;
+  }
+
+  .geo {
+    margin: 0 10px 0 10px;
+    font-size: 18px;
+  }
+
+  .geo,
+  .fa-globe {
+    opacity: 50%;
+    cursor: pointer;
+  }
+
+  .sub-1,
+  .sub-2 {
+    .title {
+      cursor: pointer;
+      font-family: "Roboto", sans-serif;
+      font-size: 35px;
+      font-weight: 700;
+      color: #213250;
+      margin-right: 25px;
+    }
+    .nav-title {
+      cursor: pointer;
+      font-family: "BPG Arial", sans-serif;
+      margin-right: 15px;
+      color: #213250;
+      font-weight: bold;
+      &:hover {
+        color: #2dc302;
+      }
+    }
+    .try-free-btn {
+      cursor: pointer;
+      font-family: "BPG Arial", sans-serif;
+      font-weight: bold;
+      color: #2dc302;
+      border: 1px solid #2dc302;
+      border-radius: 3px;
+      padding: 10px 20px;
+      transition: all 0.3s;
+      &:hover {
+        color: #fff;
+        background-color: #2dc302;
+      }
+    }
+  }
+}
