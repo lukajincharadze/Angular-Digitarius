@@ -1,0 +1,22 @@
+.section3 {
+  width: 100%;
+  height: 400px;
+  background-color: #f3f6fa;
+  &-div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1000px;
+    width: 100%;
+    margin: 0 auto;
+    &-title {
+    }
+    &-img {
+      width: 350px;
+      height: auto;
+      img {
+        width: 100%;
+      }
+    }
+  }
+}

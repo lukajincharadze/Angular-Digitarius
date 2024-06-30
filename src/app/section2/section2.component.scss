@@ -1,9 +1,90 @@
 .body {
-  &-container > h2 {
-    margin: 70px auto 40px;
-    font-size: 32px;
-    line-height: normal;
-    font-family: "BPG Arial", sans-serif;
-    text-align: center;
+  &-container {
+    &-title {
+      color: #1c3252;
+      font-size: 36px;
+      line-height: normal;
+      text-align: center;
+      font-weight: bold;
+      margin: 40px auto 50px;
+      font-family: "BPG Arial", sans-serif;
+    }
+  }
+  &-collapse-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    &-accordion {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+  }
+  &-collapse-panel {
+    max-width: 540px;
+    width: 100%;
+    padding-right: 5px;
+    box-shadow: none !important;
+    img {
+      padding-right: 10px;
+      width: 35px;
+    }
+    &-title {
+      font-family: "BPG Arial", sans-serif;
+      margin: 0px 0px 0px 10px;
+      font-size: 18px;
+      line-height: normal;
+      font-weight: bold;
+      color: rgb(28, 50, 82);
+      user-select: none;
+      &-div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        app-collapse-logo1,
+        app-collapse-logo2,
+        app-collapse-logo3,
+        app-collapse-logo4,
+        app-collapse-logo5 {
+          padding-top: 8px;
+        }
+      }
+    }
+    p {
+      font-family: "BPG Arial", sans-serif;
+      font-size: 16px;
+      line-height: normal;
+      color: rgb(28, 50, 82);
+      margin-bottom: 20px;
+      margin-left: 10px;
+    }
+    &-button {
+      font-family: "BPG Arial", sans-serif;
+      margin-left: 10px;
+      font-size: 16px;
+      border: none;
+      text-decoration: none;
+      background-color: transparent;
+      color: #6c6efb;
+      cursor: pointer;
+    }
+    border: none;
+    box-shadow: none;
+  }
+  &-collapse-img {
+    max-height: 500px;
+    max-width: 500px;
+    object-fit: cover;
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+  padding-bottom: 80px;
+}
+.mat-expansion-panel-header {
+  &:hover {
+    background-color: transparent !important;
   }
 }

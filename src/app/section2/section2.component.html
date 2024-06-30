@@ -1,5 +1,148 @@
 <section class="body">
   <div class="body-container">
-    <h2>შენი ყველა დოკუმენტი ერთ პლატფორმაზე</h2>
+    <h2 class="body-container-title">შენი ყველა დოკუმენტი ერთ პლატფორმაზე</h2>
+  </div>
+
+  <div class="body-collapse-div">
+    <div class="body-collapse-div-accordion">
+      <mat-accordion>
+        <mat-expansion-panel
+          (opened)="panelOpenState.set(true)"
+          (closed)="panelOpenState.set(false)"
+          expanded="true"
+          hideToggle=""
+          class="body-collapse-panel"
+        >
+          <mat-expansion-panel-header
+            class="mat-expansion-panel-header"
+            style="padding: 0"
+          >
+            <mat-panel-title
+              class="body-collapse-panel-title"
+              style="margin: 0"
+            >
+              <!-- აქ ფლექსი მაქ გასაწერი რო გავცენტრო ეს ორი ვაჟკაცი -->
+              <div class="body-collapse-panel-title-div">
+                <app-collapse-logo1></app-collapse-logo1>
+                დღეებიდან კლიკებამდე
+              </div>
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          <p>
+            უბრალოდ ატვირთე დოკუმენტი ან აირჩიე შენახული შაბლონი, მიუთითე
+            მიმღები და გაუშვი!
+          </p>
+          <a href="#" class="body-collapse-panel-button">გაიგე მეტი</a>
+        </mat-expansion-panel>
+
+        <mat-expansion-panel
+          (opened)="panelOpenState.set(true)"
+          (closed)="panelOpenState.set(false)"
+          class="body-collapse-panel"
+        >
+          <mat-expansion-panel-header
+            class="mat-expansion-panel-header"
+            style="padding: 0"
+          >
+            <mat-panel-title
+              class="body-collapse-panel-title"
+              style="margin: 0"
+            >
+              <div class="body-collapse-panel-title-div">
+                <app-collapse-logo2></app-collapse-logo2>
+                თვალი ადევნე სტატუსს
+              </div>
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          <p>
+            აკონტროლე დოკუმენტის სტატუსი: ვინ გახსნა, ვინ უკვე მოაწერა ან ვის
+            ხელმოწერას ელოდები. ავტომატურად გაგზავნე შეხსენების შეტყობინებები.
+          </p>
+          <a href="#" class="body-collapse-panel-button">გაიგე მეტი</a>
+        </mat-expansion-panel>
+
+        <mat-expansion-panel
+          (opened)="panelOpenState.set(true)"
+          (closed)="panelOpenState.set(false)"
+          class="body-collapse-panel"
+        >
+          <mat-expansion-panel-header
+            class="mat-expansion-panel-header"
+            style="padding: 0"
+          >
+            <mat-panel-title
+              class="body-collapse-panel-title"
+              style="margin: 0"
+            >
+              <div class="body-collapse-panel-title-div">
+                <app-collapse-logo3></app-collapse-logo3>
+                შეინახე და მართე
+              </div>
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          <p>
+            შენი დოკუმენტები უსაფრთხოდ ინახება ციფრულად, რაც გაგიმარტივებს მათ
+            დახარისხხებასა და მოძებნას
+          </p>
+          <a href="#" class="body-collapse-panel-button">გაიგე მეტი</a>
+        </mat-expansion-panel>
+
+        <mat-expansion-panel
+          (opened)="panelOpenState.set(true)"
+          (closed)="panelOpenState.set(false)"
+          class="body-collapse-panel"
+        >
+          <mat-expansion-panel-header
+            class="mat-expansion-panel-header"
+            style="padding: 0"
+          >
+            <mat-panel-title
+              class="body-collapse-panel-title"
+              style="margin: 0"
+            >
+              <div class="body-collapse-panel-title-div">
+                <app-collapse-logo4></app-collapse-logo4>
+                ხელმომწერის იდენტიფიკაცია
+              </div>
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          <p>
+            მიმღების იდენტიფიკაციისთვის შექმენი უსაფრთხოების დამატებითი საფეხური
+            და გამოიყენე SMS კოდი, ვიდეო იდენტიფიკაცია ან კვალიფიციური
+            ელექტრონული ხელმოწერა
+          </p>
+          <a href="#" class="body-collapse-panel-button">გაიგე მეტი</a>
+        </mat-expansion-panel>
+
+        <mat-expansion-panel
+          (opened)="panelOpenState.set(true)"
+          (closed)="panelOpenState.set(false)"
+          class="body-collapse-panel"
+        >
+          <mat-expansion-panel-header
+            class="mat-expansion-panel-header"
+            style="padding: 0"
+          >
+            <mat-panel-title
+              class="body-collapse-panel-title"
+              style="margin: 0"
+            >
+              <div class="body-collapse-panel-title-div">
+                <app-collapse-logo5></app-collapse-logo5>
+                მარტივი ინტეგრაცია
+              </div>
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          <p>
+            დაინტეგრირდი Rest API-ით, Zapier-ით, ან უბრალოდ ჩასვი Signify-ს
+            iframe-ი შენს აპლიკაციაში
+          </p>
+          <a href="#" class="body-collapse-panel-button">გაიგე მეტი</a>
+        </mat-expansion-panel>
+      </mat-accordion>
+    </div>
+    <div class="body-collapse-img">
+      <img src="../../assets/img/collapse1.jpg" alt="collapse1" />
+    </div>
   </div>
 </section>
