@@ -1,16 +1,83 @@
 .section3 {
   width: 100%;
-  height: 400px;
+  height: 420px;
   background-color: #f3f6fa;
+  display: flex;
+  align-items: center;
   &-div {
     display: flex;
     align-items: center;
     justify-content: space-between;
     max-width: 1000px;
     width: 100%;
+    height: 100vh;
     margin: 0 auto;
     &-title {
+      font-size: 30px;
+      font-family: "BPG Arial", sans-serif;
+      &-1 {
+        color: #2dc302;
+        font-weight: bold;
+      }
+      &-2 {
+        color: #1c3252;
+        font-weight: bold;
+      }
+      &-input {
+        font-family: "BPG Arial", sans-serif;
+        margin-top: 10px;
+        max-width: 300px;
+        width: 100%;
+        height: 45px;
+        border: 1px solid #c3d1e5;
+        border-top-left-radius: 2px;
+        border-bottom-left-radius: 2px;
+        transition: all 0.3s;
+        outline: transparent;
+        padding-left: 35px;
+        &::placeholder {
+          color: #bfbfc7;
+        }
+        &:hover {
+          border-color: #2dc302;
+        }
+        &:focus,
+        &:active,
+        &:checked {
+          box-shadow: 1px red;
+        }
+      }
+      &-logoWraper {
+        position: relative;
+        &-div {
+          display: flex;
+        }
+        app-section3-logo {
+          padding-top: 10px;
+          position: absolute;
+          top: 0px;
+          left: 10px;
+        }
+        &-button {
+          max-width: 110px;
+          width: 100%;
+          height: 45px;
+          font-size: 14px;
+          font-family: "BPG Arial", sans-serif;
+          border: none;
+          border-top-right-radius: 2px;
+          border-bottom-right-radius: 2px;
+          color: #fff;
+          background-color: #2dc302;
+          margin-top: 10px;
+          transition: all 0.3s;
+          &:hover {
+            background-color: #2fda00;
+          }
+        }
+      }
     }
+
     &-img {
       width: 350px;
       height: auto;

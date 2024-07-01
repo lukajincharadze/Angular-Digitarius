@@ -1,8 +1,25 @@
 <section class="section3">
   <div class="section3-div">
     <div class="section3-div-title">
-      <p>სცადე შენ თვითონ,</p>
-      <p>გაიგზავნე დოკუმენტი ხელმოსაწერად</p>
+      <p class="section3-div-title-1">სცადე შენ თვითონ,</p>
+      <p class="section3-div-title-2">გაიგზავნე დოკუმენტი ხელმოსაწერად</p>
+      <div class="section3-div-title-logoWraper">
+        <app-section3-logo></app-section3-logo>
+        <div class="section3-div-title-logoWraper-div">
+          <input
+            type="email"
+            placeholder="შეიყვანე ელ.ფოსტა"
+            class="section3-div-title-input"
+            [(ngModel)]="foo"
+          />
+          <button
+            class="section3-div-title-logoWraper-button"
+            (click)="request()"
+          >
+            გაგზავნა
+          </button>
+        </div>
+      </div>
     </div>
     <div class="section3-div-img">
       <img src="../../assets/img/section3Img.png" alt="sec3Img" />
