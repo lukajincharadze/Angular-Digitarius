@@ -2,11 +2,25 @@
   <p class="section4-title">Use case-ები სხვადასხვა გუნდებისთვის</p>
   <div class="section4-div">
     <div class="section4-div-wrapper">
-      <span>გაყიდვები</span>
-      <span>შესყიდვები</span>
-      <span>HR</span>
-      <span>ფინანსები</span>
-      <span>ფრონტ ოფისი</span>
+      <ng-container *ngFor="let item of arr; let i = index">
+        <app-button
+          [ngStyle]="{
+            backgroundColor: i === foo ? '#6c6efb' : '#fff',
+            color: i === foo ? '#FFF' : '#1C3252'
+          }"
+          [text]="item"
+          (changeData)="eventHandler($event)"
+          [index]="i"
+          style="border-radius: 3px"
+        ></app-button>
+      </ng-container>
     </div>
+    <ng-container>
+      <app-dynamic-content
+        [img]="arr2[foo].img"
+        [text]="arr2[foo].text"
+        [title]="arr2[foo].title"
+      ></app-dynamic-content>
+    </ng-container>
   </div>
 </section>

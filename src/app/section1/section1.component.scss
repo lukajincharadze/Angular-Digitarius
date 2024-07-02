@@ -22,6 +22,9 @@
     -webkit-box-pack: center;
     justify-content: center;
     gap: 20px;
+    & > * {
+      width: 100%;
+    }
   }
   &-chart {
     width: 100%;

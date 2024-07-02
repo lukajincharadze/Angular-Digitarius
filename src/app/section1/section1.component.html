@@ -2,33 +2,13 @@
   <div class="body-container">
     <h2>დაკონტრაქტება Signify-სთან უკეთესია</h2>
     <div class="body-charts">
-      <div class="body-chart">
-        <div class="body-stat">
-          <h4>5<small>X</small></h4>
-          <div class="body-image-wraper">
-            <img src="../../assets/img/stat-logo1.svg" alt="" />
-          </div>
-        </div>
-        <div class="body-desc"><span>სწრაფი პროცესი</span></div>
-      </div>
-      <div class="body-chart">
-        <div class="body-stat">
-          <h4>70<small>%</small></h4>
-          <div class="body-image-wraper">
-            <img src="../../assets/img/stat-logo2.svg" alt="" />
-          </div>
-        </div>
-        <div class="body-desc"><span>შემცირებული ხარჯი</span></div>
-      </div>
-      <div class="body-chart">
-        <div class="body-stat">
-          <h4>1<small>დღე</small></h4>
-          <div class="body-image-wraper">
-            <img src="../../assets/img/stat-logo3.svg" alt="" />
-          </div>
-        </div>
-        <div class="body-desc"><span>დასანერგად</span></div>
-      </div>
+      <ng-container *ngFor="let item of arr">
+        <app-card-component
+          [title]="item.title"
+          [text]="item.text"
+          [logo]="item.logo"
+        ></app-card-component>
+      </ng-container>
     </div>
   </div>
 </section>
