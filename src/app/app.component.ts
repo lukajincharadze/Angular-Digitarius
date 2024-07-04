@@ -8,6 +8,7 @@ import { CollapseLogo1Component } from './iconComponents/collapse-logo1/collapse
 import { Section3Component } from './section3/section3.component';
 import { Section4Component } from './section4/section4.component';
 import { FormsModule } from '@angular/forms';
+import { Section6Component } from './section6/section6.component';
 
 @Component({
   selector: 'app-root',
@@ -22,6 +23,7 @@ import { FormsModule } from '@angular/forms';
     Section2Component,
     Section3Component,
     Section4Component,
+    Section6Component,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
