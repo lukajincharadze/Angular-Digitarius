@@ -9,6 +9,7 @@ import { Section3Component } from './section3/section3.component';
 import { Section4Component } from './section4/section4.component';
 import { FormsModule } from '@angular/forms';
 import { Section6Component } from './section6/section6.component';
+import { FooterComponent } from './footer/footer.component';
 
 @Component({
   selector: 'app-root',
@@ -24,6 +25,7 @@ import { Section6Component } from './section6/section6.component';
     Section3Component,
     Section4Component,
     Section6Component,
+    FooterComponent,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',

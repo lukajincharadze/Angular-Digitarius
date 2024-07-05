@@ -44,6 +44,5 @@ export class Section4Component {
   foo: number = 0;
   eventHandler(index: any) {
     this.foo = index;
-    // this.states.btnIndex = this.index;
   }
 }

@@ -1,1 +1,71 @@
-<p>footer works!</p>
+<footer class="footer">
+  <div class="footer-topDiv">
+    <div class="footer-topDiv-left">
+      <app-signify-logo></app-signify-logo>
+      <div class="footer-topDiv-left-A">
+        <a href="https://www.facebook.com/">
+          <app-footerlogo-1></app-footerlogo-1>
+        </a>
+        <a href="https://www.youtube.com/">
+          <app-footerlogo-2></app-footerlogo-2>
+        </a>
+        <a href="https://www.linkedin.com/">
+          <app-footerlogo-3></app-footerlogo-3>
+        </a>
+      </div>
+      <p class="footer-topDiv-left-contact">{{ contact }}</p>
+      <div class="footer-topDiv-left-lang">
+        <app-glope-svg></app-glope-svg>Georgian<app-arr-svg></app-arr-svg>
+      </div>
+    </div>
+    <div class="footer-topDiv-right">
+      <ng-container *ngFor="let item of arr">
+        <ul>
+          <app-dynamic-lists
+            [title]="item.title"
+            [text1]="item.list1"
+            [text2]="item.list2"
+            [text3]="item.list3"
+            [text4]="item.list4"
+            [text5]="item.list5"
+          ></app-dynamic-lists>
+        </ul>
+      </ng-container>
+      <ng-container *ngFor="let item of arr2">
+        <ul>
+          <app-dynamic-lists
+            [title]="item.title"
+            [text1]="item.list1"
+            [text2]="item.list2"
+            [text3]="item.list3"
+            [text4]="item.list4"
+            [text5]="item.list5"
+          ></app-dynamic-lists>
+        </ul>
+      </ng-container>
+      <ng-container *ngFor="let item of arr3">
+        <ul>
+          <app-dynamic-lists
+            [title]="item.title"
+            [text1]="item.list1"
+            [text2]="item.list2"
+            [text3]="item.list3"
+            [text4]="item.list4"
+            [text5]="item.list5"
+          ></app-dynamic-lists>
+        </ul>
+      </ng-container>
+    </div>
+  </div>
+  <div class="footer-subDiv">
+    <div class="footer-subDiv-div">
+      <div class="footer-subDiv-div-left">
+        <p class="footer-subDiv-div-left-p">© Signify 2024</p>
+      </div>
+      <div class="footer-subDiv-div-right">
+        <a href="#">მომს. პირობები</a>
+        <a href="#">კონფ. პოლიტიკა</a>
+      </div>
+    </div>
+  </div>
+</footer>
