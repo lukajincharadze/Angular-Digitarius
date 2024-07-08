@@ -13,6 +13,21 @@
     width: 100%;
     padding: 40px;
     background-color: #f3f6fa;
+    @media screen and (max-width: 700px) {
+      height: 700px;
+    }
+    @media screen and (max-width: 650px) {
+      .section4-div-wrapper {
+        margin-bottom: 60px;
+      }
+      height: 800px;
+    }
+    @media screen and (max-width: 420px) {
+      .section4-div-wrapper {
+        margin-bottom: 90px;
+      }
+      height: 900px;
+    }
     margin: 0 auto;
     &-wrapper {
       display: flex;
@@ -21,11 +36,14 @@
       flex-wrap: wrap;
       margin: 0 auto;
       text-align: center;
-      width: 650px;
+      max-width: 650px;
+      width: 100%;
     }
   }
   img {
     width: 300px;
   }
   padding-bottom: 50px;
+}
+@media screen and (max-width: 700px) {
 }

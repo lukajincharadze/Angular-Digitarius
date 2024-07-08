@@ -88,3 +88,13 @@
     background-color: transparent !important;
   }
 }
+@media screen and (max-width: 750px) {
+  .body-collapse-div[_ngcontent-ng-c513281179] {
+    flex-direction: column;
+  }
+  .body-collapse-div-accordion[_ngcontent-ng-c513281179] {
+    padding: 0 10px;
+    max-width: 400px;
+    width: 100%;
+  }
+}

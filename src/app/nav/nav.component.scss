@@ -69,4 +69,26 @@
       }
     }
   }
+  .bar-div {
+    width: 30px;
+    height: 30px;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .nav-title,
+  .sub-2-ul {
+    display: none !important;
+  }
+  .bar {
+    display: block !important;
+  }
+  .div-header {
+    justify-content: space-between;
+    padding: 0 20px;
+  }
 }

@@ -32,7 +32,8 @@
       align-items: center;
       justify-content: center;
       flex-direction: column;
-      width: 450px;
+      max-width: 450px;
+      width: 100%;
       button {
         max-width: 220px;
         width: 100%;
@@ -68,5 +69,22 @@
         flex-direction: column;
       }
     }
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .section-div-left {
+    padding-left: 20px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .section-div {
+    flex-direction: column;
+  }
+  .section[_ngcontent-ng-c654936355] {
+    text-align: center;
+    padding: 50px 0;
+    height: 500px;
   }
 }

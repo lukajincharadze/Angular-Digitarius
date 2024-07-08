@@ -43,7 +43,7 @@ export class FooterComponent {
       list2: 'ლეგალურობა',
       list3: 'უსაფრთხოება',
       list4: 'დახმარება',
-      list5: 'დეველოპერებისთვის',
+      list5: 'დეველოპერი',
     },
   ];
   arr3: any[] = [
