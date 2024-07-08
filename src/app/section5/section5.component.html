@@ -1,0 +1,58 @@
+<section class="section">
+  <div class="section-div">
+    <h1>ისტორიები ჩვენი მომხმარებლებისგან</h1>
+    <div class="section-div-slider">
+      <div>
+        <p-carousel
+          [value]="products"
+          [numVisible]="3"
+          [numScroll]="1"
+          [circular]="true"
+          [responsiveOptions]="responsiveOptions"
+        >
+          <ng-template let-product pTemplate="item">
+            <div class="section-div-wrapper">
+              <div class="section-div-img">
+                <img src="../../assets/img/profilelogo1.webp" alt="logo" />
+              </div>
+              <p class="section-div-info">
+                {{ product.description }}
+              </p>
+              <a class="section-div-btn" href="#">გაიგე მეტი</a>
+              <div class="section-div-profileDiv">
+                <div>
+                  <div class="section-div-profileDiv-profilepic">
+                    <img src="../../assets/img/profilepic1.webp" alt="img" />
+                  </div>
+                </div>
+                <div>
+                  <h4>გიორგი ნოზაძე</h4>
+                  <p>პროექტების კორდინატორი</p>
+                </div>
+              </div>
+            </div>
+          </ng-template>
+        </p-carousel>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 
+<div>
+    <img src="../../assets/img/profilelogo1.webp" alt="logo" />
+    <p>
+      ,,Signify-ს სისტემაზე გადასვლით კომპანიის ყოველდღიურობიდან
+      გამოთავისუფლდა უდიდესი დრო და ენერგია. Signify-ს გუნდი თითოეულ ჩვენ
+      თხოვნას უდიდესი ყურადღებით უდგება, რაც პროდუქტის მუდმივი განახლების და
+      განვითარების საწინდარია."
+    </p>
+    <a href="#">გაიგე მეტი</a>
+    <div>
+      <div>
+        <img src="../../assets/img/profilepic1.webp" alt="img" />
+      </div>
+      <h4>გიორგი ნოზაძე</h4>
+      <p>პროექტების კორდინატორი</p>
+    </div>
+  </div> -->

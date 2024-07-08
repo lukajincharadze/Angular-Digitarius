@@ -10,10 +10,13 @@ import { Section4Component } from './section4/section4.component';
 import { FormsModule } from '@angular/forms';
 import { Section6Component } from './section6/section6.component';
 import { FooterComponent } from './footer/footer.component';
+import { Section5Component } from './section5/section5.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
+  templateUrl: './app.component.html',
+  styleUrl: './app.component.scss',
   imports: [
     FormsModule,
     CollapseLogo1Component,
@@ -24,11 +27,10 @@ import { FooterComponent } from './footer/footer.component';
     Section2Component,
     Section3Component,
     Section4Component,
+    Section5Component,
     Section6Component,
     FooterComponent,
   ],
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.scss',
 })
 export class AppComponent {
   title = 'signify';
