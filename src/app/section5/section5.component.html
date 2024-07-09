@@ -13,7 +13,7 @@
           <ng-template let-product pTemplate="item">
             <div class="section-div-wrapper">
               <div class="section-div-img">
-                <img src="../../assets/img/profilelogo1.webp" alt="logo" />
+                <img [src]="product.logo" alt="logo" />
               </div>
               <p class="section-div-info">
                 {{ product.description }}
@@ -22,12 +22,14 @@
               <div class="section-div-profileDiv">
                 <div>
                   <div class="section-div-profileDiv-profilepic">
-                    <img src="../../assets/img/profilepic1.webp" alt="img" />
+                    <img [src]="product.image" alt="img" />
                   </div>
                 </div>
                 <div>
-                  <h4>გიორგი ნოზაძე</h4>
-                  <p>პროექტების კორდინატორი</p>
+                  <h4>{{ product.name }}</h4>
+                  <p class="section-div-profileDiv-profesion">
+                    {{ product.profesion }}
+                  </p>
                 </div>
               </div>
             </div>

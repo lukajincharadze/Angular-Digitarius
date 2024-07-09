@@ -5,80 +5,75 @@ export class ProductService {
   getProductsData() {
     return [
       {
-        id: '1000',
-        code: 'f230fh0g3',
-        name: 'Bamboo Watch',
+        name: 'გიორგი ნოზაძე',
+        profesion: 'პროექტების კორდინატორი',
         description:
           ' ,,Signify-ს სისტემაზე გადასვლით კომპანიის ყოველდღიურობიდან\
                 გამოთავისუფლდა უდიდესი დრო და ენერგია. Signify-ს გუნდი თითოეულ\
                 ჩვენ თხოვნას უდიდესი ყურადღებით უდგება, რაც პროდუქტის მუდმივი\
                 განახლების და განვითარების საწინდარია."',
-        image: 'bamboo-watch.jpg',
-        price: 65,
-        category: 'Accessories',
-        quantity: 24,
-        inventoryStatus: 'INSTOCK',
-        rating: 5,
+        image: '../../assets/img/profilepic1.webp',
+        logo: '../../assets/img/profilelogo1.webp',
       },
       {
-        id: '1001',
-        code: 'nvklal433',
-        name: 'Black Watch',
-        description: 'nika jobava',
-        image: 'black-watch.jpg',
-        price: 72,
-        category: 'Accessories',
-        quantity: 61,
-        inventoryStatus: 'OUTOFSTOCK',
-        rating: 4,
+        name: 'ზვიად გუბელიძე',
+        profesion: 'გენერალური დირექტორი',
+        description:
+          '"1 არქივი უკვე გამოვანთავისუფლეთ. მეორესაც დროთა განმავლობაში გავაუქმებთ.\
+           თანამშრომლებიც ბედნიერები არიან,  რადგან "დღის დახურვას" 30-40 წუთის\
+            ნაცვლად 10 წუთში ასრულებენ და სახლში დროულად მიდიან."',
+        image: '../../assets/img/profilepic2.webp',
+        logo: '../../assets/img/profilelogo2.webp',
       },
       {
-        id: '1002',
-        code: 'zz21cz3c1',
-        name: 'Blue Band',
-        description: 'Product Description',
-        image: 'blue-band.jpg',
-        price: 79,
-        category: 'Fitness',
-        quantity: 2,
-        inventoryStatus: 'LOWSTOCK',
-        rating: 3,
+        name: 'თეა რობაქიძე',
+        profesion: 'ბიზნეს პროცესების მენეჯერი',
+        description:
+          ',,ჩვენ დავნერგეთ საცალო მომსახურების პროცესში Signify-ს ელექტრონული ხელმოწერა\
+           ბანკის მომხარებელს სახლიდან ან ოფისიდან გაუსვლელად მარტივად, უსაფრთხოდ,\
+            კომფორტულად შეუძლია ნებისმიერი მოწყობილობიდან მოაწეროს ხელი სასესხო დოკუმენტებს."',
+        image: '../../assets/img/profilepic3.webp',
+        logo: '../../assets/img/profilelogo3.webp',
       },
       {
-        id: '1003',
-        code: '244wgerg2',
-        name: 'Blue T-Shirt',
-        description: 'Product Description',
-        image: 'blue-t-shirt.jpg',
-        price: 29,
-        category: 'Clothing',
-        quantity: 25,
-        inventoryStatus: 'INSTOCK',
-        rating: 5,
+        name: 'ბაკო ხუბარძანია',
+        profesion: 'შესყიდვების გუნდის ლიდერი',
+        description:
+          ',,ჩვენი პარტნიორობის დასაწყისში, გვხდებოდა უფრო მეტი კომპანია, ვისაც არ ჰქონდა მზაობა, რომ\
+           სველი ხელმოწერის გარეშე გაგვეფორმებინა ხელშეკრულება. ძალიან მოკლე დროში ყველა დარწმუნდა,\
+            რომ ეს არის ერთ-ერთი ყველაში"',
+        image: '../../assets/img/profilepic4.webp',
+        logo: '../../assets/img/profilelogo4.webp',
       },
       {
-        id: '1004',
-        code: 'h456wer53',
-        name: 'Bracelet',
-        description: 'Product Description',
-        image: 'bracelet.jpg',
-        price: 15,
-        category: 'Accessories',
-        quantity: 73,
-        inventoryStatus: 'INSTOCK',
-        rating: 4,
+        name: 'ნინი ჭიღლაძე',
+        profesion: 'HR Administration',
+        description:
+          '“დღეს კომპანიაში ვიცით, რომ დოკუმენტაცია არის დაცული, თავმოყრილია საერთო პლატფორმაზე და \
+          პროცესის ადმინისტრირებაც გაცილებით იოლია. აქვე აღვნიშნავ, რომ სიგნიფაის ჰყავს ერთ-ერთი ყველაზე\
+            უკეთესი სერვისები შემოგვთავაზოს.”"',
+        image: '../../assets/img/profilepic5.webp',
+        logo: '../../assets/img/profilelogo5.webp',
       },
       {
-        id: '1005',
-        code: 'av2231fwg',
-        name: 'Brown Purse',
-        description: 'Product Description',
-        image: 'brown-purse.jpg',
-        price: 120,
-        category: 'Accessories',
-        quantity: 0,
-        inventoryStatus: 'OUTOFSTOCK',
-        rating: 4,
+        name: 'ნინი ერგემლიძე',
+        profesion: 'ადამიანური რესურსების მართვა',
+        description:
+          '”Signify-ს დახმარებით თვეში 100-ზე მეტ დოკუმენტზე ხდება ხელმოწერა. აგვისტოს თვეში გავაფორმეთ\
+           შრომითი ხელშეკრულებები 150-მდე თანამშრომელთან და საათზე ნაკლებ დროში ორივე მხრიდან \
+           ხელმოწერილი დოკუმენტი მზად მქონდა, ""',
+        image: '../../assets/img/profilepic6.webp',
+        logo: '../../assets/img/profilelogo6.webp',
+      },
+      {
+        name: 'ეკა მჭედლიშვილი',
+        profesion: 'HR დეპარტანმენტი ხელმ.',
+        description:
+          '"Signify-ს საშუალებით კომპანიაში შესაძლებელი გახდა, როგორც შიდა დეპარტამენტებს, ასევე გარე \
+          კომპანიებს შორის დოკუმენტების სრულად გაციფრულება. შედეგად დაჩქარდა პროცესები, გაადვილდა\
+           კომუნიკაცია, დაიზოგა ადამიანური რესურსი და დრო.""',
+        image: '../../assets/img/profilepic7.webp',
+        logo: '../../assets/img/profilelogo7.webp',
       },
     ];
   }

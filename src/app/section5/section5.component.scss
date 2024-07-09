@@ -55,12 +55,15 @@
       &-profilepic {
         height: 40px;
         width: 100%;
-
         img {
+          border-radius: 50%;
           max-width: 100%;
           width: auto;
           height: 100%;
         }
+      }
+      &-profesion {
+        color: rgb(149, 161, 177);
       }
     }
     &-slider {
@@ -73,9 +76,35 @@
       @media screen and (max-width: 950px) {
         width: 500px;
       }
+      @media screen and (max-width: 530px) {
+        width: 400px;
+      }
+      @media screen and (max-width: 435px) {
+        width: 300px;
+      }
     }
   }
 }
+::ng-deep .p-carousel {
+  ul {
+    gap: 10px;
+    padding: 10px 0 0 0;
+
+    li {
+      button {
+        height: 10px;
+        width: 10px;
+        border-radius: 50%;
+        background-color: #c3d1e5;
+
+        &[tabindex="0"] {
+          background-color: #fff;
+        }
+      }
+    }
+  }
+}
+
 ::ng-deep .p-carousel .p-carousel-content .p-carousel {
   &-prev,
   &-next {
