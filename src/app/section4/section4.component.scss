@@ -31,12 +31,12 @@
     margin: 0 auto;
     &-wrapper {
       display: flex;
-      justify-content: space-between;
+      justify-content: center;
+      gap: 30px;
       align-items: center;
       flex-wrap: wrap;
       margin: 0 auto;
       text-align: center;
-      max-width: 650px;
       width: 100%;
     }
   }

@@ -11,10 +11,13 @@
             placeholder="შეიყვანე ელ.ფოსტა"
             class="section3-div-title-input"
             [(ngModel)]="foo"
+            [ngClass]="{ incorrect: incorrect }"
           />
           <button
             class="section3-div-title-logoWraper-button"
             (click)="request()"
+            [disabled]="disabled"
+            [ngClass]="{ clicked: disabled }"
           >
             გაგზავნა
           </button>
