@@ -68,26 +68,36 @@ export class DataService {
         Title: 'დღეებიდან კლიკებამდე',
         Desc: 'უბრალოდ ატვირთე დოკუმენტი ან აირჩიე შენახული შაბლონი, მიუთითე მიმღები და გაუშვი!',
         learnMore: 'გაიგე მეტი',
+        imgUrl: '../../assets/img/collapseLogo1.svg',
+        imgColor: '#2DC302',
       },
       {
         Title: 'თვალი ადევნე სტატუსს',
         Desc: 'აკონტროლე დოკუმენტის სტატუსი: ვინ გახსნა, ვინ უკვე მოაწერა ან ვის ხელმოწერას ელოდები. ავტომატურად გაგზავნე შეხსენების შეტყობინებები.',
         learnMore: 'გაიგე მეტი',
+        imgUrl: '../../assets/img/collapseLogo2.svg',
+        imgColor: '#6C6EFB',
       },
       {
         Title: 'შეინახე და მართე',
         Desc: 'შენი დოკუმენტები უსაფრთხოდ ინახება ციფრულად, რაც გაგიმარტივებს მათ დახარისხხებასა და მოძებნას',
         learnMore: 'გაიგე მეტი',
+        imgUrl: '../../assets/img/collapseLogo3.svg',
+        imgColor: '#FFCD00',
       },
       {
         Title: 'ხელმომწერის იდენტიფიკაცია',
         Desc: 'მიმღების იდენტიფიკაციისთვის შექმენი უსაფრთხოების დამატებითი საფეხური და გამოიყენე SMS კოდი, ვიდეო იდენტიფიკაცია ან კვალიფიციური ელექტრონული ხელმოწერა',
         learnMore: 'გაიგე მეტი',
+        imgUrl: '../../assets/img/collapseLogo4.svg',
+        imgColor: '#2DC302',
       },
       {
         Title: 'მარტივი ინტეგრაცია',
         Desc: 'დაინტეგრირდი Rest API-ით, Zapier-ით, ან უბრალოდ ჩასვი Signify-ს iframe-ი შენს აპლიკაციაში',
         learnMore: 'გაიგე მეტი',
+        imgUrl: '../../assets/img/collapseLogo5.svg',
+        imgColor: '#6C6EFB',
       },
     ];
   }

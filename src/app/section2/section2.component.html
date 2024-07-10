@@ -23,7 +23,13 @@
                 style="margin: 0"
               >
                 <div class="body-collapse-panel-title-div">
-                  <app-collapse-logo1></app-collapse-logo1>
+                  <!-- <app-collapse-logo1></app-collapse-logo1> -->
+                  <img
+                    [src]="collapseInfo.imgUrl"
+                    alt="img"
+                    style="padding-right: 10px"
+                    [ngStyle]="{ color: collapseInfo.imgColor }"
+                  />
                   {{ collapseInfo.Title }}
                 </div>
               </mat-panel-title>
