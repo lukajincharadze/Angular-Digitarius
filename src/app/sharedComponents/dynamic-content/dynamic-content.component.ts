@@ -11,4 +11,5 @@ export class DynamicContentComponent {
   @Input() text: string = '';
   @Input() title: string = '';
   @Input() img: string = '';
+  @Input() btnText: string = 'გაიგე მეტი';
 }

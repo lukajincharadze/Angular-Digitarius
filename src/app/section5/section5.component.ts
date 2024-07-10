@@ -16,7 +16,18 @@ import { CommonModule } from '@angular/common';
 export class Section5Component implements OnInit {
   products: any[] = [];
 
-  responsiveOptions: any[] | undefined;
+  responsiveOptions: any[] = [
+    {
+      breakpoint: '1350px',
+      numVisible: 2,
+      numScroll: 1,
+    },
+    {
+      breakpoint: '950px',
+      numVisible: 1,
+      numScroll: 1,
+    },
+  ];
 
   constructor(private productService: ProductService) {}
 
@@ -24,19 +35,6 @@ export class Section5Component implements OnInit {
     this.productService.getProductsSmall().then((products) => {
       this.products = products;
     });
-
-    this.responsiveOptions = [
-      {
-        breakpoint: '1350px',
-        numVisible: 2,
-        numScroll: 1,
-      },
-      {
-        breakpoint: '950px',
-        numVisible: 1,
-        numScroll: 1,
-      },
-    ];
   }
 
   getSeverity(status: string) {

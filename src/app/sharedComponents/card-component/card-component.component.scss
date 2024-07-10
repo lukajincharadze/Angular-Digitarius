@@ -2,15 +2,15 @@
   max-width: 1200px;
   margin: 0px auto;
   padding: 70px 0px 100px;
-}
-.container > h2 {
-  color: rgb(255, 255, 255);
-  font-size: 36px;
-  line-height: normal;
-  text-align: center;
-  font-weight: bold;
-  margin: 0px auto 50px;
-  font-family: "BPG Arial", sans-serif;
+  h2 {
+    color: rgb(255, 255, 255);
+    font-size: 36px;
+    line-height: normal;
+    text-align: center;
+    font-weight: bold;
+    margin: 0px auto 50px;
+    font-family: "BPG Arial", sans-serif;
+  }
 }
 
 .chart {
@@ -23,6 +23,9 @@
   -webkit-box-pack: end;
   justify-content: flex-start;
   flex-direction: column;
+  &:nth-child(2) {
+    margin: 0px 40px;
+  }
 }
 .stat {
   position: relative;
@@ -30,20 +33,20 @@
   height: 100%;
   display: flex;
   align-items: flex-start;
-}
-.stat > h4 {
-  font-size: 120px;
-  line-height: normal;
-  font-weight: bolder;
-  color: rgb(255, 255, 255);
-}
-.stat > h4 > small {
-  font-size: 70px;
-  line-height: normal;
-}
-.stat > svg {
-  font-size: 65px;
-  min-width: 65px;
+  h4 {
+    font-size: 120px;
+    line-height: normal;
+    font-weight: bolder;
+    color: rgb(255, 255, 255);
+    small {
+      font-size: 70px;
+      line-height: normal;
+    }
+  }
+  svg {
+    font-size: 65px;
+    min-width: 65px;
+  }
 }
 .desc > span {
   font-family: "BPG Arial", sans-serif;
@@ -52,9 +55,7 @@
   color: rgb(195, 209, 229);
   text-transform: capitalize;
 }
-.chart:nth-child(2) {
-  margin: 0px 40px;
-}
+
 .image-wraper {
   width: 60px;
   height: 60px;

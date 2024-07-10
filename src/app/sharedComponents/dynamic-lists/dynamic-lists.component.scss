@@ -11,14 +11,13 @@
   justify-content: center;
   flex-direction: column;
   gap: 10px;
+  .text {
+    color: #94a5bc;
+  }
 }
 
 .title {
   color: #1c3252;
   font-weight: bold;
   margin-bottom: 15px;
-}
-
-.text {
-  color: #94a5bc;
 }

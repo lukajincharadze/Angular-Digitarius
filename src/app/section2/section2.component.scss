@@ -42,12 +42,10 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        app-collapse-logo1,
-        app-collapse-logo2,
-        app-collapse-logo3,
-        app-collapse-logo4,
-        app-collapse-logo5 {
-          padding-top: 8px;
+        @for $i from 1 through 5 {
+          .app-collapse-logo#{i} {
+            padding-top: 8px;
+          }
         }
       }
     }
@@ -89,12 +87,12 @@
   }
 }
 @media screen and (max-width: 750px) {
-  .body-collapse-div[_ngcontent-ng-c513281179] {
+  .body-collapse-div {
     flex-direction: column;
-  }
-  .body-collapse-div-accordion[_ngcontent-ng-c513281179] {
-    padding: 0 10px;
-    max-width: 400px;
-    width: 100%;
+    &-accordion {
+      padding: 0 10px;
+      max-width: 400px;
+      width: 100%;
+    }
   }
 }

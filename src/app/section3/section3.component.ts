@@ -12,9 +12,9 @@ import { CommonModule } from '@angular/common';
   styleUrl: './section3.component.scss',
 })
 export class Section3Component {
-  foo: string = '';
+  userMail: string = '';
   disabled: boolean = false;
-  incorrect: boolean = false;
+  invalid: boolean = false;
 
   constructor(private dataService: DataService) {}
   validateEmail(email: string) {
@@ -22,14 +22,14 @@ export class Section3Component {
     return emailRegex.test(email);
   }
   request() {
-    let data = { userMail: this.foo };
-    console.log(this.foo);
+    let data = { userMail: this.userMail };
+    console.log(this.userMail);
 
-    this.validateEmail(this.foo);
-    if (this.validateEmail(this.foo)) {
-      this.incorrect = false;
+    this.validateEmail(this.userMail);
+    if (this.validateEmail(this.userMail)) {
+      this.invalid = false;
     } else {
-      this.incorrect = true;
+      this.invalid = true;
       return;
     }
     this.dataService.sendData('http://127.0.0.1:5000/mail', data).subscribe(

@@ -11,6 +11,8 @@ import { CollapseLogo2Component } from '../iconComponents/collapse-logo2/collaps
 import { CollapseLogo3Component } from '../iconComponents/collapse-logo3/collapse-logo3.component';
 import { CollapseLogo4Component } from '../iconComponents/collapse-logo4/collapse-logo4.component';
 import { CollapseLogo5Component } from '../iconComponents/collapse-logo5/collapse-logo5.component';
+import { DataService } from '../core/data.service';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-section2',
@@ -22,6 +24,7 @@ import { CollapseLogo5Component } from '../iconComponents/collapse-logo5/collaps
     CollapseLogo3Component,
     CollapseLogo4Component,
     CollapseLogo5Component,
+    CommonModule,
   ],
   changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: './section2.component.html',
@@ -29,4 +32,10 @@ import { CollapseLogo5Component } from '../iconComponents/collapse-logo5/collaps
 })
 export class Section2Component {
   readonly panelOpenState = signal(false);
+
+  collapseInfo: any[] = [];
+  constructor(private dataService: DataService) {}
+  ngOnInit() {
+    this.collapseInfo = this.dataService.getCollapseInfo();
+  }
 }
