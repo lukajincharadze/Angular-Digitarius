@@ -30,16 +30,16 @@ export class FooterComponent {
     {
       title: 'გამოყენებები',
       list1: 'გაყიდვები',
-      list2: 'HR',
+      list2: 'ლოჯისტიკა',
       list3: 'შესყიდვები',
-      list4: 'ფრონტ ოფისი',
+      list4: 'მართვა',
       list5: 'ფინანსები',
     },
   ];
   arr2: any[] = [
     {
       title: 'რესურსები',
-      list1: 'ბლოგი',
+      list1: 'მენეჯმენტი',
       list2: 'ლეგალურობა',
       list3: 'უსაფრთხოება',
       list4: 'დახმარება',
@@ -50,10 +50,10 @@ export class FooterComponent {
     {
       title: 'კომპანია',
       list1: 'ჩვენს შესახებ',
-      list2: 'ტური',
+      list2: 'არქივი',
       list3: 'კონტაქტი',
       list4: 'ფასი',
-      list5: 'შესაბამისობა',
+      list5: 'ექსელი',
     },
   ];
 }
