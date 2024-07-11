@@ -25,7 +25,7 @@ import { CommonModule } from '@angular/common';
   styleUrl: './footer.component.scss',
 })
 export class FooterComponent {
-  contact: string = 'conatct@signify.ge';
+  contact: string = 'conatct@archive.ge';
   arr: any[] = [
     {
       title: 'გამოყენებები',

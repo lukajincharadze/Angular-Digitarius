@@ -39,6 +39,7 @@ $signify-theme: mat.define-theme(
 @import url("//cdn.web-fonts.ge/fonts/bpg-arial/css/bpg-arial.min.css");
 @import "primeng/resources/themes/lara-light-blue/theme.css";
 @import "primeng/resources/primeng.css";
+@import "../src/assets/styles/variables.scss";
 * {
   box-sizing: border-box;
   padding: 0px;

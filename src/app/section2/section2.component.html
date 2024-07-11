@@ -1,17 +1,20 @@
 <section class="body">
   <div class="body-container">
-    <h2 class="body-container-title">შენი ყველა დოკუმენტი ერთ პლატფორმაზე</h2>
+    <h2 class="body-container-title">
+      ყუთბის/პაკეტების და დოკუმენტების გამოთხოვა
+    </h2>
   </div>
 
   <div class="body-collapse-div">
     <div class="body-collapse-div-accordion">
       <mat-accordion>
-        <ng-container *ngFor="let collapseInfo of collapseInfo">
+        <ng-container *ngFor="let item of collapseInfo; let i = index">
           <mat-expansion-panel
             (opened)="panelOpenState.set(true)"
             (closed)="panelOpenState.set(false)"
-            expanded="true"
-            hideToggle=""
+            (click)="changePic(i)"
+            [expanded]="i == 0"
+            hideToggle="false"
             class="body-collapse-panel"
           >
             <mat-expansion-panel-header
@@ -23,29 +26,28 @@
                 style="margin: 0"
               >
                 <div class="body-collapse-panel-title-div">
-                  <!-- <app-collapse-logo1></app-collapse-logo1> -->
-                  <img
-                    [src]="collapseInfo.imgUrl"
-                    alt="img"
-                    style="padding-right: 10px"
-                    [ngStyle]="{ color: collapseInfo.imgColor }"
-                  />
-                  {{ collapseInfo.Title }}
+                  <app-collapse-logo1 *ngIf="i == 0"></app-collapse-logo1>
+                  <app-collapse-logo2 *ngIf="i == 1"></app-collapse-logo2>
+                  <app-collapse-logo3 *ngIf="i == 2"></app-collapse-logo3>
+                  <app-collapse-logo4 *ngIf="i == 3"></app-collapse-logo4>
+                  <app-collapse-logo5 *ngIf="i == 4"></app-collapse-logo5>
+
+                  {{ item.Title }}
                 </div>
               </mat-panel-title>
             </mat-expansion-panel-header>
             <p>
-              {{ collapseInfo.Desc }}
+              {{ item.Desc }}
             </p>
             <a href="#" class="body-collapse-panel-button">{{
-              collapseInfo.learnMore
+              item.learnMore
             }}</a>
           </mat-expansion-panel>
         </ng-container>
       </mat-accordion>
     </div>
     <div class="body-collapse-img">
-      <img src="../../assets/img/collapse1.jpg" alt="collapse1" />
+      <img [src]="collapseInfo[collapseImg].picUrl" alt="collapsePic" />
     </div>
   </div>
 </section>

@@ -1,3 +1,5 @@
+@import url("../../assets/styles/variables.scss");
+
 .body {
   &-container {
     &-title {
@@ -60,10 +62,11 @@
       font-family: "BPG Arial", sans-serif;
       margin-left: 10px;
       font-size: 16px;
+      font-weight: bold;
       border: none;
       text-decoration: none;
       background-color: transparent;
-      color: #6c6efb;
+      color: var(--mainColor);
       cursor: pointer;
     }
     border: none;

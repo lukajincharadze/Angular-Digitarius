@@ -1,9 +1,11 @@
+@import url("../../../assets/styles/variables.scss");
+
 .container {
   max-width: 1200px;
   margin: 0px auto;
   padding: 70px 0px 100px;
   h2 {
-    color: rgb(255, 255, 255);
+    color: var(--white);
     font-size: 36px;
     line-height: normal;
     text-align: center;
@@ -18,7 +20,7 @@
   height: 280px;
   padding: 30px;
   border-radius: 10px;
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: var(--mainColor);
   display: flex;
   -webkit-box-pack: end;
   justify-content: flex-start;
@@ -37,7 +39,7 @@
     font-size: 120px;
     line-height: normal;
     font-weight: bolder;
-    color: rgb(255, 255, 255);
+    color: var(--white);
     small {
       font-size: 70px;
       line-height: normal;
@@ -52,7 +54,7 @@
   font-family: "BPG Arial", sans-serif;
   font-size: 26px;
   line-height: normal;
-  color: rgb(195, 209, 229);
+  color: var(--white);
   text-transform: capitalize;
 }
 

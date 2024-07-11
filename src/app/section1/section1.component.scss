@@ -1,12 +1,12 @@
 .body {
-  background-color: rgb(28, 50, 82);
+  background-color: #f3f6fa;
   font-family: "Roboto", sans-serif;
   &-container {
     max-width: 1200px;
     margin: 0px auto;
     padding: 70px 0px 100px;
     h2 {
-      color: rgb(255, 255, 255);
+      color: #1c3252;
       font-size: 36px;
       line-height: normal;
       text-align: center;
@@ -38,7 +38,7 @@
       font-size: 120px;
       line-height: normal;
       font-weight: bolder;
-      color: rgb(255, 255, 255);
+      color: #1c3252;
       small {
         font-size: 70px;
         line-height: normal;

@@ -1,17 +1,19 @@
+@import url("../../assets/styles/variables.scss");
+
 .try-free-btn1,
 .try-free-btn2 {
   cursor: pointer;
   font-family: "BPG Arial", sans-serif;
   font-weight: bold;
-  color: #fff;
-  background-color: #2dc302;
-  border: 1px solid #fff;
+  color: var(--white);
+  background-color: var(--mainColor);
+  border: 1px solid var(--white);
   letter-spacing: 1.7;
   border-radius: 3px;
   padding: 10px 40px;
   transition: all 0.3s;
   &:hover {
-    background-color: #32d704;
+    background-color: var(--clickedmainColor);
   }
   margin-bottom: 15px;
 }
@@ -84,12 +86,12 @@
 }
 
 .try-free-btn2 {
-  background-color: #fff;
-  color: #6c6bfb;
-  border: 1px solid #6c6bfb;
+  background-color: var(--white);
+  color: var(--mainColor);
+  border: 1px solid var(--mainColor);
   &:hover {
-    background-color: #6c6bfb;
-    color: #fff;
+    background-color: var(--mainColor);
+    color: var(--white);
   }
 }
 

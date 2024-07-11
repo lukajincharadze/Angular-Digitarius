@@ -1,3 +1,5 @@
+@import url("../../assets/styles/variables.scss");
+
 .section3 {
   width: 100%;
   height: 420px;
@@ -22,7 +24,7 @@
         text-align: center;
       }
       &-1 {
-        color: #2dc302;
+        color: var(--mainColor);
         font-weight: bold;
       }
       &-2 {
@@ -45,7 +47,7 @@
           color: #bfbfc7;
         }
         &:hover {
-          border-color: #2dc302;
+          border-color: var(--mainColor);
         }
         &:focus,
         &:active,
@@ -78,12 +80,12 @@
           border-top-right-radius: 2px;
           border-bottom-right-radius: 2px;
           color: #fff;
-          background-color: #2dc302;
+          background-color: var(--mainColor);
           margin-top: 10px;
           transition: all 0.3s;
           cursor: pointer;
           &:hover {
-            background-color: #2fda00;
+            background-color: var(--clickedmainColor);
           }
         }
       }
@@ -104,7 +106,7 @@
 }
 
 .clicked {
-  background-color: #9fdc8b;
+  background-color: var(--clickedmainColor);
   pointer-events: none;
 }
 .incorrect {

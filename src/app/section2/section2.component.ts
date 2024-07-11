@@ -1,11 +1,5 @@
-import {
-  ChangeDetectionStrategy,
-  Component,
-  ViewChild,
-  signal,
-  viewChild,
-} from '@angular/core';
-import { MatAccordion, MatExpansionModule } from '@angular/material/expansion';
+import { ChangeDetectionStrategy, Component, signal } from '@angular/core';
+import { MatExpansionModule } from '@angular/material/expansion';
 import { CollapseLogo1Component } from '../iconComponents/collapse-logo1/collapse-logo1.component';
 import { CollapseLogo2Component } from '../iconComponents/collapse-logo2/collapse-logo2.component';
 import { CollapseLogo3Component } from '../iconComponents/collapse-logo3/collapse-logo3.component';
@@ -32,6 +26,11 @@ import { CommonModule } from '@angular/common';
 })
 export class Section2Component {
   readonly panelOpenState = signal(false);
+
+  collapseImg: number = 0;
+  changePic(i: number) {
+    this.collapseImg = i;
+  }
 
   collapseInfo: any[] = [];
   constructor(private dataService: DataService) {}

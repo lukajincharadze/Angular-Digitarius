@@ -12,7 +12,7 @@ import { DataService } from '../core/data.service';
   styleUrl: './section4.component.scss',
 })
 export class Section4Component {
-  arr: any[] = ['გაყიდვები', 'შესყიდვები', 'HR', 'ფინანსები', 'ფრონტ ოფისი'];
+  arr: any[] = ['ექსელი', 'მენეჯმენტი', 'აღრიცხვა', 'აღწერა', 'კლასი'];
   useCaseInfo: any[] = [];
   i: number = 0;
   constructor(private dataService: DataService) {}
