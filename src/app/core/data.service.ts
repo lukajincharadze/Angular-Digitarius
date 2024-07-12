@@ -15,18 +15,18 @@ export class DataService {
   getStatisticInfo() {
     return [
       {
-        title: '5<small>x</small>',
-        text: 'სწრაფი პროცესი',
+        title: 'აღრიცხვა',
+        text: 'პაკეტირება',
         logo: '../../assets/img/stat-logo1.svg',
       },
       {
-        title: '70<small>%</small>',
-        text: 'შემცირებული ხარჯი',
+        title: 'შემოწმება<small></small>',
+        text: 'დახარვეზება',
         logo: '../../assets/img/stat-logo2.svg',
       },
       {
-        title: '1<small>დღე</small>',
-        text: 'დასანერგად',
+        title: 'სანდო<small></small>',
+        text: 'მხარდაჭერა',
         logo: '../../assets/img/stat-logo3.svg',
       },
     ];

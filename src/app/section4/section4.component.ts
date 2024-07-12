@@ -14,7 +14,7 @@ import { DataService } from '../core/data.service';
 export class Section4Component {
   arr: any[] = ['ექსელი', 'მენეჯმენტი', 'აღრიცხვა', 'აღწერა', 'კლასი'];
   useCaseInfo: any[] = [];
-  i: number = 0;
+  num: number = 0;
   constructor(private dataService: DataService) {}
 
   ngOnInit() {
@@ -22,6 +22,6 @@ export class Section4Component {
   }
 
   eventHandler(index: any) {
-    this.i = index;
+    this.num = index;
   }
 }

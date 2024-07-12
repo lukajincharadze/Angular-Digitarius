@@ -36,16 +36,19 @@
   display: flex;
   align-items: flex-start;
   h4 {
-    font-size: 120px;
+    font-family: "BPG Arial", sans-serif;
+    font-size: 50px;
     line-height: normal;
     font-weight: bolder;
     color: var(--white);
+
     small {
       font-size: 70px;
       line-height: normal;
     }
   }
   svg {
+    padding-top: 30px;
     font-size: 65px;
     min-width: 65px;
   }
@@ -62,7 +65,7 @@
   width: 60px;
   height: 60px;
   position: absolute;
-  top: 0px;
+  bottom: 0px;
   right: 0px;
   img {
     width: 100%;
@@ -73,7 +76,7 @@
 
 @media screen and (max-width: 1000px) {
   .stat > h4 {
-    font-size: 70px !important;
+    font-size: 30px !important;
   }
   .image-wraper {
     width: 40px;

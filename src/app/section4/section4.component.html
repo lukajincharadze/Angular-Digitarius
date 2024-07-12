@@ -5,8 +5,8 @@
       <ng-container *ngFor="let item of arr; let i = index">
         <app-button
           [ngStyle]="{
-            backgroundColor: i === i ? '#f26724' : '#fff',
-            color: i === i ? '#FFF' : '#1C3252'
+            backgroundColor: i == num ? '#f26724' : '#fff',
+            color: i === num ? '#FFF' : '#1C3252'
           }"
           [text]="item"
           (changeData)="eventHandler($event)"
@@ -17,9 +17,9 @@
     </div>
     <ng-container>
       <app-dynamic-content
-        [img]="useCaseInfo[i].img"
-        [text]="useCaseInfo[i].text"
-        [title]="useCaseInfo[i].title"
+        [img]="useCaseInfo[num].img"
+        [text]="useCaseInfo[num].text"
+        [title]="useCaseInfo[num].title"
       ></app-dynamic-content>
     </ng-container>
   </div>
