@@ -23,6 +23,7 @@ import { CollapseLogo3Component } from '../iconComponents/collapse-logo3/collaps
 import { CollapseLogo4Component } from '../iconComponents/collapse-logo4/collapse-logo4.component';
 import { CollapseLogo5Component } from '../iconComponents/collapse-logo5/collapse-logo5.component';
 import { DataService } from '../core/data.service';
+import { DialogComponent } from '../sharedComponents/dialog/dialog.component';
 
 @Component({
   selector: 'app-section2',
@@ -40,6 +41,7 @@ import { DataService } from '../core/data.service';
     CollapseLogo3Component,
     CollapseLogo4Component,
     CollapseLogo5Component,
+    DialogComponent,
   ],
   changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: './section2.component.html',
@@ -49,9 +51,9 @@ export class Section2Component {
   readonly panelOpenState = signal(false);
   collapseImg: number = 0;
   collapseInfo: any[] = [];
+  dialogPopup: boolean = false;
 
   readonly mail = signal('');
-  readonly name = model('');
   readonly dialog = inject(MatDialog);
 
   constructor(private dataService: DataService) {}
@@ -64,71 +66,7 @@ export class Section2Component {
     this.collapseImg = i;
   }
 
-  openDialog(): void {
-    const dialogRef = this.dialog.open(DialogOverviewExampleDialog, {
-      data: { name: this.name(), mail: this.mail() },
-    });
-
-    dialogRef.afterClosed().subscribe((result) => {
-      if (result !== undefined) {
-        this.mail.set(result);
-      }
-    });
+  toggleDialogPopup() {
+    this.dialogPopup = !this.dialogPopup;
   }
-}
-
-@Component({
-  selector: 'dialog-overview-example-dialog',
-  template: `
-    <mat-dialog-content class="dialog">
-      <p class="dialog-title">გთხოვთ შეიყვანოთ თქვენი მონაცემები</p>
-      <div class="dialog-wrapper">
-        <mat-form-field>
-          <mat-label>სახელი</mat-label>
-          <input matInput [(ngModel)]="name" />
-        </mat-form-field>
-        <mat-form-field>
-          <mat-label>ელფოსტა</mat-label>
-          <input matInput [(ngModel)]="mail" />
-        </mat-form-field>
-      </div>
-    </mat-dialog-content>
-    <mat-dialog-actions class="dialog-btnWrapper">
-      <button (click)="onNoClick()" class="dialog-btnWrapper-button">
-        გაუქმება
-      </button>
-      <button
-        [mat-dialog-close]="mail()"
-        class="dialog-btnWrapper-button"
-        cdkFocusInitial
-      >
-        გაგზავნა
-      </button>
-    </mat-dialog-actions>
-  `,
-  styleUrl: './section2.component.scss',
-
-  standalone: true,
-  imports: [
-    MatFormFieldModule,
-    MatInputModule,
-    FormsModule,
-    MatButtonModule,
-    MatDialogModule,
-  ],
-})
-export class DialogOverviewExampleDialog {
-  readonly dialogRef = inject(MatDialogRef<DialogOverviewExampleDialog>);
-  readonly data = inject<DialogData>(MAT_DIALOG_DATA);
-  readonly mail = model(this.data.mail);
-  readonly name = model(this.data.mail);
-
-  onNoClick(): void {
-    this.dialogRef.close();
-  }
-}
-
-export interface DialogData {
-  mail: string;
-  name: string;
 }

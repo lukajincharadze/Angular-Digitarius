@@ -1,0 +1,14 @@
+<div class="overlay" *ngIf="dialogPopup">
+  <div class="div">
+    <div class="div-wraperInfo">
+      <h3>გთხოვთ შეიყვანოთ თქვენი მონაცემი</h3>
+      <div class="div-wraperInfo-mail">
+        <input type="text" placeholder="მეილი" />
+      </div>
+    </div>
+    <div class="div-btn">
+      <button (click)="closeDialogPopup()">გაუქმება</button>
+      <button (click)="closeDialogPopup()">გაგზავნა</button>
+    </div>
+  </div>
+</div>

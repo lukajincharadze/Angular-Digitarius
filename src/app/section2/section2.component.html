@@ -39,7 +39,9 @@
             <p>
               {{ item.Desc }}
             </p>
-            <button (click)="openDialog()" class="learnMore">გაიგე მეტი</button>
+            <button (click)="toggleDialogPopup()" class="learnMore">
+              გაიგე მეტი
+            </button>
           </mat-expansion-panel>
         </ng-container>
       </mat-accordion>
@@ -49,3 +51,7 @@
     </div>
   </div>
 </section>
+
+<ng-container *ngIf="dialogPopup">
+  <app-dialog></app-dialog>
+</ng-container>
