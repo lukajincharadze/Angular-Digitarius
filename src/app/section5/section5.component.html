@@ -18,7 +18,13 @@
               <p class="section-div-info">
                 {{ product.description }}
               </p>
-              <a href="#" class="section-div-btn">გაიგე მეტი</a>
+              <button
+                class="section-div-btn"
+                (click)="toggleDialogPopup()"
+                class="learnMore"
+              >
+                გაიგე მეტი
+              </button>
               <div class="section-div-profileDiv">
                 <div>
                   <div class="section-div-profileDiv-profilepic">
@@ -39,22 +45,6 @@
     </div>
   </div>
 </section>
-
-<!-- 
-<div>
-    <img src="../../assets/img/profilelogo1.webp" alt="logo" />
-    <p>
-      ,,Signify-ს სისტემაზე გადასვლით კომპანიის ყოველდღიურობიდან
-      გამოთავისუფლდა უდიდესი დრო და ენერგია. Signify-ს გუნდი თითოეულ ჩვენ
-      თხოვნას უდიდესი ყურადღებით უდგება, რაც პროდუქტის მუდმივი განახლების და
-      განვითარების საწინდარია."
-    </p>
-    <a href="#">გაიგე მეტი</a>
-    <div>
-      <div>
-        <img src="../../assets/img/profilepic1.webp" alt="img" />
-      </div>
-      <h4>გიორგი ნოზაძე</h4>
-      <p>პროექტების კორდინატორი</p>
-    </div>
-  </div> -->
+<ng-container *ngIf="dialogPopup">
+  <app-dialog></app-dialog>
+</ng-container>

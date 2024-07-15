@@ -4,17 +4,25 @@ import { CarouselModule } from 'primeng/carousel';
 import { ButtonModule } from 'primeng/button';
 import { TagModule } from 'primeng/tag';
 import { CommonModule } from '@angular/common';
+import { DialogComponent } from '../sharedComponents/dialog/dialog.component';
 
 @Component({
   selector: 'app-section5',
   templateUrl: './section5.component.html',
   styleUrl: './section5.component.scss',
   standalone: true,
-  imports: [CarouselModule, ButtonModule, TagModule, CommonModule],
+  imports: [
+    CarouselModule,
+    ButtonModule,
+    TagModule,
+    CommonModule,
+    DialogComponent,
+  ],
   providers: [ProductService],
 })
 export class Section5Component implements OnInit {
   products: any[] = [];
+  dialogPopup: boolean = false;
 
   responsiveOptions: any[] = [
     {
@@ -48,5 +56,9 @@ export class Section5Component implements OnInit {
       default:
         return 'info';
     }
+  }
+
+  toggleDialogPopup() {
+    this.dialogPopup = !this.dialogPopup;
   }
 }

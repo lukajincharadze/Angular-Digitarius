@@ -5,6 +5,10 @@
   <div class="div-wrapper-content">
     <h1>{{ title }}</h1>
     <p>{{ text }}</p>
-    <a href="#">{{ btnText }}</a>
+    <button (click)="toggleDialogPopup()" class="learnMore">გაიგე მეტი</button>
   </div>
 </div>
+
+<ng-container *ngIf="dialogPopup">
+  <app-dialog></app-dialog>
+</ng-container>
