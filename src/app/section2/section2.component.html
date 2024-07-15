@@ -39,9 +39,7 @@
             <p>
               {{ item.Desc }}
             </p>
-            <a href="#" class="body-collapse-panel-button">{{
-              item.learnMore
-            }}</a>
+            <button (click)="openDialog()" class="learnMore">გაიგე მეტი</button>
           </mat-expansion-panel>
         </ng-container>
       </mat-accordion>
