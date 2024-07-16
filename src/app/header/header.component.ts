@@ -39,7 +39,7 @@ export class HeaderComponent {
   }
 
   playVideo() {
-    const videoElement = this.videoPlayer?.nativeElement;
+    const videoElement = this.videoPlayer?.nativeElement as HTMLVideoElement;
     videoElement.play();
   }
 }
