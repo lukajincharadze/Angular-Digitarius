@@ -23,7 +23,6 @@ export class Section3Component {
   }
   request() {
     let data = { userMail: this.userMail };
-    console.log(this.userMail);
 
     this.validateEmail(this.userMail);
     if (this.validateEmail(this.userMail)) {

@@ -2,13 +2,22 @@
   <div class="div">
     <div class="div-wraperInfo">
       <h3>გთხოვთ შეიყვანოთ თქვენი მონაცემი</h3>
-      <div class="div-wraperInfo-mail">
-        <input type="text" placeholder="მეილი" />
+      <div class="div-wraperInfo-box">
+        <div class="div-wraperInfo-mail">
+          <input
+            type="text"
+            placeholder="მეილი"
+            [ngClass]="{ incorrect: invalid }"
+            [(ngModel)]="userMail"
+          />
+          <textarea [(ngModel)]="textareaContent" rows="5" cols="30"></textarea>
+          <br />
+        </div>
       </div>
     </div>
     <div class="div-btn">
       <button (click)="closeDialogPopup()">გაუქმება</button>
-      <button (click)="closeDialogPopup()">გაგზავნა</button>
+      <button (click)="request()" [disabled]="disabled">გაგზავნა</button>
     </div>
   </div>
 </div>

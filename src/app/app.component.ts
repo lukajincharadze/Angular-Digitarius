@@ -11,6 +11,8 @@ import { CollapseLogo1Component } from './iconComponents/collapse-logo1/collapse
 import { Section6Component } from './section6/section6.component';
 import { FormsModule } from '@angular/forms';
 import { FooterComponent } from './footer/footer.component';
+import { StatesService } from './core/states.service';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-root',
@@ -34,4 +36,15 @@ import { FooterComponent } from './footer/footer.component';
 })
 export class AppComponent {
   title = 'signify';
+  subscription: Subscription = new Subscription();
+
+  constructor(private stateService: StatesService) {}
+
+  ngOnInit() {
+    this.subscription.add(
+      this.stateService.isOpen$.subscribe((res: any) => {
+        document.body.style.overflow = res ? 'hidden' : 'auto';
+      })
+    );
+  }
 }
