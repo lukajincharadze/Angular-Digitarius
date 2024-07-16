@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -31,4 +31,13 @@ export class HeaderComponent {
       alt: 'tbc',
     },
   ];
+  @ViewChild('videoPlayer') videoPlayer: any;
+
+  ngAfterViewInit() {
+    this.playVideo();
+  }
+
+  playVideo() {
+    this.videoPlayer.nativeElement.play();
+  }
 }
