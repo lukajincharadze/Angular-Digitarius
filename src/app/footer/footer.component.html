@@ -15,7 +15,8 @@
       </div>
       <p class="footer-topDiv-left-contact">{{ contact }}</p>
       <div class="footer-topDiv-left-lang">
-        <app-glope-svg></app-glope-svg>Georgian<app-arr-svg></app-arr-svg>
+        <app-glope-svg></app-glope-svg>{{ langs.lang[index]
+        }}<app-arr-svg></app-arr-svg>
       </div>
     </div>
     <div class="footer-topDiv-right">
@@ -63,8 +64,8 @@
         <p class="footer-subDiv-div-left-p">© Archive 2024</p>
       </div>
       <div class="footer-subDiv-div-right">
-        <a href="#">მომს. პირობები</a>
-        <a href="#">კონფ. პოლიტიკა</a>
+        <a href="#">{{ langs.footerDesc1[index] }}</a>
+        <a href="#">{{ langs.footerDesc2[index] }}</a>
       </div>
     </div>
   </div>

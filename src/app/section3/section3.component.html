@@ -1,14 +1,14 @@
 <section class="section3">
   <div class="section3-div">
     <div class="section3-div-title">
-      <p class="section3-div-title-1">სცადე შენ თვითონ,</p>
-      <p class="section3-div-title-2">გადაამოწმე ყუთები ლოკალურად</p>
+      <p class="section3-div-title-1">{{ langs.section3Title1[index] }}</p>
+      <p class="section3-div-title-2">{{ langs.section3Title2[index] }}</p>
       <div class="section3-div-title-logoWraper">
         <app-section3-logo></app-section3-logo>
         <div class="section3-div-title-logoWraper-div">
           <input
             type="email"
-            placeholder="შეიყვანე ელ.ფოსტა"
+            [placeholder]="langs.section3InputTitle[index]"
             class="section3-div-title-input"
             [(ngModel)]="userMail"
             [ngClass]="{ incorrect: invalid }"
@@ -19,7 +19,7 @@
             [disabled]="disabled"
             [ngClass]="{ clicked: disabled }"
           >
-            გაგზავნა
+            {{ langs.section3SendBtn[index] }}
           </button>
         </div>
       </div>

@@ -5,6 +5,7 @@ import { ButtonModule } from 'primeng/button';
 import { TagModule } from 'primeng/tag';
 import { CommonModule } from '@angular/common';
 import { DialogComponent } from '../sharedComponents/dialog/dialog.component';
+import { TranslationService } from '../core/translation.service';
 
 @Component({
   selector: 'app-section5',
@@ -23,6 +24,8 @@ import { DialogComponent } from '../sharedComponents/dialog/dialog.component';
 export class Section5Component implements OnInit {
   products: any[] = [];
   dialogPopup: boolean = false;
+  langs: any = {};
+  index: number = 324213523;
 
   responsiveOptions: any[] = [
     {
@@ -37,12 +40,17 @@ export class Section5Component implements OnInit {
     },
   ];
 
-  constructor(private productService: ProductService) {}
+  constructor(
+    private productService: ProductService,
+    private translationService: TranslationService
+  ) {}
 
   ngOnInit() {
     this.productService.getProductsSmall().then((products) => {
       this.products = products;
     });
+    this.langs = this.translationService.langs;
+    this.index = this.translationService.index;
   }
 
   getSeverity(status: string) {

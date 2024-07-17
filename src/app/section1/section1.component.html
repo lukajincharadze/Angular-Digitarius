@@ -1,6 +1,8 @@
 <section class="body">
   <div class="body-container">
-    <h2>ჩატარებული ინვენტარიზაციების სრული ისტორია</h2>
+    <h2>
+      {{ langs.section1Title[index] }}
+    </h2>
     <div class="body-charts">
       <ng-container *ngFor="let item of statInfo">
         <app-card-component

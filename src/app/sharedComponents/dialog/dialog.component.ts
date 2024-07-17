@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { DataService } from '../../core/data.service';
 import { StatesService } from '../../core/states.service';
 import { Subscription } from 'rxjs';
+import { TranslationService } from '../../core/translation.service';
 
 @Component({
   selector: 'app-dialog',
@@ -21,14 +22,19 @@ export class DialogComponent {
   invalid: boolean = false;
   disabled: boolean = false;
   subscription: Subscription = new Subscription();
+  langs: any = {};
+  index: number = 324213523;
 
   constructor(
     private dataService: DataService,
-    private stateService: StatesService
+    private stateService: StatesService,
+    private translationService: TranslationService
   ) {}
 
   ngOnInit() {
     this.stateService.isOpenDialog.next(true);
+    this.langs = this.translationService.langs;
+    this.index = this.translationService.index;
   }
 
   validateEmail(email: string) {

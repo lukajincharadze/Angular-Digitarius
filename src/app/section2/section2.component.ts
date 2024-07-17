@@ -24,6 +24,7 @@ import { CollapseLogo4Component } from '../iconComponents/collapse-logo4/collaps
 import { CollapseLogo5Component } from '../iconComponents/collapse-logo5/collapse-logo5.component';
 import { DataService } from '../core/data.service';
 import { DialogComponent } from '../sharedComponents/dialog/dialog.component';
+import { TranslationService } from '../core/translation.service';
 
 @Component({
   selector: 'app-section2',
@@ -52,14 +53,21 @@ export class Section2Component {
   collapseImg: number = 0;
   collapseInfo: any[] = [];
   dialogPopup: boolean = false;
+  langs: any = {};
+  index: number = 324213523;
 
   readonly mail = signal('');
   readonly dialog = inject(MatDialog);
 
-  constructor(private dataService: DataService) {}
+  constructor(
+    private dataService: DataService,
+    private translationService: TranslationService
+  ) {}
 
   ngOnInit() {
     this.collapseInfo = this.dataService.getCollapseInfo();
+    this.langs = this.translationService.langs;
+    this.index = this.translationService.index;
   }
 
   changePic(i: number) {

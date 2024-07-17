@@ -3,6 +3,7 @@ import { ButtonComponent } from '../sharedComponents/button/button.component';
 import { CommonModule } from '@angular/common';
 import { DynamicContentComponent } from '../sharedComponents/dynamic-content/dynamic-content.component';
 import { DataService } from '../core/data.service';
+import { TranslationService } from '../core/translation.service';
 
 @Component({
   selector: 'app-section4',
@@ -15,10 +16,18 @@ export class Section4Component {
   arr: any[] = ['ექსელი', 'მენეჯმენტი', 'აღრიცხვა', 'აღწერა', 'კლასი'];
   useCaseInfo: any[] = [];
   num: number = 0;
-  constructor(private dataService: DataService) {}
+  langs: any = {};
+  index: number = 324213523;
+
+  constructor(
+    private dataService: DataService,
+    private translationService: TranslationService
+  ) {}
 
   ngOnInit() {
     this.useCaseInfo = this.dataService.useCaseInfo();
+    this.langs = this.translationService.langs;
+    this.index = this.translationService.index;
   }
 
   eventHandler(index: any) {

@@ -3,6 +3,7 @@ import { Section3LogoComponent } from '../iconComponents/section3-logo/section3-
 import { FormsModule } from '@angular/forms';
 import { DataService } from '../core/data.service';
 import { CommonModule } from '@angular/common';
+import { TranslationService } from '../core/translation.service';
 
 @Component({
   selector: 'app-section3',
@@ -15,8 +16,13 @@ export class Section3Component {
   userMail: string = '';
   disabled: boolean = false;
   invalid: boolean = false;
+  langs: any = {};
+  index: number = 324213523;
 
-  constructor(private dataService: DataService) {}
+  constructor(
+    private dataService: DataService,
+    private translationService: TranslationService
+  ) {}
   validateEmail(email: string) {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return emailRegex.test(email);
@@ -40,5 +46,10 @@ export class Section3Component {
       }
     );
     this.disabled = true;
+  }
+
+  ngOnInit() {
+    this.langs = this.translationService.langs;
+    this.index = this.translationService.index;
   }
 }

@@ -3,21 +3,23 @@
     <div class="sub-1-logo">
       <img src="../../assets/img/ugtLogo.png" alt="img" />
     </div>
-    <p class="nav-title">ლოჯისტიკა</p>
-    <p class="nav-title">გამოთხოვა</p>
-    <p class="nav-title">ყუთები</p>
-    <p class="nav-title">ფასი</p>
+    <p class="nav-title">{{ langs.nav1[index] }}</p>
+    <p class="nav-title">{{ langs.nav2[index] }}</p>
+    <p class="nav-title">{{ langs.nav3[index] }}</p>
+    <p class="nav-title">{{ langs.nav4[index] }}</p>
   </div>
   <div class="sub-2">
     <ul class="sub-2-ul">
       <p class="geo">
-        <li><i class="fa-solid fa-globe"></i>&nbsp;Geo</li>
+        <li (click)="changeText()">
+          <i class="fa-solid fa-globe"></i>&nbsp;<span>{{ text }}</span>
+        </li>
       </p>
       <p class="nav-title">
-        <li>შესვლა</li>
+        <li>{{ langs.navSignIn[index] }}</li>
       </p>
       <div class="try-free-btn">
-        <li>პაკეტები</li>
+        <li>{{ langs.navPackets[index] }}</li>
       </div>
     </ul>
     <ul class="bar" style="display: none">

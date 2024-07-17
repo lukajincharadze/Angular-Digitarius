@@ -1,23 +1,31 @@
 <div class="overlay" *ngIf="dialogPopup">
   <div class="div">
     <div class="div-wraperInfo">
-      <h3>გთხოვთ შეიყვანოთ თქვენი მონაცემი</h3>
+      <h3>{{ langs.dialogTitle[index] }}</h3>
       <div class="div-wraperInfo-box">
         <div class="div-wraperInfo-mail">
           <input
             type="text"
-            placeholder="მეილი"
+            [placeholder]="langs.dialogMail[index]"
             [ngClass]="{ incorrect: invalid }"
             [(ngModel)]="userMail"
           />
-          <textarea [(ngModel)]="textareaContent" rows="5" cols="30"></textarea>
+          <textarea
+            [(ngModel)]="langs.dialogDesc[index]"
+            rows="5"
+            cols="30"
+          ></textarea>
           <br />
         </div>
       </div>
     </div>
     <div class="div-btn">
-      <button (click)="closeDialogPopup()">გაუქმება</button>
-      <button (click)="request()" [disabled]="disabled">გაგზავნა</button>
+      <button (click)="closeDialogPopup()">
+        {{ langs.dialogBtn[index] }}
+      </button>
+      <button (click)="request()" [disabled]="disabled">
+        {{ langs.dialogBtn2[index] }}
+      </button>
     </div>
   </div>
 </div>

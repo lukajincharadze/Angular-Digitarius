@@ -13,6 +13,7 @@ import { FormsModule } from '@angular/forms';
 import { FooterComponent } from './footer/footer.component';
 import { StatesService } from './core/states.service';
 import { Subscription } from 'rxjs';
+import { TranslationService } from './core/translation.service';
 
 @Component({
   selector: 'app-root',

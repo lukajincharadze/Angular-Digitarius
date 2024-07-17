@@ -1,7 +1,7 @@
 <section class="body">
   <div class="body-container">
     <h2 class="body-container-title">
-      ყუთბის/პაკეტების და დოკუმენტების გამოთხოვა
+      {{ langs.section2Title[index] }}
     </h2>
   </div>
 
@@ -40,7 +40,7 @@
               {{ item.Desc }}
             </p>
             <button (click)="toggleDialogPopup()" class="learnMore">
-              გაიგე მეტი
+              {{ langs.learnMore[index] }}
             </button>
           </mat-expansion-panel>
         </ng-container>

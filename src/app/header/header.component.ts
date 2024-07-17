@@ -1,45 +1,30 @@
+import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { Component, ElementRef, ViewChild } from '@angular/core';
+import { TranslationService } from '../core/translation.service';
 
 @Component({
   selector: 'app-header',
   standalone: true,
   imports: [CommonModule],
   templateUrl: './header.component.html',
-  styleUrl: './header.component.scss',
+  styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent {
   imageLogo: any[] = [
-    {
-      url: '../../assets/img/Diplomat.jpg',
-      alt: 'diplomat',
-    },
-    {
-      url: '../../assets/img/Icon_Magti.jpg',
-      alt: 'magti',
-    },
-    {
-      url: '../../assets/img/adjarabet.jpg',
-      alt: 'adjarabet',
-    },
-    {
-      url: '../../assets/img/spar.jpg',
-      alt: 'spar',
-    },
-    {
-      url: '../../assets/img/tbc.jpg',
-      alt: 'tbc',
-    },
+    { url: '../../assets/img/Diplomat.jpg', alt: 'diplomat' },
+    { url: '../../assets/img/Icon_Magti.jpg', alt: 'magti' },
+    { url: '../../assets/img/adjarabet.jpg', alt: 'adjarabet' },
+    { url: '../../assets/img/spar.jpg', alt: 'spar' },
+    { url: '../../assets/img/tbc.jpg', alt: 'tbc' },
   ];
-  @ViewChild('videoPlayer') videoPlayer: ElementRef | undefined;
-  constructor() {}
 
-  ngAfterViewInit() {
-    this.playVideo();
-  }
+  langs: any = {};
+  index: number = 324213523;
 
-  playVideo() {
-    const videoElement = this.videoPlayer?.nativeElement as HTMLVideoElement;
-    videoElement.play();
+  constructor(private translationService: TranslationService) {}
+
+  ngOnInit() {
+    this.langs = this.translationService.langs;
+    this.index = this.translationService.index;
   }
 }
