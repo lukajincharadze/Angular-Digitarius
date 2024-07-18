@@ -1,21 +1,43 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs/internal/Observable';
+import { TranslationService } from './translation.service';
+import { Subscription } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
 })
 export class DataService {
-  constructor(private http: HttpClient) {}
+  langs: any = {};
+  index: number = 0;
+  subscription: Subscription = new Subscription();
+
+  constructor(
+    private http: HttpClient,
+    private translationService: TranslationService
+  ) {}
 
   sendData(url: string, data: any): Observable<any> {
     return this.http.post(url, data);
   }
 
+  ngOnInit() {
+    this.langs = this.translationService.langs;
+    this.index = this.translationService.index;
+    this.subscription.add(
+      this.translationService.langStatus$.subscribe((res: any) => {
+        this.index = res;
+      })
+    );
+  }
+
   getStatisticInfo() {
     return [
       {
-        title: 'აღრიცხვა',
+        title:
+          this.translationService.langs.sectionSubTitle1[
+            this.translationService.index
+          ],
         text: 'პაკეტირება',
         logo: '../../assets/img/stat-logo1.svg',
       },

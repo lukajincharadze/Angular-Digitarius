@@ -11,7 +11,7 @@ import { TranslationService } from '../core/translation.service';
 export class NavComponent {
   text: string = 'Geo';
   langs: any = {};
-  index: number = 324213523;
+  index: number = 0;
 
   constructor(private translationService: TranslationService) {}
 
@@ -23,5 +23,7 @@ export class NavComponent {
   changeText() {
     this.text = this.text === 'Geo' ? 'Eng' : 'Geo';
     this.translationService.index = this.translationService.index === 1 ? 0 : 1;
+    this.index = this.translationService.index;
+    this.translationService.changeLang.next(this.index);
   }
 }

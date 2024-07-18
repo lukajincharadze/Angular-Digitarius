@@ -20,9 +20,10 @@ export class Section1Component {
     private dataService: DataService,
     private translationService: TranslationService
   ) {}
+
   ngOnInit() {
-    this.statInfo = this.dataService.getStatisticInfo();
     this.langs = this.translationService.langs;
     this.index = this.translationService.index;
+    this.statInfo = this.dataService.getStatisticInfo();
   }
 }

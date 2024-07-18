@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TranslationService } from '../core/translation.service';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-header',
@@ -18,6 +19,7 @@ export class HeaderComponent {
     { url: '../../assets/img/tbc.jpg', alt: 'tbc' },
   ];
 
+  subscription: Subscription = new Subscription();
   langs: any = {};
   index: number = 324213523;
 
@@ -26,5 +28,10 @@ export class HeaderComponent {
   ngOnInit() {
     this.langs = this.translationService.langs;
     this.index = this.translationService.index;
+    this.subscription.add(
+      this.translationService.langStatus$.subscribe((res: any) => {
+        this.index = res;
+      })
+    );
   }
 }

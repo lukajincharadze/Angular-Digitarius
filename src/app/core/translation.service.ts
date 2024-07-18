@@ -1,10 +1,13 @@
 import { Injectable } from '@angular/core';
+import { BehaviorSubject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
 })
 export class TranslationService {
   index = 1;
+  changeLang: any = new BehaviorSubject<any>(0);
+  langStatus$: any = this.changeLang.asObservable();
 
   langs: any = {
     lang: ['ქართული', 'English'],
@@ -45,6 +48,8 @@ export class TranslationService {
       'ჩატარებული ინვენტარიზაციების სრული ისტორია',
       'Complete history of conducted inventories',
     ],
+
+    sectionSubTitle1: ['აღწერა', 'Description'],
 
     section2Title: [
       'ყუთბის/პაკეტების და დოკუმენტების გამოთხოვა',
