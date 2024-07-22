@@ -54,7 +54,7 @@ export class Section2Component {
   collapseInfo: any[] = [];
   dialogPopup: boolean = false;
   langs: any = {};
-  index: number = 324213523;
+  index: number = 0;
 
   readonly mail = signal('');
   readonly dialog = inject(MatDialog);

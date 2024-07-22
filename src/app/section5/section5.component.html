@@ -16,7 +16,7 @@
                 <img [src]="product.logo" alt="logo" />
               </div>
               <p class="section-div-info">
-                {{ product.description }}
+                {{ product.description[index] }}
               </p>
               <button
                 class="section-div-btn"
@@ -32,9 +32,9 @@
                   </div>
                 </div>
                 <div>
-                  <h4>{{ product.name }}</h4>
+                  <h4>{{ product.name[index] }}</h4>
                   <p class="section-div-profileDiv-profesion">
-                    {{ product.profesion }}
+                    {{ product.profesion[index] }}
                   </p>
                 </div>
               </div>

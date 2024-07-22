@@ -32,12 +32,12 @@
                   <app-collapse-logo4 *ngIf="i == 3"></app-collapse-logo4>
                   <app-collapse-logo5 *ngIf="i == 4"></app-collapse-logo5>
 
-                  {{ item.Title }}
+                  {{ item.Title[index] }}
                 </div>
               </mat-panel-title>
             </mat-expansion-panel-header>
             <p>
-              {{ item.Desc }}
+              {{ item.Desc[index] }}
             </p>
             <button (click)="toggleDialogPopup()" class="learnMore">
               {{ langs.learnMore[index] }}

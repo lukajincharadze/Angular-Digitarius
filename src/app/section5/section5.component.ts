@@ -25,7 +25,7 @@ export class Section5Component implements OnInit {
   products: any[] = [];
   dialogPopup: boolean = false;
   langs: any = {};
-  index: number = 324213523;
+  index: number = 0;
 
   responsiveOptions: any[] = [
     {

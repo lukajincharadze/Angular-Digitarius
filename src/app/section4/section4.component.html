@@ -8,7 +8,7 @@
             backgroundColor: i == num ? '#f26724' : '#fff',
             color: i === num ? '#FFF' : '#1C3252'
           }"
-          [text]="item"
+          [text]="item[index]"
           (changeData)="eventHandler($event)"
           [index]="i"
           style="border-radius: 3px"
@@ -18,8 +18,8 @@
     <ng-container>
       <app-dynamic-content
         [img]="useCaseInfo[num].img"
-        [text]="useCaseInfo[num].text"
-        [title]="useCaseInfo[num].title"
+        [text]="useCaseInfo[num].text[index]"
+        [title]="useCaseInfo[num].title[index]"
       ></app-dynamic-content>
     </ng-container>
   </div>

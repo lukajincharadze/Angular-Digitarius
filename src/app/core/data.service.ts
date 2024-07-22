@@ -34,21 +34,18 @@ export class DataService {
   getStatisticInfo() {
     return [
       {
-        title:
-          this.translationService.langs.sectionSubTitle1[
-            this.translationService.index
-          ],
-        text: 'პაკეტირება',
+        title: ['სწრაფი', 'Immediate'],
+        text: ['პაკეტირება', 'Packaging'],
         logo: '../../assets/img/stat-logo1.svg',
       },
       {
-        title: 'შემოწმება<small></small>',
-        text: 'დახარვეზება',
+        title: ['შემოწმება', 'Verify'],
+        text: ['დახარვეზება', 'Debugging'],
         logo: '../../assets/img/stat-logo2.svg',
       },
       {
-        title: 'სანდო<small></small>',
-        text: 'მხარდაჭერა',
+        title: ['სანდო', 'Reliable'],
+        text: ['მხარდაჭერა', 'Support'],
         logo: '../../assets/img/stat-logo3.svg',
       },
     ];
@@ -58,28 +55,43 @@ export class DataService {
     return [
       {
         img: '../../assets/img/section4Img.webp',
-        title: 'ცხრილების ექსპორტი',
-        text: 'ექსელში (excel) მონაცემების ფილტრებზე დაფუძნებული ექსპორტი,  შემოსული/დაბრუნებული გამოთხოვებისა და დღის რეპორტი ექსელის (excel) ცხრილის სახით. ',
+        title: ['ცხრილების ექსპორტი', 'Export Tables'],
+        text: [
+          'ექსელში (excel) მონაცემების ფილტრებზე დაფუძნებული ექსპორტი,  შემოსული/დაბრუნებული გამოთხოვებისა და დღის რეპორტი ექსელის (excel) ცხრილის სახით.',
+          'Filter-based export of data to Excel, incoming/returned requests and daily report as an Excel table.',
+        ],
       },
       {
         img: '../../assets/img/section4Img2.webp',
-        title: 'დროზე დაკვირვება',
-        text: 'დროის მონაკვეთში განხორცილებულ ქმდებების აღრიცხვა, სერვის ცენტრში მოთხოვნილი ერთულის მიტანისას მომთხოვნზე ერთეულის გადაცემა ',
+        title: ['დროზე დაკვირვება', 'Observing time'],
+        text: [
+          'დროის მონაკვეთში განხორცილებულ ქმდებების აღრიცხვა, სერვის ცენტრში მოთხოვნილი ერთულის მიტანისას მომთხოვნზე ერთეულის გადაცემა',
+          'Recording of the actions performed during the period of time, handing over the requested unit to the requester when the requested unit is delivered to the service center,',
+        ],
       },
       {
         img: '../../assets/img/section4Img3.webp',
-        title: 'პერსონა',
-        text: 'პერსონის მიერ შეტანილი ცვლილებების აღრიცხვა, ბიზნეს პროცესში მონაწილე როლებისთვის საჭირო ფუნქციების მინიჭება  ',
+        title: ['პერსონა', 'Person'],
+        text: [
+          'პერსონის მიერ შეტანილი ცვლილებების აღრიცხვა, ბიზნეს პროცესში მონაწილე როლებისთვის საჭირო ფუნქციების მინიჭება  ',
+          'According to the changes made by the person, assigning the necessary functions to the roles involved in the business process',
+        ],
       },
       {
         img: '../../assets/img/section4Img4.webp',
-        title: 'დეტალიზაცია',
-        text: 'პერსონის მიერ დროის მონაკვეთში განხორციელებული ცვლილებების დეტალიზაცია ',
+        title: ['დეტალიზაცია', 'Detailing'],
+        text: [
+          'პერსონის მიერ დროის მონაკვეთში განხორციელებული ცვლილებების დეტალიზაცია',
+          'Detailing changes made by a person over a period of time',
+        ],
       },
       {
         img: '../../assets/img/section4Img5.webp',
-        title: 'კლასიფიკაცია',
-        text: 'ოთხ ძირითად მოქმედებაზე დაკვირვება: შექმნა, რედაქტირება, წაშლა, ატვირთვა.',
+        title: ['კლასიფიკაცია', 'Classification'],
+        text: [
+          'ოთხ ძირითად მოქმედებაზე დაკვირვება: შექმნა, რედაქტირება, წაშლა, ატვირთვა.',
+          'Observe the four main actions: create, edit, delete, upload.',
+        ],
       },
     ];
   }
@@ -87,41 +99,59 @@ export class DataService {
   getCollapseInfo() {
     return [
       {
-        Title: 'მოთხოვნის რეგისტრირება',
-        Desc: 'არქივიდან ყუთების/პაკეტების/დოკუმენტების სერვის ცენტრში მოტანის მოთხოვნის რეგისტრირება',
-        learnMore: 'გაიგე მეტი',
+        Title: ['მოთხოვნის რეგისტრირება', 'Request registration'],
+        Desc: [
+          'არქივიდან ყუთების/პაკეტების/დოკუმენტების სერვის ცენტრში მოტანის მოთხოვნის რეგისტრირება',
+          'Registering a request to bring boxes/packages/documents from the archive to the service center',
+        ],
+        learnMore: ['გაიგე მეტი', 'Learn more'],
         imgUrl: '../../assets/img/collapseLogo1.svg',
         imgColor: '#2DC302',
         picUrl: '../../assets/img/collapse1.jpg',
       },
       {
-        Title: 'მოთხოვნების მონიტორინგი',
-        Desc: 'პასუხისმგებელი პირებისთვის ჩანართი სადაც გამოჩნდება რეგისტრირებული მოთხოვნები',
-        learnMore: 'გაიგე მეტი',
+        Title: ['მოთხოვნების მონიტორინგი', 'Request Monitoring'],
+        Desc: [
+          'პასუხისმგებელი პირებისთვის ჩანართი სადაც გამოჩნდება რეგისტრირებული მოთხოვნები',
+          'A tab for responsible persons where registered requests will be displayed',
+        ],
+        learnMore: ['გაიგე მეტი', 'Learn more'],
         imgUrl: '../../assets/img/collapseLogo2.svg',
         imgColor: '#6C6EFB',
         picUrl: '../../assets/img/collapse2.jpg',
       },
       {
-        Title: 'რეგისტრირებულების გადამისამართება',
-        Desc: 'მოთხოვნის ტიპის მიხედვით (დედანი/სკანირებული ასლი/დედანთან დამოწმებული ასლი) ერთეულის გადაგზავნა',
-        learnMore: 'გაიგე მეტი',
+        Title: [
+          'რეგისტრირებულების გადამისამართება',
+          'Redirect registered users',
+        ],
+        Desc: [
+          'მოთხოვნის ტიპის მიხედვით (დედანი/სკანირებული ასლი/დედანთან დამოწმებული ასლი) ერთეულის გადაგზავნა',
+          'By request type (original/scanned copy/certified copy) forward the item',
+        ],
+        learnMore: ['გაიგე მეტი', 'Learn more'],
         imgUrl: '../../assets/img/collapseLogo3.svg',
         imgColor: '#FFCD00',
         picUrl: '../../assets/img/collapse3.jpg',
       },
       {
-        Title: 'არქივის საწყობში ძიება',
-        Desc: 'მოთხოვნილი ერთეულის ობიექტზე ორიენტირებული ლოკაციური ძებნა ',
-        learnMore: 'გაიგე მეტი',
+        Title: ['არქივის საწყობში ძიება', 'Search Archive Warehouse'],
+        Desc: [
+          'მოთხოვნილი ერთეულის ობიექტზე ორიენტირებული ლოკაციური ძებნა',
+          'Object-oriented location search for the requested entity',
+        ],
+        learnMore: ['გაიგე მეტი', 'Learn more'],
         imgUrl: '../../assets/img/collapseLogo4.svg',
         imgColor: '#2DC302',
         picUrl: '../../assets/img/collapse4.jpg',
       },
       {
-        Title: 'ლოჯისტიკა',
-        Desc: 'ობიექტების ტრანსპორტირების მართვის მობილურზე მორეგებული აპლიკაცია',
-        learnMore: 'გაიგე მეტი',
+        Title: ['ლოჯისტიკა', 'Logistic'],
+        Desc: [
+          'ობიექტების ტრანსპორტირების მართვის მობილურზე მორეგებული აპლიკაცია',
+          'A mobile-friendly application for object transportation management',
+        ],
+        learnMore: ['გაიგე მეტი', 'Learn more'],
         imgUrl: '../../assets/img/collapseLogo5.svg',
         imgColor: '#6C6EFB',
         picUrl: '../../assets/img/collapse5.jpg',

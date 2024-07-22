@@ -27,39 +27,40 @@ import { TranslationService } from '../core/translation.service';
 })
 export class FooterComponent {
   contact: string = 'conatct@archive.ge';
+  langs: any = {};
+  index: number = 0;
   arr: any[] = [
     {
-      title: 'გამოყენებები',
-      list1: 'გაყიდვები',
-      list2: 'ლოჯისტიკა',
-      list3: 'შესყიდვები',
-      list4: 'მართვა',
-      list5: 'ფინანსები',
-    },
-  ];
-  arr2: any[] = [
-    {
-      title: 'რესურსები',
-      list1: 'მენეჯმენტი',
-      list2: 'ლეგალურობა',
-      list3: 'უსაფრთხოება',
-      list4: 'დახმარება',
-      list5: 'დეველოპერი',
-    },
-  ];
-  arr3: any[] = [
-    {
-      title: 'კომპანია',
-      list1: 'ჩვენს შესახებ',
-      list2: 'არქივი',
-      list3: 'კონტაქტი',
-      list4: 'ფასი',
-      list5: 'ექსელი',
+      title: ['გამოყენებები', 'Usage'],
+      list1: ['გაყიდვები', 'Sales'],
+      list2: ['ლოჯისტიკა', 'Logistics'],
+      list3: ['შესყიდვები', 'Purchases'],
+      list4: ['მართვა', 'Management'],
+      list5: ['ფინანსები', 'Finance'],
     },
   ];
 
-  langs: any = {};
-  index: number = 324213523;
+  arr2: any[] = [
+    {
+      title: ['რესურსები', 'Resources'],
+      list1: ['მენეჯმენტი', 'Management'],
+      list2: ['ლეგალურობა', 'Legality'],
+      list3: ['უსაფრთხოება', 'Security'],
+      list4: ['დახმარება', 'Support'],
+      list5: ['დეველოპერი', 'Developer'],
+    },
+  ];
+
+  arr3: any[] = [
+    {
+      title: ['კომპანია', 'Company'],
+      list1: ['ჩვენს შესახებ', 'About Us'],
+      list2: ['არქივი', 'Archive'],
+      list3: ['კონტაქტი', 'Contact'],
+      list4: ['ფასი', 'Price'],
+      list5: ['ექსელი', 'Excel'],
+    },
+  ];
 
   constructor(private translationService: TranslationService) {}
 

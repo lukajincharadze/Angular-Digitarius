@@ -14,7 +14,7 @@ import { TranslationService } from '../core/translation.service';
 export class Section1Component {
   statInfo: any[] = [];
   langs: any = {};
-  index: number = 324213523;
+  index: number = 0;
 
   constructor(
     private dataService: DataService,

@@ -13,7 +13,13 @@ import { TranslationService } from '../core/translation.service';
   styleUrl: './section4.component.scss',
 })
 export class Section4Component {
-  arr: any[] = ['ექსელი', 'მენეჯმენტი', 'აღრიცხვა', 'აღწერა', 'კლასი'];
+  arr: any[] = [
+    ['ექსელი', 'Excel'],
+    ['მენეჯმენტი', 'Managment'],
+    ['აღრიცხვა', 'Accounting'],
+    ['აღწერა', 'Description'],
+    ['კლასი', 'Class'],
+  ];
   useCaseInfo: any[] = [];
   num: number = 0;
   langs: any = {};
