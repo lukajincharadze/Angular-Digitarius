@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { DynamicContentComponent } from '../sharedComponents/dynamic-content/dynamic-content.component';
 import { DataService } from '../core/data.service';
 import { TranslationService } from '../core/translation.service';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-section4',
@@ -23,7 +24,9 @@ export class Section4Component {
   useCaseInfo: any[] = [];
   num: number = 0;
   langs: any = {};
-  index: number = 324213523;
+  index: number = 0;
+
+  subscription: Subscription = new Subscription();
 
   constructor(
     private dataService: DataService,
@@ -34,6 +37,12 @@ export class Section4Component {
     this.useCaseInfo = this.dataService.useCaseInfo();
     this.langs = this.translationService.langs;
     this.index = this.translationService.index;
+
+    this.subscription.add(
+      this.translationService.langStatus$.subscribe((res: any) => {
+        this.index = res;
+      })
+    );
   }
 
   eventHandler(index: any) {

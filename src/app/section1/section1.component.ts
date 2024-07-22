@@ -3,6 +3,7 @@ import { CardComponentComponent } from '../sharedComponents/card-component/card-
 import { CommonModule } from '@angular/common';
 import { DataService } from '../core/data.service';
 import { TranslationService } from '../core/translation.service';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-section1',
@@ -16,6 +17,8 @@ export class Section1Component {
   langs: any = {};
   index: number = 0;
 
+  subscription: Subscription = new Subscription();
+
   constructor(
     private dataService: DataService,
     private translationService: TranslationService
@@ -25,5 +28,10 @@ export class Section1Component {
     this.langs = this.translationService.langs;
     this.index = this.translationService.index;
     this.statInfo = this.dataService.getStatisticInfo();
+    this.subscription.add(
+      this.translationService.langStatus$.subscribe((res: any) => {
+        this.index = res;
+      })
+    );
   }
 }

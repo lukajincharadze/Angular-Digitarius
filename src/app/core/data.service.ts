@@ -2,7 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs/internal/Observable';
 import { TranslationService } from './translation.service';
-import { Subscription } from 'rxjs';
+import { BehaviorSubject, Subscription } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
@@ -10,6 +10,9 @@ import { Subscription } from 'rxjs';
 export class DataService {
   langs: any = {};
   index: number = 0;
+  changeLang: any = new BehaviorSubject<any>(0);
+  langStatus$: any = this.changeLang.asObservable();
+
   subscription: Subscription = new Subscription();
 
   constructor(

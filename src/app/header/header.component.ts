@@ -19,9 +19,10 @@ export class HeaderComponent {
     { url: '../../assets/img/tbc.jpg', alt: 'tbc' },
   ];
 
-  subscription: Subscription = new Subscription();
   langs: any = {};
-  index: number = 324213523;
+  index: number = 0;
+
+  subscription: Subscription = new Subscription();
 
   constructor(private translationService: TranslationService) {}
 

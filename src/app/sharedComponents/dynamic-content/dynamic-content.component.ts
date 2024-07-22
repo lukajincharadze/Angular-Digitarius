@@ -2,6 +2,7 @@ import { CommonModule } from '@angular/common';
 import { Component, Input } from '@angular/core';
 import { DialogComponent } from '../dialog/dialog.component';
 import { TranslationService } from '../../core/translation.service';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-dynamic-content',
@@ -14,20 +15,27 @@ export class DynamicContentComponent {
   @Input() text: string = '';
   @Input() title: string = '';
   @Input() img: string = '';
-  @Input() btnText: string = 'გაიგე მეტი';
 
   dialogPopup: boolean = false;
   langs: any = {};
-  index: number = 324213523;
+  index: number = 0;
 
   toggleDialogPopup() {
     this.dialogPopup = !this.dialogPopup;
   }
+
+  subscription: Subscription = new Subscription();
 
   constructor(private translationService: TranslationService) {}
 
   ngOnInit() {
     this.langs = this.translationService.langs;
     this.index = this.translationService.index;
+
+    this.subscription.add(
+      this.translationService.langStatus$.subscribe((res: any) => {
+        this.index = res;
+      })
+    );
   }
 }

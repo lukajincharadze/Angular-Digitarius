@@ -5,7 +5,7 @@ import { BehaviorSubject } from 'rxjs';
   providedIn: 'root',
 })
 export class TranslationService {
-  index = 1;
+  index = 0;
   changeLang: any = new BehaviorSubject<any>(0);
   langStatus$: any = this.changeLang.asObservable();
 
@@ -82,26 +82,6 @@ export class TranslationService {
     footerDesc1: ['მომს. პირობები', 'Terms of Service'],
     footerDesc2: ['კონფ. პოლიტიკა', 'Confidential politics'],
   };
-
-  getStatisticInfo() {
-    return [
-      {
-        title: ['აღწერა', 'Description'],
-        text: 'პაკეტირება',
-        logo: '../../assets/img/stat-logo1.svg',
-      },
-      {
-        title: 'შემოწმება<small></small>',
-        text: 'დახარვეზება',
-        logo: '../../assets/img/stat-logo2.svg',
-      },
-      {
-        title: 'სანდო<small></small>',
-        text: 'მხარდაჭერა',
-        logo: '../../assets/img/stat-logo3.svg',
-      },
-    ];
-  }
 
   useCaseInfo() {
     return [

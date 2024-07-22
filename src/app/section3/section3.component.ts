@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { DataService } from '../core/data.service';
 import { CommonModule } from '@angular/common';
 import { TranslationService } from '../core/translation.service';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-section3',
@@ -17,7 +18,9 @@ export class Section3Component {
   disabled: boolean = false;
   invalid: boolean = false;
   langs: any = {};
-  index: number = 324213523;
+  index: number = 0;
+
+  subscription: Subscription = new Subscription();
 
   constructor(
     private dataService: DataService,
@@ -51,5 +54,11 @@ export class Section3Component {
   ngOnInit() {
     this.langs = this.translationService.langs;
     this.index = this.translationService.index;
+
+    this.subscription.add(
+      this.translationService.langStatus$.subscribe((res: any) => {
+        this.index = res;
+      })
+    );
   }
 }

@@ -6,6 +6,7 @@ import { TagModule } from 'primeng/tag';
 import { CommonModule } from '@angular/common';
 import { DialogComponent } from '../sharedComponents/dialog/dialog.component';
 import { TranslationService } from '../core/translation.service';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-section5',
@@ -40,6 +41,8 @@ export class Section5Component implements OnInit {
     },
   ];
 
+  subscription: Subscription = new Subscription();
+
   constructor(
     private productService: ProductService,
     private translationService: TranslationService
@@ -51,6 +54,12 @@ export class Section5Component implements OnInit {
     });
     this.langs = this.translationService.langs;
     this.index = this.translationService.index;
+
+    this.subscription.add(
+      this.translationService.langStatus$.subscribe((res: any) => {
+        this.index = res;
+      })
+    );
   }
 
   getSeverity(status: string) {

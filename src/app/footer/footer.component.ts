@@ -8,6 +8,7 @@ import { ArrSvgComponent } from '../iconComponents/arr-svg/arr-svg.component';
 import { DynamicListsComponent } from '../sharedComponents/dynamic-lists/dynamic-lists.component';
 import { CommonModule } from '@angular/common';
 import { TranslationService } from '../core/translation.service';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-footer',
@@ -62,10 +63,18 @@ export class FooterComponent {
     },
   ];
 
+  subscription: Subscription = new Subscription();
+
   constructor(private translationService: TranslationService) {}
 
   ngOnInit() {
     this.langs = this.translationService.langs;
     this.index = this.translationService.index;
+
+    this.subscription.add(
+      this.translationService.langStatus$.subscribe((res: any) => {
+        this.index = res;
+      })
+    );
   }
 }

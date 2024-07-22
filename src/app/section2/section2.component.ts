@@ -25,6 +25,7 @@ import { CollapseLogo5Component } from '../iconComponents/collapse-logo5/collaps
 import { DataService } from '../core/data.service';
 import { DialogComponent } from '../sharedComponents/dialog/dialog.component';
 import { TranslationService } from '../core/translation.service';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-section2',
@@ -59,6 +60,8 @@ export class Section2Component {
   readonly mail = signal('');
   readonly dialog = inject(MatDialog);
 
+  subscription: Subscription = new Subscription();
+
   constructor(
     private dataService: DataService,
     private translationService: TranslationService
@@ -68,6 +71,11 @@ export class Section2Component {
     this.collapseInfo = this.dataService.getCollapseInfo();
     this.langs = this.translationService.langs;
     this.index = this.translationService.index;
+    this.subscription.add(
+      this.dataService.langStatus$.subscribe((res: any) => {
+        this.index = res;
+      })
+    );
   }
 
   changePic(i: number) {
