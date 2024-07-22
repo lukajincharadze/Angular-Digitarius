@@ -90,7 +90,9 @@ body.no-scroll {
       cursor: pointer;
       font-family: "BPG Arial", sans-serif;
       border-radius: 3px;
-      border: 1px solid var(--mainColor);
+      border: none;
+      color: #fff;
+      background-color: var(--mainColor);
       padding: 8px;
     }
   }
