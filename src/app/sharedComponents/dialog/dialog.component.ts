@@ -23,7 +23,7 @@ export class DialogComponent {
   disabled: boolean = false;
   subscription: Subscription = new Subscription();
   langs: any = {};
-  index: number = 324213523;
+  index: number = 0;
 
   constructor(
     private dataService: DataService,

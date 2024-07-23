@@ -71,6 +71,7 @@ export class Section2Component {
     this.collapseInfo = this.dataService.getCollapseInfo();
     this.langs = this.translationService.langs;
     this.index = this.translationService.index;
+
     this.subscription.add(
       this.dataService.langStatus$.subscribe((res: any) => {
         this.index = res;

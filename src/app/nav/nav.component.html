@@ -9,6 +9,12 @@
     <p class="nav-title">{{ langs.nav4[index] }}</p>
   </div>
   <div class="sub-2">
+    <p class="geo BurgerTranslate" style="display: none">
+      <li class="sub-2" (click)="changeText()">
+        <i class="fa-solid fa-globe"></i>&nbsp;<span>{{ text }}</span>
+      </li>
+    </p>
+
     <ul class="sub-2-ul">
       <p class="geo">
         <li (click)="changeText()">
@@ -22,10 +28,20 @@
         <li>{{ langs.navPackets[index] }}</li>
       </div>
     </ul>
-    <ul class="bar" style="display: none">
+    <ul class="bar" style="display: none" (click)="toggleOverlay()">
       <div class="bar-div">
         <img src="../../assets/img/bar.png" alt="img" />
       </div>
     </ul>
   </div>
+</div>
+<div class="menu-overlay" [class.active]="isOverlayActive">
+  <p class="menu-title">{{ langs.nav1[index] }}</p>
+  <p class="menu-title">{{ langs.nav2[index] }}</p>
+  <p class="menu-title">{{ langs.nav3[index] }}</p>
+  <p class="menu-title">{{ langs.nav4[index] }}</p>
+  <ul class="menu-list">
+    <li class="menu-item">{{ langs.navPackets[index] }}</li>
+    <li class="menu-item special">{{ langs.navSignIn[index] }}</li>
+  </ul>
 </div>
