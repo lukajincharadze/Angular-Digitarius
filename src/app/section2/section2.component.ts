@@ -4,6 +4,7 @@ import {
   inject,
   signal,
   model,
+  ChangeDetectorRef,
 } from '@angular/core';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { MatFormFieldModule } from '@angular/material/form-field';
@@ -64,7 +65,8 @@ export class Section2Component {
 
   constructor(
     private dataService: DataService,
-    private translationService: TranslationService
+    private translationService: TranslationService,
+    private changeDetectorRef: ChangeDetectorRef
   ) {}
 
   ngOnInit() {
@@ -75,6 +77,7 @@ export class Section2Component {
     this.subscription.add(
       this.dataService.langStatus$.subscribe((res: any) => {
         this.index = res;
+        this.changeDetectorRef.markForCheck();
       })
     );
   }
