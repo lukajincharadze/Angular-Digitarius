@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { TranslationService } from '../core/translation.service';
 import { DataService } from '../core/data.service';
+import { StatesService } from '../core/states.service';
 
 @Component({
   selector: 'app-nav',
@@ -17,7 +18,8 @@ export class NavComponent {
 
   constructor(
     private translationService: TranslationService,
-    private dataService: DataService
+    private dataService: DataService,
+    private stateService: StatesService
   ) {}
 
   ngOnInit() {
@@ -25,8 +27,20 @@ export class NavComponent {
     this.index = this.translationService.index;
   }
 
+  width = 0;
+
+  @HostListener('window:resize', ['$event'])
+  onResize(event: Event) {
+    this.width = (event.target as Window).innerWidth;
+    if (this.width >= 800) {
+      this.isOverlayActive = false;
+      this.stateService.isOpenDialog.next(this.isOverlayActive);
+    }
+  }
+
   toggleOverlay() {
     this.isOverlayActive = !this.isOverlayActive;
+    this.stateService.isOpenDialog.next(this.isOverlayActive);
   }
 
   changeText() {
