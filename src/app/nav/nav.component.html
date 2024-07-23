@@ -3,9 +3,15 @@
     <div class="sub-1-logo">
       <img src="../../assets/img/ugtLogo.png" alt="img" />
     </div>
-    <p class="nav-title">{{ langs.nav1[index] }}</p>
-    <p class="nav-title">{{ langs.nav2[index] }}</p>
-    <p class="nav-title">{{ langs.nav3[index] }}</p>
+    <p class="nav-title" [routerLink]="['/']" fragment="section1">
+      {{ langs.nav1[index] }}
+    </p>
+    <p class="nav-title" [routerLink]="['/']" fragment="section2">
+      {{ langs.nav2[index] }}
+    </p>
+    <p class="nav-title" [routerLink]="['/']" fragment="section3">
+      {{ langs.nav3[index] }}
+    </p>
     <p class="nav-title">{{ langs.nav4[index] }}</p>
   </div>
   <div class="sub-2">

@@ -2,11 +2,12 @@ import { Component, HostListener } from '@angular/core';
 import { TranslationService } from '../core/translation.service';
 import { DataService } from '../core/data.service';
 import { StatesService } from '../core/states.service';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-nav',
   standalone: true,
-  imports: [],
+  imports: [RouterModule],
   templateUrl: './nav.component.html',
   styleUrl: './nav.component.scss',
 })
