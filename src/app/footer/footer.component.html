@@ -13,7 +13,13 @@
           <app-footerlogo-3></app-footerlogo-3>
         </a>
       </div>
-      <p class="footer-topDiv-left-contact">{{ contact }}</p>
+      <p class="footer-topDiv-left-contact">
+        <a
+          [href]="'https://mail.google.com/mail/?view=cm&fs=1&to=' + contact"
+          target="_blank"
+          >{{ contact }}</a
+        >
+      </p>
       <div class="footer-topDiv-left-lang">
         <app-glope-svg></app-glope-svg>{{ langs.lang[index]
         }}<app-arr-svg></app-arr-svg>

@@ -25,6 +25,7 @@
         align-items: center;
         max-width: 110px;
         width: 100%;
+        margin: 0 auto;
         app-footerlogo-1,
         app-footerlogo-2,
         app-footerlogo-3 {
@@ -36,13 +37,18 @@
         }
       }
       &-contact {
-        color: #94a5bc;
+        a {
+          color: #94a5bc;
+          text-decoration: none;
+        }
       }
       &-lang {
         color: #94a5bc;
         display: flex;
         align-items: center;
         justify-content: flex-start;
+        margin: 0 auto;
+
         app-glope-svg {
           padding-top: 3px;
           margin-right: 5px;
@@ -76,7 +82,7 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding-top: 20px;
+      padding: 20px 5px;
       &-right {
         display: flex;
         justify-content: space-between;
