@@ -39,11 +39,16 @@ export class NavComponent {
     }
   }
 
+  gotoSection(frag: string) {
+    document.getElementById(frag)?.scrollIntoView({ behavior: 'smooth' });
+    this.isOverlayActive = false;
+    this.stateService.isOpenDialog.next(this.isOverlayActive);
+  }
+
   toggleOverlay() {
     this.isOverlayActive = !this.isOverlayActive;
     this.stateService.isOpenDialog.next(this.isOverlayActive);
   }
-
   changeText() {
     this.text = this.text === 'Geo' ? 'Eng' : 'Geo';
     this.translationService.index = this.translationService.index === 1 ? 0 : 1;

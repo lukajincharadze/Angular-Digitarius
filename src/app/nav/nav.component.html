@@ -1,18 +1,21 @@
 <div class="div-header">
   <div class="sub-1">
-    <div class="sub-1-logo">
+    <div class="sub-1-logo" (click)="gotoSection('header')">
       <img src="../../assets/img/ugtLogo.png" alt="img" />
     </div>
-    <p class="nav-title" [routerLink]="['/']" fragment="section1">
+
+    <p class="nav-title" (click)="gotoSection('sec1')">
       {{ langs.nav1[index] }}
     </p>
-    <p class="nav-title" [routerLink]="['/']" fragment="section2">
+    <p class="nav-title" (click)="gotoSection('sec2')">
       {{ langs.nav2[index] }}
     </p>
-    <p class="nav-title" [routerLink]="['/']" fragment="section3">
+    <p class="nav-title" (click)="gotoSection('sec5')">
       {{ langs.nav3[index] }}
     </p>
-    <p class="nav-title">{{ langs.nav4[index] }}</p>
+    <p class="nav-title" (click)="gotoSection('sec3')">
+      {{ langs.nav4[index] }}
+    </p>
   </div>
   <div class="sub-2">
     <p class="geo BurgerTranslate" style="display: none">
@@ -27,10 +30,10 @@
           <i class="fa-solid fa-globe"></i>&nbsp;<span>{{ text }}</span>
         </li>
       </p>
-      <p class="nav-title">
+      <p class="nav-title" (click)="gotoSection('sec5')">
         <li>{{ langs.navSignIn[index] }}</li>
       </p>
-      <div class="try-free-btn">
+      <div class="try-free-btn" (click)="gotoSection('sec2')">
         <li>{{ langs.navPackets[index] }}</li>
       </div>
     </ul>
@@ -42,12 +45,24 @@
   </div>
 </div>
 <div class="menu-overlay" [class.active]="isOverlayActive">
-  <p class="menu-title">{{ langs.nav1[index] }}</p>
-  <p class="menu-title">{{ langs.nav2[index] }}</p>
-  <p class="menu-title">{{ langs.nav3[index] }}</p>
-  <p class="menu-title">{{ langs.nav4[index] }}</p>
+  <p class="menu-title" (click)="gotoSection('sec1')">
+    {{ langs.nav1[index] }}
+  </p>
+  <p class="menu-title" (click)="gotoSection('sec2')">
+    {{ langs.nav2[index] }}
+  </p>
+  <p class="menu-title" (click)="gotoSection('sec5')">
+    {{ langs.nav3[index] }}
+  </p>
+  <p class="menu-title" (click)="gotoSection('sec3')">
+    {{ langs.nav4[index] }}
+  </p>
   <ul class="menu-list">
-    <li class="menu-item">{{ langs.navPackets[index] }}</li>
-    <li class="menu-item special">{{ langs.navSignIn[index] }}</li>
+    <li class="menu-item" (click)="gotoSection('sec5')">
+      {{ langs.navPackets[index] }}
+    </li>
+    <li class="menu-item special" (click)="gotoSection('sec2')">
+      {{ langs.navSignIn[index] }}
+    </li>
   </ul>
 </div>

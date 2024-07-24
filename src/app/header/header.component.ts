@@ -26,6 +26,10 @@ export class HeaderComponent {
 
   constructor(private translationService: TranslationService) {}
 
+  gotoSection(frag: string) {
+    document.getElementById(frag)?.scrollIntoView();
+  }
+
   ngOnInit() {
     this.langs = this.translationService.langs;
     this.index = this.translationService.index;

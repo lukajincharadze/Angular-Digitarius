@@ -7,8 +7,10 @@
     </div>
     <div class="section-div-right">
       <div class="section-div-right-svg">
-        <button>{{ langs.requestRegistration[index] }}</button>
-        <p>{{ langs.boxCheck[index] }}</p>
+        <button (click)="gotoSection('sec1')">
+          {{ langs.requestRegistration[index] }}
+        </button>
+        <p (click)="gotoSection('sec3')">{{ langs.boxCheck[index] }}</p>
       </div>
     </div>
   </div>

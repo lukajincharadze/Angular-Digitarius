@@ -2,8 +2,12 @@
   <h1 class="header-title">{{ langs.title[index] }}</h1>
   <p class="header-desc">{{ langs.title[index] }}</p>
   <div class="header-btn-div">
-    <div class="try-free-btn1">{{ langs.headerBtn1[index] }}</div>
-    <div class="try-free-btn2">{{ langs.requestRegistration[index] }}</div>
+    <div class="try-free-btn1" (click)="gotoSection('sec6')">
+      {{ langs.headerBtn1[index] }}
+    </div>
+    <div class="try-free-btn2" (click)="gotoSection('sec3')">
+      {{ langs.requestRegistration[index] }}
+    </div>
   </div>
   <p class="header-sub-desc">{{ langs.boxCheck[index] }}</p>
 
