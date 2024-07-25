@@ -3,6 +3,7 @@ import { Component, Input } from '@angular/core';
 import { DialogComponent } from '../dialog/dialog.component';
 import { TranslationService } from '../../core/translation.service';
 import { Subscription } from 'rxjs';
+import { StatesService } from '../../core/states.service';
 
 @Component({
   selector: 'app-dynamic-content',
@@ -26,7 +27,10 @@ export class DynamicContentComponent {
 
   subscription: Subscription = new Subscription();
 
-  constructor(private translationService: TranslationService) {}
+  constructor(
+    private translationService: TranslationService,
+    private stateService: StatesService
+  ) {}
 
   ngOnInit() {
     this.langs = this.translationService.langs;
@@ -35,6 +39,11 @@ export class DynamicContentComponent {
     this.subscription.add(
       this.translationService.langStatus$.subscribe((res: any) => {
         this.index = res;
+      })
+    );
+    this.subscription.add(
+      this.stateService.isOpen$.subscribe((res: any) => {
+        this.dialogPopup = res;
       })
     );
   }

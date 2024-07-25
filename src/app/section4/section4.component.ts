@@ -5,6 +5,7 @@ import { DynamicContentComponent } from '../sharedComponents/dynamic-content/dyn
 import { DataService } from '../core/data.service';
 import { TranslationService } from '../core/translation.service';
 import { Subscription } from 'rxjs';
+import { StatesService } from '../core/states.service';
 
 @Component({
   selector: 'app-section4',

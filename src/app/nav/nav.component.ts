@@ -29,7 +29,6 @@ export class NavComponent {
   }
 
   width = 0;
-
   @HostListener('window:resize', ['$event'])
   onResize(event: Event) {
     this.width = (event.target as Window).innerWidth;

@@ -48,6 +48,7 @@
         align-items: center;
         justify-content: flex-start;
         margin: 0 auto;
+        cursor: pointer;
 
         app-glope-svg {
           padding-top: 3px;
@@ -90,6 +91,7 @@
         a {
           color: var(--mainColor);
           text-decoration: none;
+          cursor: pointer;
         }
       }
     }

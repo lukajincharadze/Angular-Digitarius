@@ -14,7 +14,7 @@ export class CardComponentComponent {
   @Input() logo: string = '';
 
   langs: any = {};
-  index: number = 324213523;
+  index: number = 0;
 
   constructor(private translationService: TranslationService) {}
 

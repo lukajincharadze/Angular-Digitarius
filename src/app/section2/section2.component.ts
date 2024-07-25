@@ -5,6 +5,7 @@ import {
   signal,
   model,
   ChangeDetectorRef,
+  Input,
 } from '@angular/core';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { MatFormFieldModule } from '@angular/material/form-field';
@@ -27,6 +28,7 @@ import { DataService } from '../core/data.service';
 import { DialogComponent } from '../sharedComponents/dialog/dialog.component';
 import { TranslationService } from '../core/translation.service';
 import { Subscription } from 'rxjs';
+import { StatesService } from '../core/states.service';
 
 @Component({
   selector: 'app-section2',
@@ -65,6 +67,7 @@ export class Section2Component {
 
   constructor(
     private dataService: DataService,
+    private stateService: StatesService,
     private translationService: TranslationService,
     private changeDetectorRef: ChangeDetectorRef
   ) {}
@@ -80,6 +83,11 @@ export class Section2Component {
         this.changeDetectorRef.markForCheck();
       })
     );
+    this.subscription.add(
+      this.stateService.isOpen$.subscribe((res: any) => {
+        this.dialogPopup = res;
+      })
+    );
   }
 
   changePic(i: number) {
@@ -87,6 +95,6 @@ export class Section2Component {
   }
 
   toggleDialogPopup() {
-    this.dialogPopup = !this.dialogPopup;
+    this.dialogPopup = true;
   }
 }

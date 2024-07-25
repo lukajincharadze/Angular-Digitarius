@@ -7,6 +7,7 @@ import { CommonModule } from '@angular/common';
 import { DialogComponent } from '../sharedComponents/dialog/dialog.component';
 import { TranslationService } from '../core/translation.service';
 import { Subscription } from 'rxjs';
+import { StatesService } from '../core/states.service';
 
 @Component({
   selector: 'app-section5',
@@ -45,6 +46,7 @@ export class Section5Component implements OnInit {
 
   constructor(
     private productService: ProductService,
+    private stateService: StatesService,
     private translationService: TranslationService
   ) {}
 
@@ -58,6 +60,11 @@ export class Section5Component implements OnInit {
     this.subscription.add(
       this.translationService.langStatus$.subscribe((res: any) => {
         this.index = res;
+      })
+    );
+    this.subscription.add(
+      this.stateService.isOpen$.subscribe((res: any) => {
+        this.dialogPopup = res;
       })
     );
   }

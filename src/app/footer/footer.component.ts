@@ -9,6 +9,10 @@ import { DynamicListsComponent } from '../sharedComponents/dynamic-lists/dynamic
 import { CommonModule } from '@angular/common';
 import { TranslationService } from '../core/translation.service';
 import { Subscription } from 'rxjs';
+import { DialogComponent } from '../sharedComponents/dialog/dialog.component';
+import { FooterDialogComponent } from '../sharedComponents/footer-dialog/footer-dialog.component';
+import { StatesService } from '../core/states.service';
+import { DataService } from '../core/data.service';
 
 @Component({
   selector: 'app-footer',
@@ -22,6 +26,7 @@ import { Subscription } from 'rxjs';
     ArrSvgComponent,
     DynamicListsComponent,
     CommonModule,
+    FooterDialogComponent,
   ],
   templateUrl: './footer.component.html',
   styleUrl: './footer.component.scss',
@@ -30,6 +35,7 @@ export class FooterComponent {
   contact: string = 'conatct@archive.ge';
   langs: any = {};
   index: number = 0;
+  dialogPopup: boolean = false;
   arr: any[] = [
     {
       title: ['გამოყენებები', 'Usage'],
@@ -65,7 +71,11 @@ export class FooterComponent {
 
   subscription: Subscription = new Subscription();
 
-  constructor(private translationService: TranslationService) {}
+  constructor(
+    private translationService: TranslationService,
+    private dataService: DataService,
+    private stateService: StatesService
+  ) {}
 
   ngOnInit() {
     this.langs = this.translationService.langs;
@@ -76,5 +86,22 @@ export class FooterComponent {
         this.index = res;
       })
     );
+    this.subscription.add(
+      this.stateService.isOpen$.subscribe((res: any) => {
+        this.dialogPopup = res;
+      })
+    );
+  }
+
+  toggleFooterDialogPopup() {
+    this.dialogPopup = true;
+  }
+
+  changeText() {
+    this.translationService.index = this.translationService.index === 1 ? 0 : 1;
+    this.dataService.index = this.dataService.index === 1 ? 0 : 1;
+    this.index = this.translationService.index;
+    this.translationService.changeLang.next(this.index);
+    this.dataService.changeLang.next(this.index);
   }
 }

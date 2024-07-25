@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { DataService } from '../../core/data.service';
 import { StatesService } from '../../core/states.service';
@@ -14,7 +14,7 @@ import { TranslationService } from '../../core/translation.service';
   styleUrls: ['./dialog.component.scss'],
 })
 export class DialogComponent {
-  dialogPopup: boolean = true;
+  @Input() dialogPopup: boolean = true;
 
   textareaContent: string = 'აღწერა';
 
