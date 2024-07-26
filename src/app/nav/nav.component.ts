@@ -9,7 +9,7 @@ import { RouterModule } from '@angular/router';
   standalone: true,
   imports: [RouterModule],
   templateUrl: './nav.component.html',
-  styleUrl: './nav.component.scss',
+  styleUrls: ['./nav.component.scss'],
 })
 export class NavComponent {
   text: string = 'Geo';
@@ -34,20 +34,18 @@ export class NavComponent {
     this.width = (event.target as Window).innerWidth;
     if (this.width >= 800) {
       this.isOverlayActive = false;
-      this.stateService.isOpenDialog.next(this.isOverlayActive);
     }
   }
 
   gotoSection(frag: string) {
     document.getElementById(frag)?.scrollIntoView({ behavior: 'smooth' });
     this.isOverlayActive = false;
-    this.stateService.isOpenDialog.next(this.isOverlayActive);
   }
 
   toggleOverlay() {
     this.isOverlayActive = !this.isOverlayActive;
-    this.stateService.isOpenDialog.next(this.isOverlayActive);
   }
+
   changeText() {
     this.text = this.text === 'Geo' ? 'Eng' : 'Geo';
     this.translationService.index = this.translationService.index === 1 ? 0 : 1;

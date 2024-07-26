@@ -3,7 +3,6 @@ import {
   Component,
   inject,
   signal,
-  model,
   ChangeDetectorRef,
   Input,
 } from '@angular/core';
@@ -12,12 +11,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { FormsModule } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
-import {
-  MatDialog,
-  MatDialogRef,
-  MAT_DIALOG_DATA,
-  MatDialogModule,
-} from '@angular/material/dialog';
+import { MatDialog, MatDialogModule } from '@angular/material/dialog';
 import { CommonModule } from '@angular/common';
 import { CollapseLogo1Component } from '../iconComponents/collapse-logo1/collapse-logo1.component';
 import { CollapseLogo2Component } from '../iconComponents/collapse-logo2/collapse-logo2.component';

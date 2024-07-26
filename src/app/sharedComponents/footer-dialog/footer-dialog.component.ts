@@ -27,7 +27,7 @@ export class FooterDialogComponent {
 
   ngOnInit() {
     this.footerInfo = this.translationService.footerDialogInfo();
-    this.stateService.isOpenDialog.next(true);
+    this.stateService.isOpenTermsPopup.next(true);
     this.langs = this.translationService.langs;
     this.index = this.translationService.index;
 
@@ -39,7 +39,6 @@ export class FooterDialogComponent {
   }
 
   closeDialogPopup() {
-    this.dialogPopup = false;
-    this.stateService.isOpenDialog.next(false);
+    this.stateService.isOpenTermsPopup.next(false);
   }
 }

@@ -9,7 +9,6 @@ import { DynamicListsComponent } from '../sharedComponents/dynamic-lists/dynamic
 import { CommonModule } from '@angular/common';
 import { TranslationService } from '../core/translation.service';
 import { Subscription } from 'rxjs';
-import { DialogComponent } from '../sharedComponents/dialog/dialog.component';
 import { FooterDialogComponent } from '../sharedComponents/footer-dialog/footer-dialog.component';
 import { StatesService } from '../core/states.service';
 import { DataService } from '../core/data.service';
@@ -29,7 +28,7 @@ import { DataService } from '../core/data.service';
     FooterDialogComponent,
   ],
   templateUrl: './footer.component.html',
-  styleUrl: './footer.component.scss',
+  styleUrls: ['./footer.component.scss'],
 })
 export class FooterComponent {
   contact: string = 'conatct@archive.ge';
@@ -87,14 +86,14 @@ export class FooterComponent {
       })
     );
     this.subscription.add(
-      this.stateService.isOpen$.subscribe((res: any) => {
+      this.stateService.isOpenTerms$.subscribe((res: any) => {
         this.dialogPopup = res;
       })
     );
   }
 
   toggleFooterDialogPopup() {
-    this.dialogPopup = true;
+    this.stateService.isOpenTermsPopup.next(true);
   }
 
   changeText() {
