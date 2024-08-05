@@ -1,10 +1,11 @@
 import { CommonModule } from '@angular/common';
-import { Component, Input } from '@angular/core';
+import { Component, inject, Input } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { DataService } from '../../core/data.service';
 import { StatesService } from '../../core/states.service';
 import { Subscription } from 'rxjs';
 import { TranslationService } from '../../core/translation.service';
+import { MatDialog } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-dialog',
@@ -14,6 +15,7 @@ import { TranslationService } from '../../core/translation.service';
   styleUrls: ['./dialog.component.scss'],
 })
 export class DialogComponent {
+  readonly dialog = inject(MatDialog);
   @Input() dialogPopup: boolean = true;
 
   textareaContent: string = 'აღწერა';
@@ -42,8 +44,9 @@ export class DialogComponent {
     return emailRegex.test(email);
   }
   closeDialogPopup() {
-    this.dialogPopup = false;
-    this.stateService.isOpenDialog.next(false);
+    // this.dialogPopup = false;
+    // this.stateService.isOpenDialog.next(false);
+    this.dialog.closeAll();
   }
 
   request() {
@@ -65,6 +68,15 @@ export class DialogComponent {
         console.log(error);
       }
     );
+
+    // this.dataService.sendData('http://', data).subscribe({
+    //   next: (res) => {
+    //     console.log(res);
+    //   },
+    //   error: (error) => {
+    //     console.log(error);
+    //   }
+    // })
     this.closeDialogPopup();
     this.disabled = true;
   }
