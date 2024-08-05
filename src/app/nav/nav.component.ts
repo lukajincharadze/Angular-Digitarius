@@ -18,7 +18,6 @@ export class NavComponent {
   index: number = 0;
   isOverlayActive: boolean = false;
 
-  
   subscription: Subscription = new Subscription();
 
   constructor(
@@ -36,6 +35,7 @@ export class NavComponent {
       this.dataService.langStatus$.subscribe((res: any) => {
         this.index = res;
         this.changeDetectorRef.markForCheck();
+        this.text = res === 0 ? 'Geo' : 'Eng';
       })
     );
   }
@@ -56,11 +56,10 @@ export class NavComponent {
 
   toggleOverlay() {
     this.isOverlayActive = !this.isOverlayActive;
-    this.stateService.isopenburger.next(this.isOverlayActive)
+    this.stateService.isopenburger.next(this.isOverlayActive);
   }
 
   changeText() {
-    this.text = this.text === 'Geo' ? 'Eng' : 'Geo';
     this.translationService.index = this.translationService.index === 1 ? 0 : 1;
     this.dataService.index = this.dataService.index === 1 ? 0 : 1;
     this.index = this.translationService.index;

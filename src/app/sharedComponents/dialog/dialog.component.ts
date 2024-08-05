@@ -15,7 +15,6 @@ import { TranslationService } from '../../core/translation.service';
 })
 export class DialogComponent {
   @Input() dialogPopup: boolean = true;
-  @Input() num: number = 0;
 
   textareaContent: string = 'აღწერა';
 

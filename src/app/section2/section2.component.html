@@ -9,10 +9,22 @@
     <div class="body-collapse-div-accordion">
       <mat-accordion>
         <ng-container *ngFor="let item of collapseInfo; let i = index">
-          <mat-expansion-panel (opened)="panelOpenState.set(true)" (closed)="panelOpenState.set(false)"
-            (click)="changePic(i)" [expanded]="i == 0" hideToggle="false" class="body-collapse-panel">
-            <mat-expansion-panel-header class="mat-expansion-panel-header" style="padding: 0">
-              <mat-panel-title class="body-collapse-panel-title" style="margin: 0">
+          <mat-expansion-panel
+            (opened)="panelOpenState.set(true)"
+            (closed)="panelOpenState.set(false)"
+            (click)="changePic(i)"
+            [expanded]="i == 0"
+            hideToggle="false"
+            class="body-collapse-panel"
+          >
+            <mat-expansion-panel-header
+              class="mat-expansion-panel-header"
+              style="padding: 0"
+            >
+              <mat-panel-title
+                class="body-collapse-panel-title"
+                style="margin: 0"
+              >
                 <div class="body-collapse-panel-title-div">
                   <app-collapse-logo1 *ngIf="i == 0"></app-collapse-logo1>
                   <app-collapse-logo2 *ngIf="i == 1"></app-collapse-logo2>
@@ -28,7 +40,7 @@
               {{ item.Desc[index] }}
             </p>
             <button (click)="toggleDialogPopup()" class="learnMore">
-              {{ item.learnMore[index] }} 
+              {{ item.learnMore[index] }}
             </button>
           </mat-expansion-panel>
         </ng-container>
@@ -41,5 +53,5 @@
 </section>
 
 <ng-container *ngIf="dialogPopup">
-  <app-dialog [num]="2"></app-dialog>
+  <app-dialog></app-dialog>
 </ng-container>
