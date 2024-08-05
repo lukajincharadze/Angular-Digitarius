@@ -1,8 +1,9 @@
-import { Component, HostListener } from '@angular/core';
+import { ChangeDetectorRef, Component, HostListener } from '@angular/core';
 import { TranslationService } from '../core/translation.service';
 import { DataService } from '../core/data.service';
 import { StatesService } from '../core/states.service';
 import { RouterModule } from '@angular/router';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-nav',
@@ -17,15 +18,26 @@ export class NavComponent {
   index: number = 0;
   isOverlayActive: boolean = false;
 
+  
+  subscription: Subscription = new Subscription();
+
   constructor(
     private translationService: TranslationService,
     private dataService: DataService,
-    private stateService: StatesService
+    private stateService: StatesService,
+    private changeDetectorRef: ChangeDetectorRef
   ) {}
 
   ngOnInit() {
     this.langs = this.translationService.langs;
     this.index = this.translationService.index;
+
+    this.subscription.add(
+      this.dataService.langStatus$.subscribe((res: any) => {
+        this.index = res;
+        this.changeDetectorRef.markForCheck();
+      })
+    );
   }
 
   width = 0;
