@@ -89,10 +89,6 @@ export class Section2Component {
   }
 
   toggleDialogPopup() {
-    // this.dialogPopup = true;
-    this.dialog.open(DialogComponent, {
-      width: '400px',
-      height: '400px',
-    });
+    this.dialogPopup = true;
   }
 }
