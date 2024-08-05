@@ -12,5 +12,8 @@ export class StatesService {
   isOpenTermsPopup: any = new BehaviorSubject<any>(false);
   isOpenTerms$: any = this.isOpenTermsPopup.asObservable();
 
+  isopenburger: any = new BehaviorSubject<any>(false);
+  isopenburger$: any = this.isopenburger.asObservable();
+
   constructor() {}
 }

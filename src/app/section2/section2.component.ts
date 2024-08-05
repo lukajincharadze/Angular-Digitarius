@@ -90,5 +90,6 @@ export class Section2Component {
 
   toggleDialogPopup() {
     this.dialogPopup = true;
+    console.log("dialog click sec2")
   }
 }

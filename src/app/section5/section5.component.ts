@@ -64,6 +64,7 @@ export class Section5Component implements OnInit {
     );
     this.subscription.add(
       this.stateService.isOpen$.subscribe((res: any) => {
+        if(res) return
         this.dialogPopup = res;
       })
     );

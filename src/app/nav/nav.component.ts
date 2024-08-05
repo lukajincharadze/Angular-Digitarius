@@ -44,6 +44,7 @@ export class NavComponent {
 
   toggleOverlay() {
     this.isOverlayActive = !this.isOverlayActive;
+    this.stateService.isopenburger.next(this.isOverlayActive)
   }
 
   changeText() {
