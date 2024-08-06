@@ -54,7 +54,6 @@ export class AppComponent {
     );
     this.subscription.add(
       this.stateService.isopenburger$.subscribe((res: any) => {
-        console.log(res)
         document.body.style.overflow = res ? 'hidden' : 'auto';
       })
     );

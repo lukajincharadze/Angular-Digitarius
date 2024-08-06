@@ -21,12 +21,12 @@ export class TranslationService {
     dialogBtn: ['გაუქმება', 'Cancel'],
     dialogBtn2: ['გაგზავნა', 'Send'],
 
-    nav1: ['ლოჯისტიკა', 'Logistic'],
-    nav2: ['გამოკითხვა', 'Survey'],
-    nav3: ['ყუთები', 'Boxes'],
+    nav1: ['დაარქივება', 'Archiving'],
+    nav2: ['პაკეტები', 'Packages'],
+    nav3: ['ლოჯისტიკა', 'Logistics'],
     nav4: ['ფასი', 'Pricing'],
     navSignIn: ['შესვლა', 'Sign In'],
-    navPackets: ['პაკეტები', 'Packets'],
+    navPackets: ['ინვენტარი', 'Inventory'],
 
     title: [
       'გაამარტივე არქივის მართვის პროცესი',
@@ -58,8 +58,11 @@ export class TranslationService {
     ],
     learnMore: ['გაიგე მეტი', 'Learn More'],
 
-    section3Title1: ['სცადე შენ თვითონ', 'Try it yourself'],
-    section3Title2: ['გადაამოწმე ყუთები ლოკალურად', 'Check the boxes locally'],
+    section3Title1: ['მონაცემთა სერვისების ექსპორტი', 'Export Data Services'],
+    section3Title2: [
+      'მოითხოვე სერვისების მართვა',
+      'Request Archiving Services',
+    ],
     section3InputTitle: ['შეიყვანე ელ.ფოსტა', 'Enter your Email'],
     section3SendBtn: ['გაგზავნა', 'Send'],
 
