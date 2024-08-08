@@ -31,7 +31,7 @@
         app-footerlogo-3 {
           color: #1c3252;
           padding: 3px 5px;
-          background-color: #edf1f7;
+          background-color: #b8ceff;
           border-radius: 2px;
           font-size: 20px;
         }
@@ -76,7 +76,7 @@
     margin: 0 auto;
     background-color: var(--whiteBg);
     &-div {
-      color: var(--mainColor);
+      color: var(--mainColor2);
       max-width: 1200px;
       width: 100%;
       margin: 0 auto;
@@ -89,7 +89,7 @@
         justify-content: space-between;
         width: 300px;
         a {
-          color: var(--mainColor);
+          color: var(--mainColor2);
           text-decoration: none;
           cursor: pointer;
         }

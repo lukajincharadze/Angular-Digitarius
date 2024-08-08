@@ -26,23 +26,26 @@ export class TranslationService {
     nav3: ['ლოჯისტიკა', 'Logistics'],
     nav4: ['ფასი', 'Pricing'],
     navSignIn: ['შესვლა', 'Sign In'],
-    navPackets: ['ინვენტარი', 'Inventory'],
+    navPackets: ['ლოჯისტიკის მართვა', 'Manage Logistic'],
 
     title: [
-      'გაამარტივე არქივის მართვის პროცესი',
-      'Simplify the archive management process',
+      'არქივის მართვის პროგრამა Archivarius',
+      'Archivarius archive management program',
     ],
     titleSub: [
-      'შექმენი და აკონტროლე დოკუმენტაციის დაარქივება',
-      'Create and control documentation archiving',
+      'აღრიცხავა დოკუმენტის ნომერის, ტიპის, თარიღისა და წარმოქმნის სერვის-ცენტრი.',
+      'Recorded document number, type, date and service center of generation.',
     ],
 
     headerBtn1: ['სცადე უფასოდ', 'Try for Free'],
     requestRegistration: ['მოითხოვე რეგისტრაცია', 'Request registration'],
-    boxCheck: ['ყუთების გადამოწმება', 'Check the boxes'],
+    boxCheck: [
+      'ქაღალდის დოკუმენტების აღწერა & ორგანიზება',
+      'Description & organization of paper documents',
+    ],
     headerFooter: [
-      'ობიექტების ტრანსპორტირების მართვის მობილურზე მორეგებული აპლიკაცია',
-      'A mobile-friendly application for managing the transportation of objects',
+      'წინასწარ მინიჭებული ყუთის ნომრის მიღებისთანავე, დოკუმენტები მზადაა არქივში გადასატანად - გადაეცემა კურიერს.',
+      'Upon receipt of the pre-assigned box number, the documents are ready to be transferred to the archive - handed over to the courier.',
     ],
 
     section1Title: [

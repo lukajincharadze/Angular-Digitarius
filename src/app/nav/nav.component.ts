@@ -52,6 +52,7 @@ export class NavComponent {
   gotoSection(frag: string) {
     document.getElementById(frag)?.scrollIntoView({ behavior: 'smooth' });
     this.isOverlayActive = false;
+    this.stateService.isopenburger.next(this.isOverlayActive);
   }
 
   toggleOverlay() {

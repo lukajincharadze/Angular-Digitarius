@@ -37,8 +37,8 @@ export class DataService {
   getStatisticInfo() {
     return [
       {
-        title: ['სწრაფი', 'Immediate'],
-        text: ['პაკეტირება', 'Packaging'],
+        title: ['ციფრული', 'Digital'],
+        text: ['ხელშეკრულება', 'Contract'],
         logo: '../../assets/img/stat-logo1.svg',
       },
       {
@@ -47,8 +47,8 @@ export class DataService {
         logo: '../../assets/img/stat-logo2.svg',
       },
       {
-        title: ['სანდო', 'Reliable'],
-        text: ['მხარდაჭერა', 'Support'],
+        title: ['სტატუსის', 'Status'],
+        text: ['კონტროლი', 'Control'],
         logo: '../../assets/img/stat-logo3.svg',
       },
     ];

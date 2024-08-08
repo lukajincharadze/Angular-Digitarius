@@ -6,14 +6,14 @@
   font-family: "BPG Arial", sans-serif;
   font-weight: bold;
   color: var(--white);
-  background-color: var(--mainColor);
+  background-color: var(--mainColor2);
   border: 1px solid var(--white);
   letter-spacing: 1.7;
   border-radius: 3px;
   padding: 10px 40px;
   transition: all 0.3s;
   &:hover {
-    background-color: var(--clickedmainColor);
+    background-color: var(--clickedmainColor2);
   }
   margin-bottom: 15px;
 }

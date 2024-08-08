@@ -12,11 +12,11 @@ import { Subscription } from 'rxjs';
 })
 export class HeaderComponent {
   imageLogo: any[] = [
-    { url: '../../assets/img/Diplomat.jpg', alt: 'diplomat' },
-    { url: '../../assets/img/Icon_Magti.jpg', alt: 'magti' },
-    { url: '../../assets/img/adjarabet.jpg', alt: 'adjarabet' },
-    { url: '../../assets/img/spar.jpg', alt: 'spar' },
-    { url: '../../assets/img/tbc.jpg', alt: 'tbc' },
+    { url: '../../assets/img/Acer.png', alt: 'diplomat' },
+    { url: '../../assets/img/Microsoft.png', alt: 'magti' },
+    { url: '../../assets/img/Oracle.png', alt: 'adjarabet' },
+    { url: '../../assets/img/legrand.png', alt: 'spar' },
+    { url: '../../assets/img/dell.png', alt: 'tbc' },
   ];
 
   langs: any = {};
