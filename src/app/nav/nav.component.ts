@@ -4,11 +4,14 @@ import { DataService } from '../core/data.service';
 import { StatesService } from '../core/states.service';
 import { RouterModule } from '@angular/router';
 import { Subscription } from 'rxjs';
+import { HeaderDialogComponent } from '../sharedComponents/header-dialog/header-dialog.component';
+import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-nav',
   standalone: true,
-  imports: [RouterModule],
+  imports: [RouterModule, HeaderDialogComponent, CommonModule, FormsModule],
   templateUrl: './nav.component.html',
   styleUrls: ['./nav.component.scss'],
 })
@@ -17,6 +20,7 @@ export class NavComponent {
   langs: any = {};
   index: number = 0;
   isOverlayActive: boolean = false;
+  dialogPopup: boolean = false;
 
   subscription: Subscription = new Subscription();
 
@@ -36,6 +40,12 @@ export class NavComponent {
         this.index = res;
         this.changeDetectorRef.markForCheck();
         this.text = res === 0 ? 'Geo' : 'Eng';
+      })
+    );
+
+    this.subscription.add(
+      this.stateService.isOpen$.subscribe((res: any) => {
+        this.dialogPopup = res;
       })
     );
   }
@@ -66,5 +76,9 @@ export class NavComponent {
     this.index = this.translationService.index;
     this.translationService.changeLang.next(this.index);
     this.dataService.changeLang.next(this.index);
+  }
+
+  toggleDialogPopup() {
+    this.dialogPopup = true;
   }
 }

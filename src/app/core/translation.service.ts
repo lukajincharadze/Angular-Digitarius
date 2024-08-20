@@ -17,6 +17,10 @@ export class TranslationService {
     ],
 
     dialogMail: ['მეილი', 'Mail'],
+    dialogName: ['სახელი', 'Name'],
+    dialogLastname: ['გვარი', 'Last name'],
+    dialogCompany: ['კომპანია', 'Company'],
+    dialogPhoneNum: ['ტელეფონის ნომერი', 'Phone Number'],
     dialogDesc: ['აღწერა', 'Description'],
     dialogBtn: ['გაუქმება', 'Cancel'],
     dialogBtn2: ['გაგზავნა', 'Send'],
@@ -26,15 +30,12 @@ export class TranslationService {
     nav3: ['ლოჯისტიკა', 'Logistics'],
     nav4: ['ფასი', 'Pricing'],
     navSignIn: ['შესვლა', 'Sign In'],
-    navPackets: ['ლოჯისტიკის მართვა', 'Manage Logistic'],
+    navPackets: ['მოითხოვე პრეზენტაცია', 'Request a presentation'],
 
-    title: [
-      'არქივის მართვის პროგრამა Archivarius',
-      'Archivarius archive management program',
-    ],
+    title: ['არქივის მართვის პროგრამა', 'Archive management program'],
     titleSub: [
-      'აღრიცხავა დოკუმენტის ნომერის, ტიპის, თარიღისა და წარმოქმნის სერვის-ცენტრი.',
-      'Recorded document number, type, date and service center of generation.',
+      'მართე დოკუმეტების არქივი და ლოჯისტიკა ერთი პროგრამით',
+      'Manage document archive and logistics with one program',
     ],
 
     headerBtn1: ['სცადე უფასოდ', 'Try for Free'],
@@ -49,15 +50,15 @@ export class TranslationService {
     ],
 
     section1Title: [
-      'ჩატარებული ინვენტარიზაციების სრული ისტორია',
-      'Complete history of conducted inventories',
+      'თუ გაქვთ ქაღალდის დოკუმენტების არქივი და გაწუხებთ:',
+      'If you have an archive of paper documents and are concerned about:',
     ],
 
     sectionSubTitle1: ['აღწერა', 'Description'],
 
     section2Title: [
-      'ყუთბის/პაკეტების და დოკუმენტების გამოთხოვა',
-      'Request boxes/packages and documents',
+      'არქივარიუსი დაგეხმარებათ, რომ:',
+      'Archivarius will help you to:',
     ],
     learnMore: ['გაიგე მეტი', 'Learn More'],
 

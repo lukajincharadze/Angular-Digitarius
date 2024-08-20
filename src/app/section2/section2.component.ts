@@ -23,6 +23,7 @@ import { DialogComponent } from '../sharedComponents/dialog/dialog.component';
 import { TranslationService } from '../core/translation.service';
 import { Subscription } from 'rxjs';
 import { StatesService } from '../core/states.service';
+import { CollapseLogo6Component } from '../iconComponents/collapse-logo6/collapse-logo6.component';
 
 @Component({
   selector: 'app-section2',
@@ -40,6 +41,7 @@ import { StatesService } from '../core/states.service';
     CollapseLogo3Component,
     CollapseLogo4Component,
     CollapseLogo5Component,
+    CollapseLogo6Component,
     DialogComponent,
   ],
   changeDetection: ChangeDetectionStrategy.OnPush,

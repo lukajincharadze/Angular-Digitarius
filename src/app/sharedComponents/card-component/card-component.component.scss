@@ -37,20 +37,10 @@
   align-items: flex-start;
   h4 {
     font-family: "BPG Arial", sans-serif;
-    font-size: 50px;
+    font-size: 35px;
     line-height: normal;
     font-weight: bolder;
     color: var(--white);
-
-    small {
-      font-size: 70px;
-      line-height: normal;
-    }
-  }
-  svg {
-    padding-top: 30px;
-    font-size: 65px;
-    min-width: 65px;
   }
 }
 .desc > span {

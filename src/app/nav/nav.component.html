@@ -1,7 +1,7 @@
 <div class="div-header">
   <div class="sub-1">
     <div class="sub-1-logo" (click)="gotoSection('header')">
-      <img src="../../assets/img/ugtLogo2.png" alt="img" />
+      <p>ARCHIVARIUS</p>
     </div>
 
     <p class="nav-title" (click)="gotoSection('sec1')">
@@ -31,7 +31,7 @@
         </li>
       </p>
 
-      <div class="try-free-btn" (click)="gotoSection('sec2')">
+      <div class="try-free-btn" (click)="toggleDialogPopup()">
         <li>{{ langs.navPackets[index] }}</li>
       </div>
     </ul>
@@ -59,8 +59,12 @@
     <li class="menu-item" (click)="gotoSection('sec2')">
       {{ langs.navPackets[index] }}
     </li>
-    <li class="menu-item special" (click)="gotoSection('sec3')">
+    <li class="menu-item special">
       {{ langs.navSignIn[index] }}
     </li>
   </ul>
 </div>
+
+<ng-container *ngIf="dialogPopup">
+  <app-header-dialog></app-header-dialog>
+</ng-container>

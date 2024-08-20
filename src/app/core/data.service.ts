@@ -37,19 +37,22 @@ export class DataService {
   getStatisticInfo() {
     return [
       {
-        title: ['ციფრული', 'Digital'],
-        text: ['ხელშეკრულება', 'Contract'],
-        logo: '../../assets/img/stat-logo1.svg',
+        title: ['არაეფექტური გამოთხოვის პროცესი', 'Inefficient claim process'],
+        logo: '../../assets/img/folder.png',
       },
       {
-        title: ['შემოწმება', 'Verify'],
-        text: ['დახარვეზება', 'Debugging'],
-        logo: '../../assets/img/stat-logo2.svg',
+        title: [
+          'დოკუმენტების გაუთავებელი ძიება',
+          'Endless search for documents',
+        ],
+        logo: '../../assets/img/searchIcon.png',
       },
       {
-        title: ['სტატუსის', 'Status'],
-        text: ['კონტროლი', 'Control'],
-        logo: '../../assets/img/stat-logo3.svg',
+        title: [
+          'დოკუმენტების მანუალური მენეჯნემტი',
+          'Manual management of documents',
+        ],
+        logo: '../../assets/img/location.png',
       },
     ];
   }
@@ -102,7 +105,7 @@ export class DataService {
   getCollapseInfo() {
     return [
       {
-        Title: ['მოთხოვნის რეგისტრირება', 'Request registration'],
+        Title: ['აღწერო დოკუმენტები', 'Descriptive documents'],
         Desc: [
           'არქივიდან ყუთების/პაკეტების/დოკუმენტების სერვის ცენტრში მოტანის მოთხოვნის რეგისტრირება',
           'Registering a request to bring boxes/packages/documents from the archive to the service center',
@@ -113,7 +116,7 @@ export class DataService {
         picUrl: '../../assets/img/collapse1.jpg',
       },
       {
-        Title: ['მოთხოვნების მონიტორინგი', 'Request Monitoring'],
+        Title: ['მართო ლოჯისტიკა', 'Manage logistics'],
         Desc: [
           'პასუხისმგებელი პირებისთვის ჩანართი სადაც გამოჩნდება რეგისტრირებული მოთხოვნები',
           'A tab for responsible persons where registered requests will be displayed',
@@ -124,10 +127,18 @@ export class DataService {
         picUrl: '../../assets/img/collapse2.jpg',
       },
       {
-        Title: [
-          'რეგისტრირებულების გადამისამართება',
-          'Redirect registered users',
+        Title: ['დააორგანიზო აქრივი', 'Organize your Archive'],
+        Desc: [
+          'პასუხისმგებელი პირებისთვის ჩანართი სადაც გამოჩნდება რეგისტრირებული მოთხოვნები',
+          'A tab for responsible persons where registered requests will be displayed',
         ],
+        learnMore: ['გაიგე მეტი', 'Learn more'],
+        imgUrl: '../../assets/img/collapseLogo2.svg',
+        imgColor: '#6C6EFB',
+        picUrl: '../../assets/img/collapse2.jpg',
+      },
+      {
+        Title: ['გაიმარტივო ინვენტარიზაცია', 'Simplify inventory'],
         Desc: [
           'მოთხოვნის ტიპის მიხედვით (დედანი/სკანირებული ასლი/დედანთან დამოწმებული ასლი) ერთეულის გადაგზავნა',
           'By request type (original/scanned copy/certified copy) forward the item',
@@ -138,7 +149,7 @@ export class DataService {
         picUrl: '../../assets/img/collapse3.jpg',
       },
       {
-        Title: ['არქივის საწყობში ძიება', 'Search Archive Warehouse'],
+        Title: ['სწრაფად მოიძიო დოკუმეტები', 'Find documents quickly'],
         Desc: [
           'მოთხოვნილი ერთეულის ობიექტზე ორიენტირებული ლოკაციური ძებნა',
           'Object-oriented location search for the requested entity',
@@ -149,13 +160,13 @@ export class DataService {
         picUrl: '../../assets/img/collapse4.jpg',
       },
       {
-        Title: ['ლოჯისტიკა', 'Logistic'],
+        Title: ['მართო როლები და უფლებები', 'Manage roles and rights'],
         Desc: [
           'ობიექტების ტრანსპორტირების მართვის მობილურზე მორეგებული აპლიკაცია',
           'A mobile-friendly application for object transportation management',
         ],
         learnMore: ['გაიგე მეტი', 'Learn more'],
-        imgUrl: '../../assets/img/collapseLogo5.svg',
+        imgUrl: '../../assets/img/law.png',
         imgColor: '#6C6EFB',
         picUrl: '../../assets/img/collapse5.jpg',
       },
