@@ -30,6 +30,7 @@
       &-2 {
         color: #1c3252;
         font-weight: bold;
+        font-size: 19px;
       }
       &-input {
         font-family: "BPG Arial", sans-serif;
@@ -114,6 +115,12 @@
   &:hover {
     border: 1px solid red;
   }
+}
+
+small {
+  font-family: "BPG Arial", sans-serif;
+  font-size: 14px;
+  color: red;
 }
 
 @media screen and (max-width: 750px) {

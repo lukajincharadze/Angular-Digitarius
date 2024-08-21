@@ -7,12 +7,14 @@
         <app-section3-logo></app-section3-logo>
         <div class="section3-div-title-logoWraper-div">
           <input
-            type="email"
-            [placeholder]="langs.section3InputTitle[index]"
+            type="tel"
             class="section3-div-title-input"
-            [(ngModel)]="userMail"
             [ngClass]="{ incorrect: invalid }"
+            [value]="'+995 '"
+            maxlength="14"
+            (input)="numberFunc($event)"
           />
+
           <button
             class="section3-div-title-logoWraper-button"
             (click)="request()"
@@ -21,6 +23,11 @@
           >
             {{ langs.section3SendBtn[index] }}
           </button>
+        </div>
+        <div *ngIf="errorShow">
+          <small>
+            {{ langs.section3ErrPhone[index] }}
+          </small>
         </div>
       </div>
     </div>

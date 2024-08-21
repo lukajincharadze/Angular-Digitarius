@@ -1,30 +1,8 @@
 <header class="header">
   <h1 class="header-title">{{ langs.title[index] }}</h1>
   <p class="header-desc">{{ langs.titleSub[index] }}</p>
-  <!-- <div class="header-btn-div">
-    <div class="try-free-btn1" (click)="gotoSection('sec6')">
-      {{ langs.headerBtn1[index] }}
-    </div>
-    <div class="try-free-btn2" (click)="gotoSection('sec3')">
-      {{ langs.requestRegistration[index] }}
-    </div>
-  </div>
-  <p class="header-sub-desc">{{ langs.boxCheck[index] }}</p> -->
 
   <div class="header-img">
-    <img
-      src="../../assets/img/digitariusPhotos/DigitariusTree.jpg"
-      alt="Tree"
-    />
+    <app-header-carousel />
   </div>
-  <!-- 
-  <div class="header-company-logos">
-    <div *ngFor="let item of imageLogo">
-      <img style="height: 80px" [src]="item.url" [alt]="item.alt" />
-    </div>
-  </div> -->
-
-  <!-- <p class="header-sub-desc-2">
-    {{ langs.headerFooter[index] }}
-  </p> -->
 </header>

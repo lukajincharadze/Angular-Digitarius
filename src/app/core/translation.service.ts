@@ -62,12 +62,16 @@ export class TranslationService {
     ],
     learnMore: ['გაიგე მეტი', 'Learn More'],
 
-    section3Title1: ['მონაცემთა სერვისების ექსპორტი', 'Export Data Services'],
+    section3Title1: ['დეტალები გაინტერესებს?', 'Interested in details?'],
     section3Title2: [
-      'მოითხოვე სერვისების მართვა',
-      'Request Archiving Services',
+      'დაგვიტოვე საკონტაქტო და დაგიკავშირდებით',
+      'Leave us a contact and we will contact you',
     ],
     section3InputTitle: ['შეიყვანე ელ.ფოსტა', 'Enter your Email'],
+    section3ErrPhone: [
+      'ტელეფონის ნომერი არასწორია. ის უნდა იყოს ფორმატში +995 5xxxxxxxx.',
+      'Invalid phone number. It should be in the format +995 5xxxxxxxx.',
+    ],
     section3SendBtn: ['გაგზავნა', 'Send'],
 
     section4Title: ['დოკუმენტაციის დაარქივება', 'Archiving of documentation'],

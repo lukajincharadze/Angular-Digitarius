@@ -44,7 +44,7 @@ export class NavComponent {
     );
 
     this.subscription.add(
-      this.stateService.isOpen$.subscribe((res: any) => {
+      this.stateService.isOpenHeader$.subscribe((res: any) => {
         this.dialogPopup = res;
       })
     );

@@ -39,7 +39,7 @@ export class HeaderDialogComponent {
   ) {}
 
   ngOnInit() {
-    this.stateService.isOpenDialog.next(true);
+    this.stateService.isOpenHeaderDialog.next(true);
     this.langs = this.translationService.langs;
     this.index = this.translationService.index;
   }
@@ -50,7 +50,7 @@ export class HeaderDialogComponent {
   }
   closeDialogPopup() {
     this.dialogPopup = false;
-    this.stateService.isOpenDialog.next(false);
+    this.stateService.isOpenHeaderDialog.next(false);
   }
 
   request() {

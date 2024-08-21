@@ -9,6 +9,9 @@ export class StatesService {
   isOpenDialog: any = new BehaviorSubject<any>(false);
   isOpen$: any = this.isOpenDialog.asObservable();
 
+  isOpenHeaderDialog: any = new BehaviorSubject<any>(false);
+  isOpenHeader$: any = this.isOpenHeaderDialog.asObservable();
+
   isOpenTermsPopup: any = new BehaviorSubject<any>(false);
   isOpenTerms$: any = this.isOpenTermsPopup.asObservable();
 

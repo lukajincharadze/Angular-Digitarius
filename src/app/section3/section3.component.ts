@@ -1,6 +1,11 @@
 import { Component } from '@angular/core';
 import { Section3LogoComponent } from '../iconComponents/section3-logo/section3-logo.component';
-import { FormsModule } from '@angular/forms';
+import {
+  FormBuilder,
+  FormGroup,
+  FormsModule,
+  Validators,
+} from '@angular/forms';
 import { DataService } from '../core/data.service';
 import { CommonModule } from '@angular/common';
 import { TranslationService } from '../core/translation.service';
@@ -22,33 +27,54 @@ export class Section3Component {
 
   subscription: Subscription = new Subscription();
 
+  phoneForm: FormGroup;
+
   constructor(
     private dataService: DataService,
-    private translationService: TranslationService
-  ) {}
+    private translationService: TranslationService,
+    private formBuilder: FormBuilder
+  ) {
+    this.phoneForm = this.formBuilder.group({
+      phone: ['+995 ', [Validators.required, this.phoneValidator]],
+    });
+  }
+
+  phoneValidator(control: any) {
+    const value = control.value;
+    const phoneRegex = /^\+995 5\d{8}$/;
+
+    if (value && !phoneRegex.test(value)) {
+      return {
+        invalidPhone: true,
+      };
+    }
+    return null;
+  }
+
   validateEmail(email: string) {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return emailRegex.test(email);
   }
+  errorShow: boolean = false;
   request() {
-    let data = { userMail: this.userMail };
-
-    this.validateEmail(this.userMail);
-    if (this.validateEmail(this.userMail)) {
-      this.invalid = false;
+    if (this.phoneForm.valid) {
+      this.errorShow = false;
+      const phoneNumber = this.phoneForm.controls['phone'].value;
+      console.log('Sending phone number:', phoneNumber);
+      this.dataService
+        .sendData('http://127.0.0.1:5000/mail', { phone: phoneNumber })
+        .subscribe(
+          (res) => {
+            console.log(res);
+          },
+          (error) => {
+            console.log(error);
+          }
+        );
     } else {
-      this.invalid = true;
-      return;
+      console.log('Phone number is invalid.');
+      this.errorShow = true;
     }
-    this.dataService.sendData('http://127.0.0.1:5000/mail', data).subscribe(
-      (res) => {
-        console.log(res);
-      },
-      (error) => {
-        console.log(error);
-      }
-    );
-    this.disabled = true;
   }
 
   ngOnInit() {
@@ -60,5 +86,18 @@ export class Section3Component {
         this.index = res;
       })
     );
+  }
+
+  numberFunc(event: any) {
+    let inputVal = event.target.value;
+
+    inputVal = inputVal.replace(/[^0-9]/g, '');
+    if (!inputVal.startsWith('995')) {
+      inputVal = '995 ';
+    } else {
+      inputVal = `995 ${inputVal.substring(3)}`;
+    }
+    event.target.value = `+${inputVal}`;
+    this.phoneForm.controls['phone'].setValue(`+${inputVal}`);
   }
 }
