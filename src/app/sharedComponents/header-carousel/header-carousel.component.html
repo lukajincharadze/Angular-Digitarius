@@ -1,15 +1,18 @@
-<c-carousel>
-  <c-carousel-indicators></c-carousel-indicators>
-  <c-carousel-inner>
-    <c-carousel-item *ngFor="let slide of slides">
-      <img
-        [src]="slide.src"
-        alt="{{ slide.title }}"
-        class="d-block w-100"
-        loading="lazy"
-      />
-    </c-carousel-item>
-  </c-carousel-inner>
-  <c-carousel-control caption="Previous" direction="prev"></c-carousel-control>
-  <c-carousel-control caption="Next" direction="next"></c-carousel-control>
-</c-carousel>
+<section class="slider-wrapper">
+  <div class="slider">
+    <div
+      class="image-container"
+      [style]="
+        'transform: translate(' + translate + '%); width: ' + contwidth + '%;'
+      "
+    >
+      <ng-container *ngFor="let imgsrc of images">
+        <div class="img">
+          <img [src]="imgsrc" alt="" />
+        </div>
+      </ng-container>
+    </div>
+  </div>
+  <button class="prev-button" (click)="prev()">&#10094;</button>
+  <button class="next-button" (click)="next()">&#10095;</button>
+</section>

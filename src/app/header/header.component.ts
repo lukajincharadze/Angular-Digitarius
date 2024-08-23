@@ -29,14 +29,6 @@ import { HeaderCarouselComponent } from '../sharedComponents/header-carousel/hea
   styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent {
-  imageLogo: any[] = [
-    { url: '../../assets/img/Acer.png', alt: 'diplomat' },
-    { url: '../../assets/img/Microsoft.png', alt: 'magti' },
-    { url: '../../assets/img/Oracle.png', alt: 'adjarabet' },
-    { url: '../../assets/img/legrand.png', alt: 'spar' },
-    { url: '../../assets/img/dell.png', alt: 'tbc' },
-  ];
-
   langs: any = {};
   index: number = 0;
 
