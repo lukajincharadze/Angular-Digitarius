@@ -2,29 +2,13 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TranslationService } from '../core/translation.service';
 import { Subscription } from 'rxjs';
-import {
-  CarouselComponent,
-  CarouselControlComponent,
-  CarouselIndicatorsComponent,
-  CarouselInnerComponent,
-  CarouselItemComponent,
-  ThemeDirective,
-} from '@coreui/angular';
+
 import { HeaderCarouselComponent } from '../sharedComponents/header-carousel/header-carousel.component';
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [
-    CommonModule,
-    ThemeDirective,
-    CarouselComponent,
-    CarouselIndicatorsComponent,
-    CarouselInnerComponent,
-    CarouselItemComponent,
-    CarouselControlComponent,
-    HeaderCarouselComponent,
-  ],
+  imports: [CommonModule, HeaderCarouselComponent],
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss'],
 })
