@@ -67,6 +67,9 @@
 @media screen and (max-width: 1000px) {
   .stat > h4 {
     font-size: 30px !important;
+    @media screen and (max-width: 600px) {
+      font-size: 24px !important;
+    }
   }
   .image-wraper {
     width: 40px;

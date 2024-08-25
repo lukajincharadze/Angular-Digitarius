@@ -13,6 +13,9 @@
       font-weight: bold;
       margin: 0px auto 50px;
       font-family: "BPG Arial", sans-serif;
+      @media screen and (max-width: 600px) {
+        font-size: 28px;
+      }
     }
   }
 
@@ -23,8 +26,13 @@
     -webkit-box-pack: center;
     justify-content: center;
     gap: 20px;
+
     & > * {
       width: 100%;
+    }
+
+    @media screen and (max-width: 880px) {
+      gap: 0;
     }
   }
 
@@ -39,10 +47,6 @@
       line-height: normal;
       font-weight: bolder;
       color: #1c3252;
-      small {
-        font-size: 70px;
-        line-height: normal;
-      }
     }
     svg {
       font-size: 65px;
@@ -85,8 +89,9 @@
   }
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 840px) {
   .body-charts {
     flex-wrap: wrap;
+    gap: 30px;
   }
 }

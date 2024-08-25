@@ -2,7 +2,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 100vw;
+  width: 100%;
   margin-bottom: 100px;
   position: relative;
 
@@ -98,6 +98,7 @@
       right: 100px;
     }
   }
+
   @media screen and (max-width: 825px) {
     .prev-button {
       left: 50px;
@@ -124,11 +125,13 @@
     .slider {
       height: 30vh;
     }
+
     .prev-button,
     .next-button {
       font-size: 1rem;
       padding: 0.3rem 0.8rem;
     }
+
     .prev-button {
       left: 30px;
     }
