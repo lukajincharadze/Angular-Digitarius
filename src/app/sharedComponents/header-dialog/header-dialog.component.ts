@@ -11,7 +11,7 @@ import { FormsModule } from '@angular/forms';
   standalone: true,
   imports: [CommonModule, FormsModule],
   templateUrl: './header-dialog.component.html',
-  styleUrl: './header-dialog.component.scss',
+  styleUrls: ['./header-dialog.component.scss'], // corrected typo: styleUrl -> styleUrls
 })
 export class HeaderDialogComponent {
   @Input() dialogPopup: boolean = true;
@@ -24,8 +24,9 @@ export class HeaderDialogComponent {
   userMail: string = '';
   userCompany: string = '';
 
+  invalidEmail: boolean = false;
+  emptyFields: boolean = false;
   invalid: boolean = false;
-  empty: boolean = false;
 
   disabled: boolean = false;
   subscription: Subscription = new Subscription();
@@ -44,33 +45,46 @@ export class HeaderDialogComponent {
     this.index = this.translationService.index;
   }
 
-  validateEmail(email: string) {
+  validateEmail(email: string): boolean {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return emailRegex.test(email);
   }
+
+  validateFields(): boolean {
+    this.emptyFields =
+      !this.userName ||
+      !this.userLastname ||
+      !this.userCompany ||
+      !this.userPhoneNum ||
+      !this.userMail;
+    this.invalidEmail = !this.validateEmail(this.userMail);
+
+    return !this.emptyFields && !this.invalidEmail;
+  }
+
+  validatePhoneNumber(event: any): void {
+    const input = event.target as HTMLInputElement;
+    input.value = input.value.replace(/[^0-9]/g, '');
+    this.userPhoneNum = input.value;
+  }
+
   closeDialogPopup() {
     this.dialogPopup = false;
     this.stateService.isOpenHeaderDialog.next(false);
   }
 
   request() {
-    let data = {
+    if (!this.validateFields()) {
+      return;
+    }
+
+    const data = {
       userMail: this.userMail,
       userCompany: this.userCompany,
       userName: this.userName,
       userLastname: this.userLastname,
       userPhoneNum: this.userPhoneNum,
     };
-
-    this.validateEmail(this.userMail);
-    if (this.validateEmail(this.userMail)) {
-      this.invalid = false;
-    } else {
-      this.invalid = true;
-      this.empty = true;
-
-      return;
-    }
 
     this.dataService.sendData('http://127.0.0.1:5000/mail', data).subscribe(
       (res) => {

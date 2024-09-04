@@ -7,35 +7,42 @@
           <input
             type="text"
             [placeholder]="langs.dialogName[index]"
-            [ngClass]="{ incorrect: empty }"
+            [ngClass]="{ incorrect: emptyFields && !userName }"
             [(ngModel)]="userName"
           />
           <input
             type="text"
             [placeholder]="langs.dialogLastname[index]"
-            [ngClass]="{ incorrect: empty }"
+            [ngClass]="{ incorrect: emptyFields && !userLastname }"
             [(ngModel)]="userLastname"
           />
           <input
             type="text"
             [placeholder]="langs.dialogCompany[index]"
-            [ngClass]="{ incorrect: empty }"
+            [ngClass]="{ incorrect: emptyFields && !userCompany }"
             [(ngModel)]="userCompany"
           />
           <input
-            type="text"
+            type="tel"
             [placeholder]="langs.dialogPhoneNum[index]"
-            [ngClass]="{ incorrect: empty }"
+            [ngClass]="{ incorrect: emptyFields && !userPhoneNum }"
             [(ngModel)]="userPhoneNum"
+            (input)="validatePhoneNumber($event)"
+            pattern="[0-9]*"
           />
+
           <input
             type="text"
             [placeholder]="langs.dialogMail[index]"
-            [ngClass]="{ incorrect: invalid }"
+            [ngClass]="{ incorrect: invalidEmail }"
             [(ngModel)]="userMail"
           />
-
-          <br />
+        </div>
+        <div *ngIf="emptyFields" class="error-message">
+          {{ langs.dialogHeaderErrMsg[index] }}
+        </div>
+        <div *ngIf="invalidEmail" class="error-message">
+          {{ langs.dialogHeaderErrMsg2[index] }}
         </div>
       </div>
     </div>

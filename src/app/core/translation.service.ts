@@ -16,7 +16,7 @@ export class TranslationService {
       'Please enter your details',
     ],
 
-    dialogMail: ['მეილი', 'Mail'],
+    dialogMail: ['მეილი', 'Email'],
     dialogName: ['სახელი', 'Name'],
     dialogLastname: ['გვარი', 'Last name'],
     dialogCompany: ['კომპანია', 'Company'],
@@ -24,6 +24,14 @@ export class TranslationService {
     dialogDesc: ['აღწერა', 'Description'],
     dialogBtn: ['გაუქმება', 'Cancel'],
     dialogBtn2: ['გაგზავნა', 'Send'],
+    dialogHeaderErrMsg: [
+      'გთხოვთ შეავსოთ ყველა ველი',
+      'Please fill in all fields.',
+    ],
+    dialogHeaderErrMsg2: [
+      'გთხოვთ შეიყვანოთ სწორი ელფოსტის მისამართი',
+      'Please enter a valid email address',
+    ],
 
     nav1: ['დაარქივება', 'Archiving'],
     nav2: ['პაკეტები', 'Packages'],
