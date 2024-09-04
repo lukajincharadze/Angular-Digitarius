@@ -19,11 +19,11 @@ import { CollapseLogo3Component } from '../iconComponents/collapse-logo3/collaps
 import { CollapseLogo4Component } from '../iconComponents/collapse-logo4/collapse-logo4.component';
 import { CollapseLogo5Component } from '../iconComponents/collapse-logo5/collapse-logo5.component';
 import { DataService } from '../core/data.service';
-import { DialogComponent } from '../sharedComponents/dialog/dialog.component';
 import { TranslationService } from '../core/translation.service';
 import { Subscription } from 'rxjs';
 import { StatesService } from '../core/states.service';
 import { CollapseLogo6Component } from '../iconComponents/collapse-logo6/collapse-logo6.component';
+import { HeaderDialogComponent } from '../sharedComponents/header-dialog/header-dialog.component';
 
 @Component({
   selector: 'app-section2',
@@ -42,7 +42,7 @@ import { CollapseLogo6Component } from '../iconComponents/collapse-logo6/collaps
     CollapseLogo4Component,
     CollapseLogo5Component,
     CollapseLogo6Component,
-    DialogComponent,
+    HeaderDialogComponent,
   ],
   changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: './section2.component.html',
@@ -80,7 +80,7 @@ export class Section2Component {
       })
     );
     this.subscription.add(
-      this.stateService.isOpen$.subscribe((res: any) => {
+      this.stateService.isOpenHeader$.subscribe((res: any) => {
         this.dialogPopup = res;
       })
     );

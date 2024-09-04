@@ -4,11 +4,12 @@ import { DialogComponent } from '../dialog/dialog.component';
 import { TranslationService } from '../../core/translation.service';
 import { Subscription } from 'rxjs';
 import { StatesService } from '../../core/states.service';
+import { HeaderDialogComponent } from '../header-dialog/header-dialog.component';
 
 @Component({
   selector: 'app-dynamic-content',
   standalone: true,
-  imports: [CommonModule, DialogComponent],
+  imports: [CommonModule, DialogComponent, HeaderDialogComponent],
   templateUrl: './dynamic-content.component.html',
   styleUrl: './dynamic-content.component.scss',
 })
@@ -42,9 +43,8 @@ export class DynamicContentComponent {
       })
     );
     this.subscription.add(
-      this.stateService.isOpen$.subscribe((res: any) => {
+      this.stateService.isOpenHeader$.subscribe((res: any) => {
         if (res) return;
-
         this.dialogPopup = res;
       })
     );

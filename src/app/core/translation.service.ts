@@ -50,31 +50,31 @@ export class TranslationService {
     ],
 
     section1Title: [
-      'თუ გაქვთ ქაღალდის დოკუმენტების არქივი და გაწუხებთ:',
-      'If you have an archive of paper documents and are concerned about:',
+      'თუ გაქვთ ქაღალდის დოკუმენტების არქივი და გაწუხებთ',
+      'If you have an archive of paper documents and are concerned about',
     ],
 
     sectionSubTitle1: ['აღწერა', 'Description'],
 
     section2Title: [
-      'არქივარიუსი დაგეხმარებათ, რომ:',
-      'Archivarius will help you to:',
+      'არქივარიუსი დაგეხმარებათ, რომ',
+      'Archivarius will help you to',
     ],
     learnMore: ['გაიგე მეტი', 'Learn More'],
 
     section3Title1: ['დეტალები გაინტერესებს?', 'Interested in details?'],
     section3Title2: [
-      'დაგვიტოვე საკონტაქტო და დაგიკავშირდებით',
-      'Leave us a contact and we will contact you',
+      'დაგვიტოვე ტელეფონის ნომერი',
+      'Leave us your phone number',
     ],
     section3InputTitle: ['შეიყვანე ელ.ფოსტა', 'Enter your Email'],
     section3ErrPhone: [
       'ტელეფონის ნომერი არასწორია. ის უნდა იყოს ფორმატში +995 5xxxxxxxx.',
       'Invalid phone number. It should be in the format +995 5xxxxxxxx.',
     ],
-    section3SendBtn: ['გაგზავნა', 'Send'],
+    section3SendBtn: ['დამიკავშირდით', 'Contact me'],
 
-    section4Title: ['დოკუმენტაციის დაარქივება', 'Archiving of documentation'],
+    section4Title: ['როგორ მუშაობს', 'How does it work'],
 
     section5Title: [
       'ისტორიები ჩვენი მომხმარებლებისგან',
@@ -175,7 +175,7 @@ export class TranslationService {
   footerDialogInfo() {
     return [
       {
-        title: ['შესავალი', '1. Introduction'],
+        title: ['შესავალი', 'Introduction'],
         desc: [
           'კეთილი იყოს თქვენი მობრძანება არქივში, UGT-ის მიერ მოწოდებულ პროგრამულ გადაწყვეტაში, რომელიც ეხმარება კომპანიებს დოკუმენტების მართვაში და დაარქივებაში. არქივის გამოყენებით, თქვენ ეთანხმებით, რომ დაიცვან შემდეგი წესები და პირობები.',
           'Welcome to Archive, a software solution provided by UGT that helps companies manage and archive documents. By using Archive, you agree to comply with and be bound by the following terms and conditions.',

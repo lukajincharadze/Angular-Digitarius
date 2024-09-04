@@ -30,7 +30,7 @@
   .sub-1 {
     &-logo {
       margin-top: 5px;
-      margin-right: 20px;
+      margin-right: 40px;
       font-weight: bold;
       color: #2f71df;
       font-size: 22px;
@@ -68,14 +68,14 @@
       cursor: pointer;
       font-family: "BPG Arial", sans-serif;
       font-weight: bold;
-      color: var(--mainColor);
-      border: 1px solid var(--mainColor);
+      color: var(--mainColor2);
+      border: 1px solid var(--mainColor2);
       border-radius: 3px;
       padding: 10px 20px;
       transition: all 0.3s;
       &:hover {
         color: var(--white);
-        background-color: var(--mainColor);
+        background-color: var(--clickedmainColor2);
       }
     }
   }

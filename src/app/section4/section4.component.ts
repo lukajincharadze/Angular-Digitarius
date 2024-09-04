@@ -5,7 +5,6 @@ import { DynamicContentComponent } from '../sharedComponents/dynamic-content/dyn
 import { DataService } from '../core/data.service';
 import { TranslationService } from '../core/translation.service';
 import { Subscription } from 'rxjs';
-import { StatesService } from '../core/states.service';
 
 @Component({
   selector: 'app-section4',
@@ -20,7 +19,6 @@ export class Section4Component {
     ['მენეჯმენტი', 'Managment'],
     ['აღრიცხვა', 'Accounting'],
     ['აღწერა', 'Description'],
-    ['კლასი', 'Class'],
   ];
   useCaseInfo: any[] = [];
   num: number = 0;

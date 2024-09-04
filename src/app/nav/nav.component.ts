@@ -39,7 +39,7 @@ export class NavComponent {
       this.dataService.langStatus$.subscribe((res: any) => {
         this.index = res;
         this.changeDetectorRef.markForCheck();
-        this.text = res === 0 ? 'Geo' : 'Eng';
+        this.text = res === 0 ? 'Eng' : 'Geo';
       })
     );
 
