@@ -42,8 +42,9 @@ export class DynamicContentComponent {
         this.index = res;
       })
     );
+
     this.subscription.add(
-      this.stateService.isOpenHeader$.subscribe((res: any) => {
+      this.stateService.isPopup2$.subscribe((res: any) => {
         if (res) return;
         this.dialogPopup = res;
       })

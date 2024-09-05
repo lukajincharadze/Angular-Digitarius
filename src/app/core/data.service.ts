@@ -61,42 +61,34 @@ export class DataService {
     return [
       {
         img: '../../assets/img/section4Img.webp',
-        title: ['ცხრილების ექსპორტი', 'Export Tables'],
+        title: ['სისტემა', 'System'],
         text: [
-          'ექსელში (excel) მონაცემების ფილტრებზე დაფუძნებული ექსპორტი,  შემოსული/დაბრუნებული გამოთხოვებისა და დღის რეპორტი ექსელის (excel) ცხრილის სახით.',
-          'Filter-based export of data to Excel, incoming/returned requests and daily report as an Excel table.',
+          'არქივარიუსი ვებ-სისტემაა, მისი გამოყენებისთვის მხოლოდ ინტერნეტი დაგჭირდება',
+          'Archivarius is a web system, you only need an internet connection to use it',
         ],
       },
       {
         img: '../../assets/img/section4Img2.webp',
-        title: ['დროზე დაკვირვება', 'Observing time'],
+        title: ['ინტეგრაცია', 'Integration'],
         text: [
-          'დროის მონაკვეთში განხორცილებულ ქმდებების აღრიცხვა, სერვის ცენტრში მოთხოვნილი ერთულის მიტანისას მომთხოვნზე ერთეულის გადაცემა',
-          'Recording of the actions performed during the period of time, handing over the requested unit to the requester when the requested unit is delivered to the service center,',
+          'პროგრამას მარტივად დააკავშირებს კომპანიი Active Directory-სთან - ამგვარად შეძლებ თანამშრომლების სისტემაში ჩართვას',
+          'The program will easily connect the company with Active Directory - thus you will be able to include employees in the system',
         ],
       },
       {
         img: '../../assets/img/section4Img3.webp',
-        title: ['პერსონა', 'Person'],
+        title: ['ინტერფეისი', 'Interface'],
         text: [
-          'პერსონის მიერ შეტანილი ცვლილებების აღრიცხვა, ბიზნეს პროცესში მონაწილე როლებისთვის საჭირო ფუნქციების მინიჭება  ',
-          'According to the changes made by the person, assigning the necessary functions to the roles involved in the business process',
+          'პროგრამას Desktop ვერსიასთან ერთად აქვს Mobile Interface-ის, რაც ლოჯისტიკის მენეჯერებს, კურიერებს და აქრივის ოპერატორებს smartphone-ით მუშაობსი შესაძლებლობას აძლევს',
+          'Along with the desktop version, the program has a mobile interface, which allows logistics managers, couriers and warehouse operators to work with a smartphone.',
         ],
       },
       {
         img: '../../assets/img/section4Img4.webp',
-        title: ['დეტალიზაცია', 'Detailing'],
+        title: ['გამოყენება', 'Usage'],
         text: [
-          'პერსონის მიერ დროის მონაკვეთში განხორციელებული ცვლილებების დეტალიზაცია',
-          'Detailing changes made by a person over a period of time',
-        ],
-      },
-      {
-        img: '../../assets/img/section4Img5.webp',
-        title: ['კლასიფიკაცია', 'Classification'],
-        text: [
-          'ოთხ ძირითად მოქმედებაზე დაკვირვება: შექმნა, რედაქტირება, წაშლა, ატვირთვა.',
-          'Observe the four main actions: create, edit, delete, upload.',
+          'არქივარიუსთან მარტივად დააკავშირებ როგორც ლაზერულ ისე ხელის სკანერს, ხოლო smartphone-ზე სამუშაოდ ტელეფონის კამერას გამოიყენებ',
+          'You can easily connect both a laser and handheld scanner to the archiver, and you can use the phones camera to work on a smartphone.',
         ],
       },
     ];

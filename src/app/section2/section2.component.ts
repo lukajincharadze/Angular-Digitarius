@@ -79,8 +79,9 @@ export class Section2Component {
         this.changeDetectorRef.markForCheck();
       })
     );
+
     this.subscription.add(
-      this.stateService.isOpenHeader$.subscribe((res: any) => {
+      this.stateService.isPopup$.subscribe((res: any) => {
         this.dialogPopup = res;
       })
     );

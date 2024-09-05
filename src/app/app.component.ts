@@ -57,5 +57,15 @@ export class AppComponent {
         document.body.style.overflow = res ? 'hidden' : 'auto';
       })
     );
+    this.subscription.add(
+      this.stateService.isPopup$.subscribe((res: any) => {
+        document.body.style.overflow = res ? 'hidden' : 'auto';
+      })
+    );
+    this.subscription.add(
+      this.stateService.isPopup2$.subscribe((res: any) => {
+        document.body.style.overflow = res ? 'hidden' : 'auto';
+      })
+    );
   }
 }

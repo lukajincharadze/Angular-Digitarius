@@ -11,10 +11,11 @@ import { FormsModule } from '@angular/forms';
   standalone: true,
   imports: [CommonModule, FormsModule],
   templateUrl: './header-dialog.component.html',
-  styleUrls: ['./header-dialog.component.scss'], // corrected typo: styleUrl -> styleUrls
+  styleUrls: ['./header-dialog.component.scss'],
 })
 export class HeaderDialogComponent {
   @Input() dialogPopup: boolean = true;
+  @Input() source: string = '';
 
   textareaContent: string = 'აღწერა';
 
@@ -40,7 +41,13 @@ export class HeaderDialogComponent {
   ) {}
 
   ngOnInit() {
-    this.stateService.isOpenHeaderDialog.next(true);
+    if (this.source == '') {
+      this.stateService.isOpenHeaderDialog.next(true);
+    } else if (this.source == 'isPopup') {
+      this.stateService.isOpenPopup.next(true);
+    } else if (this.source == 'isPopup2') {
+      this.stateService.isOpenPopup2.next(true);
+    }
     this.langs = this.translationService.langs;
     this.index = this.translationService.index;
   }
@@ -69,8 +76,14 @@ export class HeaderDialogComponent {
   }
 
   closeDialogPopup() {
+    if (this.source == '') {
+      this.stateService.isOpenHeaderDialog.next(false);
+    } else if (this.source == 'isPopup') {
+      this.stateService.isOpenPopup.next(false);
+    } else if (this.source == 'isPopup2') {
+      this.stateService.isOpenPopup2.next(false);
+    }
     this.dialogPopup = false;
-    this.stateService.isOpenHeaderDialog.next(false);
   }
 
   request() {

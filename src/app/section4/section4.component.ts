@@ -15,10 +15,10 @@ import { Subscription } from 'rxjs';
 })
 export class Section4Component {
   arr: any[] = [
-    ['ექსელი', 'Excel'],
-    ['მენეჯმენტი', 'Managment'],
-    ['აღრიცხვა', 'Accounting'],
-    ['აღწერა', 'Description'],
+    ['Cloud სისტემა', 'Cloud System'],
+    ['AD-სთან ინტეგრაცია', 'Integration with AD'],
+    ['Mobile ინტერფეისი', 'Mobile Interface'],
+    ['მოწყობილობები', 'Devices'],
   ];
   useCaseInfo: any[] = [];
   num: number = 0;
