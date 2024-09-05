@@ -31,7 +31,7 @@ import { DataService } from '../core/data.service';
   styleUrls: ['./footer.component.scss'],
 })
 export class FooterComponent {
-  contact: string = 'conatct@archive.ge';
+  contact: string = 'contact@archive.ge';
   langs: any = {};
   index: number = 0;
   dialogPopup: boolean = false;
