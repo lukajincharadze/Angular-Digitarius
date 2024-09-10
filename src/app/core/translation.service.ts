@@ -16,7 +16,7 @@ export class TranslationService {
       'Please enter your details',
     ],
 
-    dialogMail: ['მეილი', 'Email'],
+    dialogMail: ['ელფოსტა', 'Email'],
     dialogName: ['სახელი', 'Name'],
     dialogLastname: ['გვარი', 'Last name'],
     dialogCompany: ['კომპანია', 'Company'],
@@ -25,11 +25,11 @@ export class TranslationService {
     dialogBtn: ['გაუქმება', 'Cancel'],
     dialogBtn2: ['გაგზავნა', 'Send'],
     dialogHeaderErrMsg: [
-      'გთხოვთ შეავსოთ ყველა ველი',
+      'გთხოვ შეავსოთ ყველა ველი',
       'Please fill in all fields.',
     ],
     dialogHeaderErrMsg2: [
-      'გთხოვთ შეიყვანოთ სწორი ელფოსტის მისამართი',
+      'გთხოვ შეიყვანო სწორი ელფოსტის მისამართი',
       'Please enter a valid email address',
     ],
 
@@ -58,14 +58,14 @@ export class TranslationService {
     ],
 
     section1Title: [
-      'თუ გაქვთ ქაღალდის დოკუმენტების არქივი და გაწუხებთ',
+      'თუ გაქვს ქაღალდის დოკუმენტების არქივი და გაწუხებს',
       'If you have an archive of paper documents and are concerned about',
     ],
 
     sectionSubTitle1: ['აღწერა', 'Description'],
 
     section2Title: [
-      'არქივარიუსი დაგეხმარებათ, რომ',
+      'არქივარიუსი დაგეხმარება, რომ',
       'Archivarius will help you to',
     ],
     learnMore: ['გაიგე მეტი', 'Learn More'],
@@ -80,7 +80,7 @@ export class TranslationService {
       'ტელეფონის ნომერი არასწორია. ის უნდა იყოს ფორმატში +995 5xxxxxxxx.',
       'Invalid phone number. It should be in the format +995 5xxxxxxxx.',
     ],
-    section3SendBtn: ['დამიკავშირდით', 'Contact me'],
+    section3SendBtn: ['დამიკავშირდი', 'Contact me'],
 
     section4Title: ['როგორ მუშაობს', 'How does it work'],
 
