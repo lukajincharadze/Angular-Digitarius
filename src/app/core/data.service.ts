@@ -54,27 +54,48 @@ export class DataService {
         ],
         logo: '../../assets/img/location.png',
       },
-      // {
-      //   title: [
-      //     'დოკუმენტების მანუალური მენეჯნემტი',
-      //     'Manual management of documents',
-      //   ],
-      //   logo: '../../assets/img/location.png',
-      // },
-      // {
-      //   title: [
-      //     'დოკუმენტების მანუალური მენეჯნემტი',
-      //     'Manual management of documents',
-      //   ],
-      //   logo: '../../assets/img/location.png',
-      // },
-      // {
-      //   title: [
-      //     'დოკუმენტების მანუალური მენეჯნემტი',
-      //     'Manual management of documents',
-      //   ],
-      //   logo: '../../assets/img/location.png',
-      // },
+      {
+        title: [
+          'დოკუმენტების მანუალური მენეჯნემტი',
+          'Manual management of documents',
+        ],
+        logo: '../../assets/img/location.png',
+      },
+      {
+        title: [
+          'დოკუმენტების მანუალური მენეჯნემტი',
+          'Manual management of documents',
+        ],
+        logo: '../../assets/img/location.png',
+      },
+      {
+        title: [
+          'დოკუმენტების მანუალური მენეჯნემტი',
+          'Manual management of documents',
+        ],
+        logo: '../../assets/img/location.png',
+      },
+      {
+        title: [
+          'დოკუმენტების მანუალური მენეჯნემტი',
+          'Manual management of documents',
+        ],
+        logo: '../../assets/img/location.png',
+      },
+      {
+        title: [
+          'დოკუმენტების მანუალური მენეჯნემტი',
+          'Manual management of documents',
+        ],
+        logo: '../../assets/img/location.png',
+      },
+      {
+        title: [
+          'დოკუმენტების მანუალური მენეჯნემტი',
+          'Manual management of documents',
+        ],
+        logo: '../../assets/img/location.png',
+      },
     ];
   }
 
