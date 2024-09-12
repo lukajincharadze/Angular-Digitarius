@@ -37,10 +37,6 @@ export class DataService {
   getStatisticInfo() {
     return [
       {
-        title: ['არაეფექტური გამოთხოვის პროცესი', 'Inefficient claim process'],
-        logo: '../../assets/img/folder.png',
-      },
-      {
         title: [
           'დოკუმენტების გაუთავებელი ძიება',
           'Endless search for documents',
@@ -48,10 +44,25 @@ export class DataService {
         logo: '../../assets/img/searchIcon.png',
       },
       {
+        title: ['არაეფექტური გამოთხოვის პროცესი', 'Inefficient claim process'],
+        logo: '../../assets/img/folder.png',
+      },
+      {
         title: [
-          'დოკუმენტების მანუალური მენეჯნემტი',
-          'Manual management of documents',
+          'დოკუმენტების გადაადგილებასთან დაკავშირებული ხარვეზები',
+          'Errors related to the movement of documents',
         ],
+        logo: '../../assets/img/location.png',
+      },
+      {
+        title: [
+          'ინფორმაციის დაცულობის პრობლემები',
+          'Information security issues',
+        ],
+        logo: '../../assets/img/location.png',
+      },
+      {
+        title: ['კანონთან შესაბამისობის საკითხები', 'Legal Compliance Issues'],
         logo: '../../assets/img/location.png',
       },
       {
@@ -63,36 +74,19 @@ export class DataService {
       },
       {
         title: [
-          'დოკუმენტების მანუალური მენეჯნემტი',
-          'Manual management of documents',
+          'გამოთხოვილი დოკუმენტების დაბრუნების პრობლემები',
+          'Problems with returning requested documents',
         ],
         logo: '../../assets/img/location.png',
       },
       {
-        title: [
-          'დოკუმენტების მანუალური მენეჯნემტი',
-          'Manual management of documents',
-        ],
+        title: ['არაეფექტური რეპორტინგი', 'Ineffective reporting'],
         logo: '../../assets/img/location.png',
       },
       {
         title: [
-          'დოკუმენტების მანუალური მენეჯნემტი',
-          'Manual management of documents',
-        ],
-        logo: '../../assets/img/location.png',
-      },
-      {
-        title: [
-          'დოკუმენტების მანუალური მენეჯნემტი',
-          'Manual management of documents',
-        ],
-        logo: '../../assets/img/location.png',
-      },
-      {
-        title: [
-          'დოკუმენტების მანუალური მენეჯნემტი',
-          'Manual management of documents',
+          'არქივის ინვენტარიზაციასთან დაკავშირებული პრობლემები',
+          'Problems related to archive inventory',
         ],
         logo: '../../assets/img/location.png',
       },

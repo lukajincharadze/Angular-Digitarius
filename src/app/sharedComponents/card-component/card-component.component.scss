@@ -2,21 +2,20 @@
 
 .chart {
   width: 300px;
-  height: 200px;
+  height: 150px;
   padding: 30px;
   border-radius: 10px;
   background-color: var(--white);
   display: flex;
+  align-items: center;
+  text-align: center;
   justify-content: center;
-  &:nth-child(2) {
-    margin: 0px 40px;
-  }
 }
 .stat {
   width: 100%;
   height: 100%;
   display: flex;
-  flex-direction: column;
+  align-items: center;
   justify-content: space-between;
   h4 {
     font-family: "BPG Arial", sans-serif;
@@ -65,14 +64,12 @@
     }
   }
   .chart {
-    height: 200px;
     margin: 0 auto;
   }
 }
 
 @media screen and (max-width: 950px) {
   .chart {
-    width: 250px;
     height: 140px;
     padding: 15px;
   }
@@ -80,14 +77,12 @@
 
 @media screen and (max-width: 810px) {
   .chart {
-    width: 200px;
     height: 130px;
   }
 }
 
 @media screen and (max-width: 660px) {
   .chart {
-    width: 170px;
     height: 100px;
   }
   .image-wraper {

@@ -11,10 +11,7 @@ export class TranslationService {
 
   langs: any = {
     lang: ['ქართული', 'English'],
-    dialogTitle: [
-      'გთხოვთ შეიყვანოთ თქვენი მონაცემი',
-      'Please enter your details',
-    ],
+    dialogTitle: ['მოითხოვე პრეზენტაცია', 'Request a presentation'],
 
     dialogMail: ['ელფოსტა', 'Email'],
     dialogName: ['სახელი', 'Name'],
