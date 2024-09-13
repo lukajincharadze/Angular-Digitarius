@@ -50,7 +50,7 @@ export class DataService {
       {
         title: [
           'დოკუმენტების გადაადგილებასთან დაკავშირებული ხარვეზები',
-          'Errors related to the movement of documents',
+          'Errors related with document relocation',
         ],
         logo: '../../assets/img/location.png',
       },
@@ -68,14 +68,14 @@ export class DataService {
       {
         title: [
           'დოკუმენტების მანუალური მენეჯნემტი',
-          'Manual management of documents',
+          'Manual handling of paper documents',
         ],
         logo: '../../assets/img/location.png',
       },
       {
         title: [
           'გამოთხოვილი დოკუმენტების დაბრუნების პრობლემები',
-          'Problems with returning requested documents',
+          'Issues with document returns',
         ],
         logo: '../../assets/img/location.png',
       },
@@ -86,7 +86,7 @@ export class DataService {
       {
         title: [
           'არქივის ინვენტარიზაციასთან დაკავშირებული პრობლემები',
-          'Problems related to archive inventory',
+          'Issues with archive inventory management',
         ],
         logo: '../../assets/img/location.png',
       },
@@ -99,7 +99,7 @@ export class DataService {
         img: '../../assets/img/section4Img.webp',
         title: ['სისტემა', 'System'],
         text: [
-          'არქივარიუსი ვებ-სისტემაა, მისი გამოყენებისთვის მხოლოდ ინტერნეტი დაგჭირდება',
+          'დიჯიტარიუსი ვებ-სისტემაა, მისი გამოყენებისთვის მხოლოდ ინტერნეტი დაგჭირდება',
           'Archivarius is a web system, you only need an internet connection to use it',
         ],
       },
@@ -107,24 +107,24 @@ export class DataService {
         img: '../../assets/img/section4Img2.webp',
         title: ['ინტეგრაცია', 'Integration'],
         text: [
-          'პროგრამას მარტივად დააკავშირებს კომპანიი Active Directory-სთან - ამგვარად შეძლებ თანამშრომლების სისტემაში ჩართვას',
-          'The program will easily connect the company with Active Directory - thus you will be able to include employees in the system',
+          'პროგრამას მარტივად დააკავშირებ კომპანიის Active Directory-სთან და მარტივად შეძლებ თანამშრომლების სისტემაში ჩართვას',
+          "You can easily connect the program with the company's Active Directory and you can easily include employees in the system",
         ],
       },
       {
         img: '../../assets/img/section4Img3.webp',
         title: ['ინტერფეისი', 'Interface'],
         text: [
-          'პროგრამას Desktop ვერსიასთან ერთად აქვს Mobile Interface-ის, რაც ლოჯისტიკის მენეჯერებს, კურიერებს და აქრივის ოპერატორებს smartphone-ით მუშაობსი შესაძლებლობას აძლევს',
-          'Along with the desktop version, the program has a mobile interface, which allows logistics managers, couriers and warehouse operators to work with a smartphone.',
+          'პროგრამას Desktop ვერსიასთან ერთად აქვს Mobile Interface-ი, რაც ლოჯისტიკის მენეჯერებს, კურიერებს და არქივის ოპერატორებს smartphone-ით მუშაობის შესაძლებლობას აძლევს',
+          'Along with the desktop version, the program has a mobile interface, which allows logistics managers, couriers and archive operators to work with a smartphone',
         ],
       },
       {
         img: '../../assets/img/section4Img4.webp',
         title: ['გამოყენება', 'Usage'],
         text: [
-          'არქივარიუსთან მარტივად დააკავშირებ როგორც ლაზერულ ისე ხელის სკანერს, ხოლო smartphone-ზე სამუშაოდ ტელეფონის კამერას გამოიყენებ',
-          'You can easily connect both a laser and handheld scanner to the archiver, and you can use the phones camera to work on a smartphone.',
+          'დიჯიტარიუსთან მარტივად დააკავშირებ როგორც ლაზერულ, ისე ხელის სკანერს. ხოლო smartphone-ზე სამუშაოდ ტელეფონის კამერას გამოიყენებ',
+          "You can easily connect both laser and handheld scanners to Digitarius. And to work on a smartphone, you will use the phone's camera",
         ],
       },
     ];
@@ -133,10 +133,10 @@ export class DataService {
   getCollapseInfo() {
     return [
       {
-        Title: ['აღწერო დოკუმენტები', 'Descriptive documents'],
+        Title: ['აღწერო დოკუმენტები', 'Digitally classify documents'],
         Desc: [
-          'არქივიდან ყუთების/პაკეტების/დოკუმენტების სერვის ცენტრში მოტანის მოთხოვნის რეგისტრირება',
-          'Registering a request to bring boxes/packages/documents from the archive to the service center',
+          'სისტემა აღრიცხავს დოკუმენტების ნომერს, ტიპს, თარიღსა და წარმოქმნის სერვის-ცენტრს',
+          'The system registers the document number, type, date and generates the service center',
         ],
         learnMore: ['გაიგე მეტი', 'Learn more'],
         imgUrl: '../../assets/img/collapseLogo1.svg',
@@ -146,8 +146,8 @@ export class DataService {
       {
         Title: ['მართო ლოჯისტიკა', 'Manage logistics'],
         Desc: [
-          'პასუხისმგებელი პირებისთვის ჩანართი სადაც გამოჩნდება რეგისტრირებული მოთხოვნები',
-          'A tab for responsible persons where registered requests will be displayed',
+          'დავალება ციფრულად ემაგრება კურიერს, მოდის არქივში წინასწარ გამზადებულ სივრცეში, მოწმდება და თავსდება არქივის შესაბამის ლოკაციაზე - სრული პროცესი ციფრულად აისახება პროგრამაში',
+          'The task is digitally attached to the courier, comes to the archive in a pre-prepared space, is checked and placed in the appropriate location of the archive - the whole process is digitally reflected in the program',
         ],
         learnMore: ['გაიგე მეტი', 'Learn more'],
         imgUrl: '../../assets/img/collapseLogo2.svg',
@@ -157,8 +157,8 @@ export class DataService {
       {
         Title: ['დააორგანიზო აქრივი', 'Organize your Archive'],
         Desc: [
-          'პასუხისმგებელი პირებისთვის ჩანართი სადაც გამოჩნდება რეგისტრირებული მოთხოვნები',
-          'A tab for responsible persons where registered requests will be displayed',
+          'დიჯიტარიუსი აღწერს ფიზიკური არქივის ყველანაირ სპეციფიკაციას - თაროებს, დარბაზებს და ა.შ.  ხოლო თითოეული ყუთის უნიკალური შტრიხკოდი იძლევა ინფორმაციას არქივში მისი ლოკაციის შესახებ',
+          'Digitarius describes all the specifications of a physical archive - shelves, halls, etc. And the unique barcode of each box provides information about its location in the archive',
         ],
         learnMore: ['გაიგე მეტი', 'Learn more'],
         imgUrl: '../../assets/img/collapseLogo2.svg',
@@ -168,8 +168,8 @@ export class DataService {
       {
         Title: ['გაიმარტივო ინვენტარიზაცია', 'Simplify inventory'],
         Desc: [
-          'მოთხოვნის ტიპის მიხედვით (დედანი/სკანირებული ასლი/დედანთან დამოწმებული ასლი) ერთეულის გადაგზავნა',
-          'By request type (original/scanned copy/certified copy) forward the item',
+          'სისტემურად ფიქსირდება თითოეული ინვენტარიზაციის დეტალები და თარიღი',
+          'The details and date of each inventory are systematically recorded',
         ],
         learnMore: ['გაიგე მეტი', 'Learn more'],
         imgUrl: '../../assets/img/collapseLogo3.svg',
@@ -179,8 +179,8 @@ export class DataService {
       {
         Title: ['სწრაფად მოიძიო დოკუმეტები', 'Find documents quickly'],
         Desc: [
-          'მოთხოვნილი ერთეულის ობიექტზე ორიენტირებული ლოკაციური ძებნა',
-          'Object-oriented location search for the requested entity',
+          'სისტემურად შესაძლებელია მოიძებნოს თითოეული ყუთი, პაკეტი და მასში შემავალი დოკუმენტები. ასევე, ინფორმაცია თუ როდის შემოვიდა არქივში ესა თუ ის დოკუმენტი',
+          'Systematically, each box, package and the documents contained in it can be searched. Also, information about when this or that document entered the archive',
         ],
         learnMore: ['გაიგე მეტი', 'Learn more'],
         imgUrl: '../../assets/img/collapseLogo4.svg',
@@ -190,8 +190,8 @@ export class DataService {
       {
         Title: ['მართო როლები და უფლებები', 'Manage roles and rights'],
         Desc: [
-          'ობიექტების ტრანსპორტირების მართვის მობილურზე მორეგებული აპლიკაცია',
-          'A mobile-friendly application for object transportation management',
+          'დიჯიტარიუსი სრულად მოერგება შენი ორგანიზაციის სტრუქტურას - სისტემაში შესაძლებელია ნებისმიერი ტიპის როლის დამატება და მისთვის შესაბამისი უფლებებისა და შეზღუდვების მინიჭება',
+          'Digitarius will fully adapt to the structure of your organization - any type of role can be added to the system and appropriate rights and restrictions can be assigned to it',
         ],
         learnMore: ['გაიგე მეტი', 'Learn more'],
         imgUrl: '../../assets/img/law.png',

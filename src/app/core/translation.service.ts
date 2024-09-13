@@ -30,17 +30,17 @@ export class TranslationService {
       'Please enter a valid email address',
     ],
 
-    nav1: ['დაარქივება', 'Archiving'],
-    nav2: ['პაკეტები', 'Packages'],
-    nav3: ['ლოჯისტიკა', 'Logistics'],
-    nav4: ['ფასი', 'Pricing'],
+    nav1: ['გამოწვევები', 'Challenges'],
+    nav2: ['გადაწყვეტილებები', 'Solutions'],
+    nav3: ['ტექნოლოგია', 'Technology'],
+    nav4: ['კონტაქტი', 'Contact'],
     navSignIn: ['შესვლა', 'Sign In'],
     navPackets: ['მოითხოვე პრეზენტაცია', 'Request a presentation'],
 
-    title: ['არქივის მართვის პროგრამა', 'Archive management program'],
+    title: ['არქივის მართვის პროგრამა', 'Archive management'],
     titleSub: [
       'მართე დოკუმეტების არქივი და ლოჯისტიკა ერთი პროგრამით',
-      'Manage document archive and logistics with one program',
+      'Manage the paper archive with a single program',
     ],
 
     headerBtn1: ['სცადე უფასოდ', 'Try for Free'],
@@ -56,7 +56,7 @@ export class TranslationService {
 
     section1Title: [
       'თუ გაქვს ქაღალდის დოკუმენტების არქივი და გაწუხებს',
-      'If you have an archive of paper documents and are concerned about',
+      'If you have challenges with',
     ],
 
     sectionSubTitle1: ['აღწერა', 'Description'],
@@ -67,19 +67,16 @@ export class TranslationService {
     ],
     learnMore: ['გაიგე მეტი', 'Learn More'],
 
-    section3Title1: ['დეტალები გაინტერესებს?', 'Interested in details?'],
-    section3Title2: [
-      'დაგვიტოვე ტელეფონის ნომერი',
-      'Leave us your phone number',
-    ],
+    section3Title1: ['დეტალები გაინტერესებს?', 'Any questions?'],
+    section3Title2: ['დაგვიტოვე ტელეფონის ნომერი', 'Leave your number'],
     section3InputTitle: ['შეიყვანე ელ.ფოსტა', 'Enter your Email'],
     section3ErrPhone: [
       'ტელეფონის ნომერი არასწორია. ის უნდა იყოს ფორმატში +995 5xxxxxxxx.',
       'Invalid phone number. It should be in the format +995 5xxxxxxxx.',
     ],
-    section3SendBtn: ['დამიკავშირდი', 'Contact me'],
+    section3SendBtn: ['დამიკავშირდით', 'Contact me'],
 
-    section4Title: ['როგორ მუშაობს', 'How does it work'],
+    section4Title: ['როგორ მუშაობს?', 'How does it work?'],
 
     section5Title: [
       'ისტორიები ჩვენი მომხმარებლებისგან',
@@ -101,81 +98,6 @@ export class TranslationService {
 
     footerDialogTitle: ['მომსახურების პირობები', 'Terms of Service'],
   };
-
-  useCaseInfo() {
-    return [
-      {
-        img: '../../assets/img/section4Img.webp',
-        title: 'ცხრილების ექსპორტი',
-        text: 'ექსელში (excel) მონაცემების ფილტრებზე დაფუძნებული ექსპორტი,  შემოსული/დაბრუნებული გამოთხოვებისა და დღის რეპორტი ექსელის (excel) ცხრილის სახით. ',
-      },
-      {
-        img: '../../assets/img/section4Img2.webp',
-        title: 'დროზე დაკვირვება',
-        text: 'დროის მონაკვეთში განხორცილებულ ქმდებების აღრიცხვა, სერვის ცენტრში მოთხოვნილი ერთულის მიტანისას მომთხოვნზე ერთეულის გადაცემა ',
-      },
-      {
-        img: '../../assets/img/section4Img3.webp',
-        title: 'პერსონა',
-        text: 'პერსონის მიერ შეტანილი ცვლილებების აღრიცხვა, ბიზნეს პროცესში მონაწილე როლებისთვის საჭირო ფუნქციების მინიჭება  ',
-      },
-      {
-        img: '../../assets/img/section4Img4.webp',
-        title: 'დეტალიზაცია',
-        text: 'პერსონის მიერ დროის მონაკვეთში განხორციელებული ცვლილებების დეტალიზაცია ',
-      },
-      {
-        img: '../../assets/img/section4Img5.webp',
-        title: 'კლასიფიკაცია',
-        text: 'ოთხ ძირითად მოქმედებაზე დაკვირვება: შექმნა, რედაქტირება, წაშლა, ატვირთვა.',
-      },
-    ];
-  }
-
-  getCollapseInfo() {
-    return [
-      {
-        Title: 'მოთხოვნის რეგისტრირება',
-        Desc: 'არქივიდან ყუთების/პაკეტების/დოკუმენტების სერვის ცენტრში მოტანის მოთხოვნის რეგისტრირება',
-        learnMore: 'გაიგე მეტი',
-        imgUrl: '../../assets/img/collapseLogo1.svg',
-        imgColor: '#2DC302',
-        picUrl: '../../assets/img/collapse1.jpg',
-      },
-      {
-        Title: 'მოთხოვნების მონიტორინგი',
-        Desc: 'პასუხისმგებელი პირებისთვის ჩანართი სადაც გამოჩნდება რეგისტრირებული მოთხოვნები',
-        learnMore: 'გაიგე მეტი',
-        imgUrl: '../../assets/img/collapseLogo2.svg',
-        imgColor: '#6C6EFB',
-        picUrl: '../../assets/img/collapse2.jpg',
-      },
-      {
-        Title: 'რეგისტრირებულების გადამისამართება',
-        Desc: 'მოთხოვნის ტიპის მიხედვით (დედანი/სკანირებული ასლი/დედანთან დამოწმებული ასლი) ერთეულის გადაგზავნა',
-        learnMore: 'გაიგე მეტი',
-        imgUrl: '../../assets/img/collapseLogo3.svg',
-        imgColor: '#FFCD00',
-        picUrl: '../../assets/img/collapse3.jpg',
-      },
-      {
-        Title: 'არქივის საწყობში ძიება',
-        Desc: 'მოთხოვნილი ერთეულის ობიექტზე ორიენტირებული ლოკაციური ძებნა ',
-        learnMore: 'გაიგე მეტი',
-        imgUrl: '../../assets/img/collapseLogo4.svg',
-        imgColor: '#2DC302',
-        picUrl: '../../assets/img/collapse4.jpg',
-      },
-      {
-        Title: 'ლოჯისტიკა',
-        Desc: 'ობიექტების ტრანსპორტირების მართვის მობილურზე მორეგებული აპლიკაცია',
-        learnMore: 'გაიგე მეტი',
-        imgUrl: '../../assets/img/collapseLogo5.svg',
-        imgColor: '#6C6EFB',
-        picUrl: '../../assets/img/collapse5.jpg',
-      },
-    ];
-  }
 
   footerDialogInfo() {
     return [

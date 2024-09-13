@@ -15,7 +15,7 @@ import { Subscription } from 'rxjs';
 })
 export class Section4Component {
   arr: any[] = [
-    ['Cloud სისტემა', 'Cloud System'],
+    ['WEB აპლიკაცია', 'WEB Application'],
     ['AD-სთან ინტეგრაცია', 'Integration with AD'],
     ['Mobile ინტერფეისი', 'Mobile Interface'],
     ['მოწყობილობები', 'Devices'],
