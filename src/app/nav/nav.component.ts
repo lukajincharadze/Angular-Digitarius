@@ -58,11 +58,18 @@ export class NavComponent {
       this.isOverlayActive = false;
     }
   }
-
   gotoSection(frag: string) {
-    document.getElementById(frag)?.scrollIntoView({ behavior: 'smooth' });
-    this.isOverlayActive = false;
-    this.stateService.isopenburger.next(this.isOverlayActive);
+    const element = document.getElementById(frag);
+
+    if (element) {
+      const yOffset = -100;
+      const y =
+        element.getBoundingClientRect().top + window.pageYOffset + yOffset;
+
+      window.scrollTo({ top: y, behavior: 'smooth' });
+      this.isOverlayActive = false;
+      this.stateService.isopenburger.next(this.isOverlayActive);
+    }
   }
 
   toggleOverlay() {

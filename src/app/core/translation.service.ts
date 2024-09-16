@@ -31,7 +31,7 @@ export class TranslationService {
     ],
 
     nav1: ['გამოწვევები', 'Challenges'],
-    nav2: ['გადაწყვეტილებები', 'Solutions'],
+    nav2: ['გადაწყვეტები', 'Solutions'],
     nav3: ['ტექნოლოგია', 'Technology'],
     nav4: ['კონტაქტი', 'Contact'],
     navSignIn: ['შესვლა', 'Sign In'],
