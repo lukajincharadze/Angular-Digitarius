@@ -9,6 +9,9 @@
     text-align: center;
     letter-spacing: 1px;
     margin-bottom: 20px;
+    @media screen and (max-width: 600px) {
+      font-size: 30px;
+    }
   }
   &-img {
     margin-top: 50px;
@@ -27,14 +30,12 @@
 
   &-desc {
     font-family: "BPG Arial", sans-serif;
+    font-size: 20px;
     text-align: center;
     letter-spacing: 1;
     margin-bottom: 20px;
-  }
-}
-
-@media screen and (max-width: 600px) {
-  .header-title {
-    font-size: 30px;
+    @media screen and (max-width: 1000px) {
+      font-size: 18px;
+    }
   }
 }
