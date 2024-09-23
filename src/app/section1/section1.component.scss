@@ -27,8 +27,8 @@
     -webkit-box-pack: center;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 20px 50px;
-    @media screen and (max-width: 900px) {
+    gap: 50px;
+    @media screen and (max-width: 1000px) {
       gap: 20px;
     }
   }

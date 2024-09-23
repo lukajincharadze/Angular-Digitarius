@@ -1,7 +1,7 @@
 @import url("../../../assets/styles/variables.scss");
 
 .chart {
-  width: 300px;
+  width: 350px;
   height: 130px;
   padding: 30px;
   border-radius: 10px;
@@ -16,14 +16,16 @@
   height: 100%;
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: space-between;
   h4 {
     font-family: "BPG Arial", sans-serif;
     font-size: 18px;
+    text-align: left;
     max-width: 80%;
     line-height: normal;
     font-weight: bolder;
     color: var(--textColor);
+    margin: 0 auto;
   }
 }
 .desc > span {
@@ -70,19 +72,14 @@
 
 @media screen and (max-width: 950px) {
   .chart {
-    height: 140px;
+    height: 100px;
     padding: 15px;
-  }
-}
-
-@media screen and (max-width: 810px) {
-  .chart {
-    height: 130px;
   }
 }
 
 @media screen and (max-width: 660px) {
   .chart {
+    width: 280px;
     height: 100px;
   }
   .image-wraper {

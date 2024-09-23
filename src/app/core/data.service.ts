@@ -49,7 +49,7 @@ export class DataService {
       },
       {
         title: [
-          'დოკუმენტების გადაადგილებასთან დაკავშირებული ხარვეზები',
+          'დოკუმენტების გადაადგილების პრობლემები',
           'Errors related with document relocation',
         ],
         logo: '../../assets/img/location.png',
@@ -74,19 +74,19 @@ export class DataService {
       },
       {
         title: [
-          'გამოთხოვილი დოკუმენტების დაბრუნების პრობლემები',
+          'დოკუმენტების დაბრუნების პრობლემები',
           'Issues with document returns',
         ],
         logo: '../../assets/img/location.png',
       },
       {
-        title: ['არაეფექტური რეპორტინგი', 'Ineffective reporting'],
+        title: ['უშედეგო არაეფექტური  რეპორტინგი', 'Ineffective reporting'],
         logo: '../../assets/img/location.png',
       },
       {
         title: [
-          'არქივის ინვენტარიზაციასთან დაკავშირებული პრობლემები',
-          'Issues with archive inventory management',
+          'ინვენტარიზაციასთან დაკავშირებული პრობლემები',
+          'Issues with inventory management',
         ],
         logo: '../../assets/img/location.png',
       },
