@@ -59,36 +59,36 @@ export class DataService {
           'ინფორმაციის დაცულობის პრობლემები',
           'Information security issues',
         ],
-        logo: '../../assets/img/location.png',
+        logo: '../../assets/img/profileIcon.png',
       },
       {
         title: ['კანონთან შესაბამისობის საკითხები', 'Legal Compliance Issues'],
-        logo: '../../assets/img/location.png',
+        logo: '../../assets/img/policyIcon.png',
       },
       {
         title: [
           'დოკუმენტების მანუალური მენეჯნემტი',
           'Manual handling of paper documents',
         ],
-        logo: '../../assets/img/location.png',
+        logo: '../../assets/img/managmentIcon.png',
       },
       {
         title: [
           'დოკუმენტების დაბრუნების პრობლემები',
           'Issues with document returns',
         ],
-        logo: '../../assets/img/location.png',
+        logo: '../../assets/img/folder2.png',
       },
       {
         title: ['უშედეგო არაეფექტური  რეპორტინგი', 'Ineffective reporting'],
-        logo: '../../assets/img/location.png',
+        logo: '../../assets/img/chartIcon.png',
       },
       {
         title: [
           'ინვენტარიზაციასთან დაკავშირებული პრობლემები',
           'Issues with inventory management',
         ],
-        logo: '../../assets/img/location.png',
+        logo: '../../assets/img/searchIcon2.png',
       },
     ];
   }
