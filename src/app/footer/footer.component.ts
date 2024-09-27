@@ -31,40 +31,20 @@ import { DataService } from '../core/data.service';
   styleUrls: ['./footer.component.scss'],
 })
 export class FooterComponent {
-  contact: string = 'contact@archive.ge';
+  contact: string = 'ugt@ugt.ge';
   langs: any = {};
   index: number = 0;
   dialogPopup: boolean = false;
+
   arr: any[] = [
     {
-      title: ['გამოყენებები', 'Usage'],
-      list1: ['გაყიდვები', 'Sales'],
-      list2: ['ლოჯისტიკა', 'Logistics'],
-      list3: ['შესყიდვები', 'Purchases'],
-      list4: ['მართვა', 'Management'],
-      list5: ['ფინანსები', 'Finance'],
-    },
-  ];
-
-  arr2: any[] = [
-    {
-      title: ['რესურსები', 'Resources'],
-      list1: ['მენეჯმენტი', 'Management'],
-      list2: ['ლეგალურობა', 'Legality'],
-      list3: ['უსაფრთხოება', 'Security'],
-      list4: ['დახმარება', 'Support'],
-      list5: ['დეველოპერი', 'Developer'],
-    },
-  ];
-
-  arr3: any[] = [
-    {
-      title: ['კომპანია', 'Company'],
-      list1: ['ჩვენს შესახებ', 'About Us'],
-      list2: ['არქივი', 'Archive'],
-      list3: ['კონტაქტი', 'Contact'],
-      list4: ['ფასი', 'Price'],
-      list5: ['ექსელი', 'Excel'],
+      title: ['კონტაქტი', 'Contact'],
+      list1: [
+        'ჭავჭავაძის გამზ. 17ე, თბილისი 0179, საქართველო',
+        'Chavchavadze Ave. 17e, Tbilisi 0179, Georgia',
+      ],
+      list2: ['+995 (32) 2 22 05 05', '+995 (32) 2 22 05 05'],
+      list3: ['ugt@ugt.ge', 'ugt@ugt.ge'],
     },
   ];
 

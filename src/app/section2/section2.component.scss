@@ -31,6 +31,7 @@
     width: 100%;
     padding-right: 5px;
     box-shadow: none !important;
+
     img {
       width: 35px;
     }
@@ -41,11 +42,16 @@
       line-height: normal;
       font-weight: bold;
       color: rgb(17, 30, 47);
+
+      :hover {
+        color: var(--mainColor);
+      }
       user-select: none;
       &-div {
         display: flex;
         justify-content: center;
         align-items: center;
+        transition: all 0.3s;
         @for $i from 1 through 5 {
           .app-collapse-logo#{i} {
             padding-top: 8px;

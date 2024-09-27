@@ -13,13 +13,7 @@
           <app-footerlogo-3></app-footerlogo-3>
         </a>
       </div>
-      <p class="footer-topDiv-left-contact">
-        <a
-          [href]="'https://mail.google.com/mail/?view=cm&fs=1&to=' + contact"
-          target="_blank"
-          >{{ contact }}</a
-        >
-      </p>
+
       <div class="footer-topDiv-left-lang" (click)="changeText()">
         <app-glope-svg></app-glope-svg>{{ langs.lang[index] }}
       </div>
@@ -31,33 +25,10 @@
             [title]="item.title[index]"
             [text1]="item.list1[index]"
             [text2]="item.list2[index]"
-            [text3]="item.list3[index]"
-            [text4]="item.list4[index]"
-            [text5]="item.list5[index]"
-          ></app-dynamic-lists>
-        </ul>
-      </ng-container>
-      <ng-container *ngFor="let item of arr2">
-        <ul>
-          <app-dynamic-lists
-            [title]="item.title[index]"
-            [text1]="item.list1[index]"
-            [text2]="item.list2[index]"
-            [text3]="item.list3[index]"
-            [text4]="item.list4[index]"
-            [text5]="item.list5[index]"
-          ></app-dynamic-lists>
-        </ul>
-      </ng-container>
-      <ng-container *ngFor="let item of arr3">
-        <ul>
-          <app-dynamic-lists
-            [title]="item.title[index]"
-            [text1]="item.list1[index]"
-            [text2]="item.list2[index]"
-            [text3]="item.list3[index]"
-            [text4]="item.list4[index]"
-            [text5]="item.list5[index]"
+            [text3]="
+              'https://mail.google.com/mail/?view=cm&fs=1&to=' +
+              item.list3[index]
+            "
           ></app-dynamic-lists>
         </ul>
       </ng-container>
@@ -68,16 +39,16 @@
       <div class="footer-subDiv-div-left">
         <p class="footer-subDiv-div-left-p">© Archive 2024</p>
       </div>
-      <div class="footer-subDiv-div-right">
+      <!-- <div class="footer-subDiv-div-right">
         <a (click)="toggleFooterDialogPopup()">{{
           langs.footerDesc1[index]
         }}</a>
         <a href="#">{{ langs.footerDesc2[index] }}</a>
-      </div>
+      </div> -->
     </div>
   </div>
 </footer>
 
-<ng-container *ngIf="dialogPopup">
+<!-- <ng-container *ngIf="dialogPopup">
   <app-footer-dialog></app-footer-dialog>
-</ng-container>
+</ng-container> -->

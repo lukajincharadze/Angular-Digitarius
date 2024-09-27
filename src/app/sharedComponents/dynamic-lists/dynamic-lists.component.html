@@ -2,7 +2,7 @@
 <div class="wrapper">
   <li class="text">{{ text1 }}</li>
   <li class="text">{{ text2 }}</li>
-  <li class="text">{{ text3 }}</li>
-  <li class="text">{{ text4 }}</li>
-  <li class="text">{{ text5 }}</li>
+  <li class="text">
+    <a [href]="text3" target="_blank">{{ text3.split("to=")[1] }}</a>
+  </li>
 </div>
