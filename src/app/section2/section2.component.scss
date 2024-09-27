@@ -35,6 +35,7 @@
     img {
       width: 35px;
     }
+
     &-title {
       font-family: "BPG Arial", sans-serif;
       margin: 0px 0px 0px 10px;
@@ -42,21 +43,12 @@
       line-height: normal;
       font-weight: bold;
       color: rgb(17, 30, 47);
-
-      :hover {
-        color: var(--mainColor);
-      }
       user-select: none;
+
       &-div {
         display: flex;
         justify-content: center;
         align-items: center;
-        transition: all 0.3s;
-        @for $i from 1 through 5 {
-          .app-collapse-logo#{i} {
-            padding-top: 8px;
-          }
-        }
       }
     }
     p {
@@ -64,6 +56,7 @@
       font-size: 16px;
       line-height: normal;
       color: rgb(28, 50, 82);
+
       margin-bottom: 30px;
       margin-left: 10px;
     }
@@ -131,6 +124,18 @@
       border: none;
       border-radius: 3px;
       cursor: pointer;
+    }
+  }
+}
+
+::ng-deep .mat-expansion-panel-header {
+  padding: 0;
+
+  &:hover {
+    background-color: transparent !important;
+
+    .body-collapse-panel-title-div {
+      color: var(--mainColor) !important;
     }
   }
 }
