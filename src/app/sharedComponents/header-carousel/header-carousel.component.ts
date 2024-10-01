@@ -19,7 +19,7 @@ export class HeaderCarouselComponent {
 
   images = [
     '../../../assets/img/heroimage.png',
-    '../../../assets/img/heroimage2.png',
+    // '../../../assets/img/heroimage2.png',
   ];
 
   prev() {
