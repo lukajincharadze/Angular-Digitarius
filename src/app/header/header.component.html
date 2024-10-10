@@ -1,5 +1,28 @@
 <header class="header">
   <h1 class="header-title">{{ langs.title[index] }}</h1>
+  <!-- <div>ამ ღილაკს დაეიჭრა {{ clicked }} ჯერ</div>
+  <div>
+    <input type="number" [(ngModel)]="clicked" />
+  </div>
+
+  <div *ngIf="clicked > 3">
+    <p>გეყოფა!</p>
+  </div>
+
+  <div>
+    <button (click)="clickMe()">დამაჭირე</button>
+  </div> -->
+
+  <!-- <div class="contextBox" (contextmenu)="toggleContextMenu(true, $event)"></div>
+  <div
+    class="contextMenu"
+    *ngIf="contextMenuInfo.willShowMenu"
+    [style.left.px]="contextMenuInfo.pageX"
+    [style.top.px]="contextMenuInfo.pageY"
+  >
+    Hello, its context
+  </div> -->
+
   <p class="header-desc">{{ langs.titleSub[index] }}</p>
 
   <app-header-carousel />

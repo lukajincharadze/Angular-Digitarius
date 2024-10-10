@@ -4,11 +4,12 @@ import { TranslationService } from '../core/translation.service';
 import { Subscription } from 'rxjs';
 
 import { HeaderCarouselComponent } from '../sharedComponents/header-carousel/header-carousel.component';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [CommonModule, HeaderCarouselComponent],
+  imports: [CommonModule, HeaderCarouselComponent, FormsModule],
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss'],
 })
@@ -33,4 +34,25 @@ export class HeaderComponent {
       })
     );
   }
+
+  // clicked: number = 0;
+
+  // clickMe() {
+  //   this.clicked += 1;
+  // }
+
+  // contextMenuInfo: any = {
+  //   pageX: 0,
+  //   pageY: 0,
+  //   willShowMenu: false,
+  // };
+
+  // willShowBlock: boolean = false;
+
+  // toggleContextMenu(willShowBlock: boolean, event: MouseEvent) {
+  //   this.contextMenuInfo.pageX = event.pageX;
+  //   this.contextMenuInfo.pageY = event.pageY;
+
+  //   this.contextMenuInfo.willShowMenu = willShowBlock;
+  // }
 }
