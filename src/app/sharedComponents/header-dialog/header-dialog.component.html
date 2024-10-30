@@ -1,6 +1,5 @@
 <div class="overlay" *ngIf="dialogPopup">
   <div class="div">
-    <!-- Close Button -->
     <button class="close-btn" (click)="closeDialogPopup()">&#x2715;</button>
 
     <div class="div-wraperInfo">
@@ -50,7 +49,6 @@
           />
         </div>
 
-        <!-- Error messages -->
         <div *ngIf="emptyFields" class="error-message">
           {{ langs.dialogHeaderErrMsg[index] }}
         </div>
@@ -60,7 +58,6 @@
       </div>
     </div>
 
-    <!-- Send Button -->
     <button class="send-btn" (click)="request()" [disabled]="disabled">
       {{ langs.dialogBtn2[index] }}
     </button>

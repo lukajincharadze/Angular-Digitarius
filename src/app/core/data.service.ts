@@ -96,7 +96,7 @@ export class DataService {
   useCaseInfo() {
     return [
       {
-        img: '../../assets/img/section4Img.webp',
+        img: '../../assets/img/webapp2.png',
         title: ['სისტემა', 'System'],
         text: [
           'დიჯიტარიუსი ვებ-სისტემაა, მისი გამოყენებისთვის მხოლოდ ინტერნეტი დაგჭირდება',
@@ -104,7 +104,7 @@ export class DataService {
         ],
       },
       {
-        img: '../../assets/img/section4Img2.webp',
+        img: '../../assets/img/adIntegration.png',
         title: ['ინტეგრაცია', 'Integration'],
         text: [
           'პროგრამას მარტივად დააკავშირებ კომპანიის Active Directory-სთან და მარტივად შეძლებ თანამშრომლების სისტემაში ჩართვას',
@@ -112,7 +112,7 @@ export class DataService {
         ],
       },
       {
-        img: '../../assets/img/section4Img3.webp',
+        img: '../../assets/img/mobileInterface.png',
         title: ['ინტერფეისი', 'Interface'],
         text: [
           'პროგრამას Desktop ვერსიასთან ერთად აქვს Mobile Interface-ი, რაც ლოჯისტიკის მენეჯერებს, კურიერებს და არქივის ოპერატორებს smartphone-ით მუშაობის შესაძლებლობას აძლევს',
@@ -120,7 +120,7 @@ export class DataService {
         ],
       },
       {
-        img: '../../assets/img/section4Img4.webp',
+        img: '../../assets/img/devices03.png',
         title: ['გამოყენება', 'Usage'],
         text: [
           'დიჯიტარიუსთან მარტივად დააკავშირებ როგორც ლაზერულ, ისე ხელის სკანერს. ხოლო smartphone-ზე სამუშაოდ ტელეფონის კამერას გამოიყენებ',

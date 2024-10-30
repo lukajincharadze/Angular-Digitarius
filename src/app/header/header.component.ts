@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TranslationService } from '../core/translation.service';
 import { Subscription } from 'rxjs';
@@ -35,24 +35,57 @@ export class HeaderComponent {
     );
   }
 
-  // clicked: number = 0;
+  //   clicked: number = 0;
+  //   willShowBlock: boolean = false;
 
-  // clickMe() {
-  //   this.clicked += 1;
-  // }
+  //   clickMe() {
+  //     this.clicked += 1;
+  //   }
 
-  // contextMenuInfo: any = {
-  //   pageX: 0,
-  //   pageY: 0,
-  //   willShowMenu: false,
-  // };
+  //   contextMenuInfo: any = {
+  //     pageX: 0,
+  //     pageY: 0,
+  //     willShow: false,
+  //   };
 
-  // willShowBlock: boolean = false;
+  //   tooltipInfo: any = {
+  //     pageX: 0,
+  //     pageY: 0,
+  //     willShow: false,
+  //   };
 
-  // toggleContextMenu(willShowBlock: boolean, event: MouseEvent) {
-  //   this.contextMenuInfo.pageX = event.pageX;
-  //   this.contextMenuInfo.pageY = event.pageY;
+  //   contextClicked: boolean = false;
 
-  //   this.contextMenuInfo.willShowMenu = willShowBlock;
-  // }
+  //   toggleContextMenu(willShowBlock: boolean, event: MouseEvent | null = null) {
+  //     if (event !== null) {
+  //       event.preventDefault();
+  //       this.contextMenuInfo.pageX = event.pageX;
+  //       this.contextMenuInfo.pageY = event.pageY;
+  //     }
+  //     this.contextMenuInfo.willShow = willShowBlock;
+  //   }
+
+  //   @HostListener('document:click')
+  //   closeContextMenu() {
+  //     setTimeout(() => {
+  //       if (!this.contextClicked) {
+  //         this.toggleContextMenu(false);
+  //       }
+  //     }, 10);
+  //   }
+
+  //   contextClick() {
+  //     this.contextClicked = true;
+  //     setTimeout(() => {
+  //       this.contextClicked = false;
+  //     }, 20);
+  //   }
+
+  //   onMouseMove(inside: boolean, event: MouseEvent) {
+  //     if (this.tooltipInfo.willShow !== inside) {
+  //       this.tooltipInfo.willShow = inside;
+  //     }
+  //     this.tooltipInfo.pageX = event.pageX - 50;
+  //     this.tooltipInfo.pageY = event.pageY + 15;
+  //   }
 }
